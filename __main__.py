@@ -39,7 +39,7 @@ class Application:
     
     ### APP WINDOW ###
     def enter_apps(self, widget):
-        os.system("/home/cosmo/build/cosmo-welcome-glade/apps.sh")
+        os.system("/etc/nobara/scripts/apps.sh")
     ### DOC WINDOW ###
     def enter_doc(self, widget):
         os.system("xdg-open https://nobaraproject.org/docs/")
