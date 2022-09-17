@@ -49,7 +49,25 @@ class Application:
     ### WEBSITE WINDOW ###
     def enter_website(self, widget):
         os.system("xdg-open https://nobaraproject.org/")
-    ###
+    
+    
+    
+    ### LOOK ENTRIES ###
+    
+    ### DRIVER ENTRIES ###
+    
+    ### NVIDIA ###
+    def enter_nvidia(self, widget):
+        os.system("/etc/nobara/scripts/nvidia.sh")
+    ### AMD PRO ###
+    def enter_amd(self, widget):
+        os.system("/usr/bin/nobara-amdgpu-config")
+    ### ROCm ###
+    def enter_rocm(self, widget):
+        os.system("/etc/nobara/scripts/rocm.sh")
+    
+    
+    
     
     
     
