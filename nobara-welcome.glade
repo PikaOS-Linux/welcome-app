@@ -4,9 +4,15 @@
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkWindow" id="main_Window">
     <property name="can-focus">False</property>
+    <property name="margin-start">2</property>
+    <property name="margin-end">2</property>
+    <property name="margin-top">2</property>
+    <property name="margin-bottom">2</property>
     <property name="title" translatable="yes">Nobara Welcome</property>
+    <property name="resizable">False</property>
     <property name="default-width">900</property>
     <property name="default-height">450</property>
+    <property name="urgency-hint">True</property>
     <child>
       <object class="GtkBox" id="global_box">
         <property name="visible">True</property>
@@ -168,6 +174,7 @@
               <object class="GtkGrid" id="buttom_box_grid">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+                <property name="row-spacing">1</property>
                 <child>
                   <object class="GtkSwitch" id="startup_switch">
                     <property name="visible">True</property>
@@ -208,6 +215,7 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
+                <property name="padding">5</property>
                 <property name="position">0</property>
               </packing>
             </child>
@@ -223,10 +231,16 @@
   </object>
   <object class="GtkWindow" id="driver_Window">
     <property name="can-focus">False</property>
+    <property name="margin-start">2</property>
+    <property name="margin-end">2</property>
+    <property name="margin-top">2</property>
+    <property name="margin-bottom">80</property>
     <property name="title" translatable="yes">Drivers</property>
+    <property name="resizable">False</property>
     <property name="default-width">900</property>
-    <property name="default-height">250</property>
-    <property name="transient-for">main_Window</property>
+    <property name="default-height">450</property>
+    <property name="urgency-hint">True</property>
+    <property name="attached-to">main_Window</property>
     <child>
       <object class="GtkBox" id="global_driver_box">
         <property name="visible">True</property>
@@ -337,10 +351,16 @@
   </object>
   <object class="GtkWindow" id="look_Window">
     <property name="can-focus">False</property>
+    <property name="margin-start">2</property>
+    <property name="margin-end">2</property>
+    <property name="margin-top">2</property>
+    <property name="margin-bottom">2</property>
     <property name="title" translatable="yes">Appearance</property>
+    <property name="resizable">False</property>
     <property name="default-width">900</property>
-    <property name="default-height">250</property>
-    <property name="transient-for">main_Window</property>
+    <property name="default-height">450</property>
+    <property name="urgency-hint">True</property>
+    <property name="attached-to">main_Window</property>
     <child>
       <object class="GtkBox" id="look_global_look_box">
         <property name="visible">True</property>
@@ -390,6 +410,7 @@
           <object class="GtkGrid" id="look_global_box_grid">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">80</property>
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
             <property name="column-spacing">4</property>
