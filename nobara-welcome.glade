@@ -30,7 +30,7 @@
                 <property name="can-focus">False</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <property name="label" translatable="yes">Welcome to Nobara Linux</property>
+                <property name="label" translatable="yes">Welcome to Nobara Linux™</property>
                 <property name="justify">center</property>
               </object>
               <packing>
@@ -235,15 +235,16 @@
     <property name="margin-start">2</property>
     <property name="margin-end">2</property>
     <property name="margin-top">2</property>
-    <property name="margin-bottom">80</property>
-    <property name="title" translatable="yes">Drivers</property>
+    <property name="margin-bottom">2</property>
+    <property name="title" translatable="yes">Appearance</property>
     <property name="resizable">False</property>
     <property name="default-width">900</property>
     <property name="default-height">450</property>
     <property name="urgency-hint">True</property>
     <property name="attached-to">main_Window</property>
+    <signal name="delete-event" handler="close_driver" swapped="no"/>
     <child>
-      <object class="GtkBox" id="global_driver_box">
+      <object class="GtkBox" id="driver_global_look_box">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
@@ -258,7 +259,7 @@
                 <property name="can-focus">False</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <property name="label" translatable="yes">Are we on windows?</property>
+                <property name="label" translatable="yes">Are we on Windows?</property>
                 <property name="justify">center</property>
               </object>
               <packing>
@@ -291,12 +292,13 @@
           <object class="GtkGrid" id="driver_global_box_grid">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">80</property>
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
             <property name="column-spacing">4</property>
             <child>
               <object class="GtkButton" id="nvidia_button">
-                <property name="label" translatable="yes">Install Nvidia™ Drivers</property>
+                <property name="label" translatable="yes">Nvidia™ Drivers</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
@@ -312,7 +314,7 @@
             </child>
             <child>
               <object class="GtkButton" id="amd_button">
-                <property name="label" translatable="yes">Install AMDGPU™-PRO Drivers</property>
+                <property name="label" translatable="yes">AMD™ PRO Drivers</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
@@ -327,7 +329,7 @@
             </child>
             <child>
               <object class="GtkButton" id="rocm_button">
-                <property name="label" translatable="yes">Install ROCm Drivers</property>
+                <property name="label" translatable="yes">ROCm Drivers</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>

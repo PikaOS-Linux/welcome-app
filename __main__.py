@@ -27,8 +27,8 @@ class Application:
         return self.builder.get_object("look_Window").hide_on_delete()
     ### DRIVER WINDOW ###
     def enter_driver(self, widget):
-        look_window =  self.builder.get_object("look_Window")
-        look_window.show()
+        driver_window =  self.builder.get_object("driver_Window")
+        driver_window.show()
     ### APP WINDOW ###
     def enter_apps(self, widget):
         look_window =  self.builder.get_object("look_Window")
