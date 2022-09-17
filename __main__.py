@@ -42,16 +42,13 @@ class Application:
         os.system("/home/cosmo/build/cosmo-welcome-glade/apps.sh")
     ### DOC WINDOW ###
     def enter_doc(self, widget):
-        look_window =  self.builder.get_object("look_Window")
-        look_window.show()
+        os.system("xdg-open https://nobaraproject.org/docs/")
     ### PROB WINDOW ###
     def enter_prob(self, widget):
-        look_window =  self.builder.get_object("look_Window")
-        look_window.show()
+        os.system("xdg-open https://nobaraproject.org/docs/upgrade-troubleshooting/")
     ### WEBSITE WINDOW ###
     def enter_website(self, widget):
-        look_window =  self.builder.get_object("look_Window")
-        look_window.show()
+        os.system("xdg-open https://nobaraproject.org/")
     ###
     
     
