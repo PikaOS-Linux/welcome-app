@@ -16,10 +16,13 @@ class Application:
         
         self.window = self.builder.get_object("main_Window")
         self.window.show()
-    ### LOOK WINDOW ###
+    ### ENTER LOOK WINDOW ###
     def enter_look(self, widget):
         look_window =  self.builder.get_object("look_Window")
         look_window.show()
+    ### EXIT LOOK WINDOW ###
+    def close_look(self, widget, event):
+        return self.builder.get_object("look_Window").hide_on_delete()
     ### DRIVER WINDOW ###
     def enter_driver(self, widget):
         look_window =  self.builder.get_object("look_Window")

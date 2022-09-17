@@ -361,6 +361,7 @@
     <property name="default-height">450</property>
     <property name="urgency-hint">True</property>
     <property name="attached-to">main_Window</property>
+    <signal name="delete-event" handler="close_look" swapped="no"/>
     <child>
       <object class="GtkBox" id="look_global_look_box">
         <property name="visible">True</property>
