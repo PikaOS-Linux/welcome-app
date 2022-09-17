@@ -1,6 +1,8 @@
 import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
+import subprocess
+import os
 
 class Application:
     
@@ -25,14 +27,19 @@ class Application:
     ### EXIT LOOK WINDOW ###
     def close_look(self, widget, event):
         return self.builder.get_object("look_Window").hide_on_delete()
-    ### DRIVER WINDOW ###
+    ### ENTER DRIVER WINDOW ###
     def enter_driver(self, widget):
         driver_window =  self.builder.get_object("driver_Window")
         driver_window.show()
+    ### EXIT DRIVER WINDOW ###
+    def close_driver(self, widget, event):
+        return self.builder.get_object("driver_Window").hide_on_delete()
+    
+    ### Simple Entries
+    
     ### APP WINDOW ###
     def enter_apps(self, widget):
-        look_window =  self.builder.get_object("look_Window")
-        look_window.show()
+        os.system("/home/cosmo/build/cosmo-welcome-glade/apps.sh")
     ### DOC WINDOW ###
     def enter_doc(self, widget):
         look_window =  self.builder.get_object("look_Window")
