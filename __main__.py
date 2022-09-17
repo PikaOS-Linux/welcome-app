@@ -13,6 +13,8 @@ class Application:
         self.builder = Gtk.Builder()
         self.builder.add_from_file("nobara-welcome.glade")
         self.builder.connect_signals(self)
+        win = self.builder.get_object("main_Window")
+        win.connect("destroy", Gtk.main_quit)
         
         self.window = self.builder.get_object("main_Window")
         self.window.show()
@@ -43,7 +45,10 @@ class Application:
     def enter_website(self, widget):
         look_window =  self.builder.get_object("look_Window")
         look_window.show()
-
-if __name__ == "__main__":
-    Application()
-    Gtk.main()
+    ###
+    
+    
+    
+    
+Application()
+Gtk.main()

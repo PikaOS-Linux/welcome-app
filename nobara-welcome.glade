@@ -13,6 +13,7 @@
     <property name="default-width">900</property>
     <property name="default-height">450</property>
     <property name="urgency-hint">True</property>
+    <signal name="delete-event" handler="close_main" swapped="no"/>
     <child>
       <object class="GtkBox" id="global_box">
         <property name="visible">True</property>
