@@ -67,10 +67,5 @@ class Application:
         os.system("/etc/nobara/scripts/rocm.sh")
     
     
-    
-    
-    
-    
-    
 Application()
 Gtk.main()
