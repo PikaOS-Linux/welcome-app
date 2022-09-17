@@ -18,6 +18,3 @@ class Application:
         
         self.window = self.builder.get_object("main_Window")
         self.window.show_all()
-if __name__ == "__main__":
-    Application()
-    Gtk.main()
