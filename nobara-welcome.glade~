@@ -288,7 +288,6 @@
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="always-show-image">True</property>
-                <signal name="pressed" handler="enter_nvidia" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">0</property>
@@ -303,7 +302,6 @@
                 <property name="receives-default">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <signal name="pressed" handler="enter_amd" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">1</property>
@@ -318,7 +316,6 @@
                 <property name="receives-default">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <signal name="pressed" handler="enter_rocm" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">2</property>
@@ -402,7 +399,6 @@
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="always-show-image">True</property>
-                <signal name="pressed" handler="enter_dm" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">0</property>
@@ -417,7 +413,6 @@
                 <property name="receives-default">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <signal name="pressed" handler="enter_layout" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">1</property>
@@ -432,7 +427,6 @@
                 <property name="receives-default">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <signal name="pressed" handler="enter_theme" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">2</property>
