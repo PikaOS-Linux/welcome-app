@@ -174,9 +174,10 @@
                 <property name="row-spacing">1</property>
                 <child>
                   <object class="GtkSwitch" id="startup_switch">
+                    <property name="name">startup_switch</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
-                    <signal name="notify::active" handler="activate_startup" swapped="no"/>
+                    <signal name="notify::active" handler="on_startup_switch" swapped="no"/>
                   </object>
                   <packing>
                     <property name="left-attach">5</property>
