@@ -52,7 +52,7 @@ class Application:
     
     ### APP WINDOW ###
     def enter_apps(self, widget):
-        os.system("/etc/nobara/scripts/apps.sh")
+        os.system("/etc/nobara/scripts/nobara-welcome/apps.sh")
     ### DOC WINDOW ###
     def enter_doc(self, widget):
         os.system("xdg-open https://nobaraproject.org/docs/")
@@ -71,13 +71,13 @@ class Application:
     
     ### NVIDIA ###
     def enter_nvidia(self, widget):
-        os.system("/etc/nobara/scripts/nvidia.sh")
+        os.system("/etc/nobara/scripts/nobara-welcome/nvidia.sh")
     ### AMD PRO ###
     def enter_amd(self, widget):
         os.system("/usr/bin/nobara-amdgpu-config")
     ### ROCm ###
     def enter_rocm(self, widget):
-        os.system("/etc/nobara/scripts/rocm.sh")
+        os.system("/etc/nobara/scripts/nobara-welcome/rocm.sh")
     
     
 Application()
