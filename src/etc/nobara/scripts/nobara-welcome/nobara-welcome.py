@@ -35,9 +35,9 @@ class Application:
     
     def on_startup_switch(self, switch, state):
         if switch.get_active():
-            print("Switch toggled to on")
+            os.system("cp /usr/share/applications/nobara-welcome.desktop ~/.config/autostart/nobara-welcome.desktop && echo 'X-GNOME-Autostart-enabled=true' >> ~/.config/autostart/nobara-welcome.desktop ")
         else:
-            print("Switch toggled to off")
+            os.system("rm ~/.config/autostart/nobara-welcome.desktop")
     
     ### ENTER LOOK WINDOW ###
     def enter_look(self, widget):
