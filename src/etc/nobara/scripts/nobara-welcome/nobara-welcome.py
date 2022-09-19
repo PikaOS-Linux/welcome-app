@@ -3,6 +3,8 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 import subprocess
 import os
+import os.path
+from pathlib import Path
 
 class Application:
     
@@ -21,11 +23,15 @@ class Application:
         self.window = self.builder.get_object("main_Window")
         self.window.show()
         
-        startup_switch = self.builder.get_object("startup_switch")
-        #startup_switch.set_active(True)
         
     ### Start up Switch ###
         
+        startup_switch = self.builder.get_object("startup_switch")
+        
+        startup_file = Path('/home/' + os.getlogin() + '/.config/autostart/nobara-welcome.desktop')
+        
+        if startup_file.is_file():
+            startup_switch.set_active(True)
     
     def on_startup_switch(self, switch, state):
         if switch.get_active():
