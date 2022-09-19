@@ -25,6 +25,7 @@ Requires:	nobara-amdgpu-config
 %install
 tar -xf %{SOURCE0}
 mv usr %{buildroot}/
+mv etc %{buildroot}/
 mkdir -p %{buildroot}/usr/share/icons/hicolor/scalable/apps/
 mkdir -p %{buildroot}/usr/share/licenses/nobara-welcome
 wget https://raw.githubusercontent.com/CosmicFusion/cosmo-welcome-glade/main/LICENSE.md -O %{buildroot}/usr/share/licenses/nobara-welcome/LICENSE
