@@ -1,0 +1,2 @@
+#! /bin/bash
+python3 /etc/nobara/scripts/nobara-welcome/nobara-welcome.py
