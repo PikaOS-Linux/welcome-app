@@ -15,13 +15,15 @@ class Application:
         self.df = None
         
         self.builder = Gtk.Builder()
-        self.builder.add_from_file("/etc/nobara/scripts/nobara-welcome/nobara-welcome.glade")
+        self.builder.add_from_file("risiWelcome.ui")
         self.builder.connect_signals(self)
         win = self.builder.get_object("main_Window")
         win.connect("destroy", Gtk.main_quit)
         
         self.window = self.builder.get_object("main_Window")
         self.window.show()
+        
+        
         
         
     ### Start up Switch ###
@@ -76,7 +78,7 @@ class Application:
     ### DRIVER ENTRIES ###
     
     ### NVIDIA ###
-    def enter_nvidia(self, widget):
+    def     enter_nvidia(self, widget):
         os.system("/etc/nobara/scripts/nobara-welcome/nvidia.sh")
     ### AMD PRO ###
     def enter_amd(self, widget):

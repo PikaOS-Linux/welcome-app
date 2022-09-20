@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkApplicationWindow" id="window">
+    <property name="width-request">-1</property>
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkStackSidebar" id="sidebar">
+            <property name="width-request">125</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="stack">Stack</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStack" id="Stack">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkBox" id="WelcomePage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="valign">start</property>
+                    <property name="margin-start">15</property>
+                    <property name="margin-end">15</property>
+                    <property name="margin-top">15</property>
+                    <property name="label" translatable="yes">&lt;big&gt;Welcome to &lt;b&gt;risiOS 36.1.1&lt;/b&gt;&lt;/big&gt;
+&lt;b&gt;The Big Beta&lt;/b&gt;</property>
+                    <property name="use-markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="valign">start</property>
+                    <property name="margin-start">15</property>
+                    <property name="margin-end">15</property>
+                    <property name="margin-top">15</property>
+                    <property name="margin-bottom">15</property>
+                    <property name="pixel-size">192</property>
+                    <property name="icon-name">fedora-logo-icon</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="valign">center</property>
+                    <property name="margin-start">15</property>
+                    <property name="margin-end">15</property>
+                    <property name="margin-bottom">15</property>
+                    <property name="label" translatable="yes">Thank you for choosing risiOS!
+This welcome screen will help guide you through the
+available resources for risiOS as well as help you setup 
+your computer to your likings.
+
+Enjoy!
+&lt;3 - the risiOS team</property>
+                    <property name="wrap">True</property>
+                    <property name="yalign">0</property>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">False</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">welcome</property>
+                <property name="title" translatable="yes">Welcome</property>
+                <property name="icon-name">go-home-symbolic</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <property name="shadow-type">in</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkListBox" id="stepsBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="selection-mode">none</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">firststeps</property>
+                <property name="title" translatable="yes">First Steps</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="shadow-type">in</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkListBox" id="quicksetupBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="selection-mode">none</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">quicksetup</property>
+                <property name="title" translatable="yes">Quick Setup</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <property name="shadow-type">in</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkListBox" id="communityBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="selection-mode">none</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">community</property>
+                <property name="title" translatable="yes">Join The Community</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <property name="shadow-type">in</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkListBox" id="contributeBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="selection-mode">none</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">contribute</property>
+                <property name="title" translatable="yes">Contribute to risiOS</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="title" translatable="yes">risiWelcome</property>
+        <property name="subtitle" translatable="yes">Welcome to the next generation of Linux</property>
+        <property name="show-close-button">True</property>
+        <child>
+          <object class="GtkCheckButton" id="startup_check">
+            <property name="label" translatable="yes">Show on startup</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">False</property>
+            <property name="draw-indicator">True</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
