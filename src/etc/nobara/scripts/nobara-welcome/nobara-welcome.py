@@ -15,7 +15,7 @@ class Application:
         self.df = None
         
         self.builder = Gtk.Builder()
-        self.builder.add_from_file("risiWelcome.ui")
+        self.builder.add_from_file("nobara-welcome.glade")
         self.builder.connect_signals(self)
         win = self.builder.get_object("main_Window")
         win.connect("destroy", Gtk.main_quit)
