@@ -381,7 +381,7 @@ many more features and improvements.
                               <object class="GtkLabel" id="software_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install more apps from the &lt;b&gt;software center&lt;/b&gt; &lt;/big&gt; 
+                                <property name="label" translatable="yes">&lt;big&gt;Install more apps from the &lt;b&gt;Software Center&lt;/b&gt; &lt;/big&gt; 
 Install and update software, using Gnome Software on GNOME, and Discover on KDE. 
 </property>
                                 <property name="use-markup">True</property>
@@ -440,9 +440,9 @@ Install and update software, using Gnome Software on GNOME, and Discover on KDE.
                               <object class="GtkLabel" id="webapps_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;webapps&lt;/b&gt;&lt;/big&gt; 
-Install webapps with your favourite web browser as a backend,
-Turn your favourite webapps into native desktop class
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;WebApps&lt;/b&gt;&lt;/big&gt; 
+Install WebApps with your favourite web browser as a backend,
+Turn your favourite WebApps into native desktop class
 applications.
 </property>
                                 <property name="use-markup">True</property>
