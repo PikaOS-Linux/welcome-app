@@ -261,7 +261,7 @@ Installs proprietary AMD® drivers that add a few neat features not found in the
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;ROCm&lt;/b&gt; drivers&lt;/big&gt; 
-Installs the Radeon Open Compute drivers (AMD's CUDA) that adds high performace APIs and 
+Installs the Radeon Open Compute drivers (AMD's CUDA) that adds high performance APIs and 
 features, like OpenCL, HIP (Used by blender) and many more APIs. 
 (RX 4XX till latest cards)
 </property>
@@ -322,8 +322,8 @@ features, like OpenCL, HIP (Used by blender) and many more APIs.
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;XONE&lt;/b&gt; drivers&lt;/big&gt; 
-Installs the XONE and the XPADNEO drivers that  provide  Xbox one and Xbox series controllers 
-many more features and improvements. 
+Installs the XONE and the XPADNEO drivers that provide Xbox one and Xbox series controllers 
+with many features and improvements. 
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0.05999999865889549</property>
@@ -441,7 +441,7 @@ Install and update software, using Gnome Software on GNOME, and Discover on KDE.
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;WebApps&lt;/b&gt;&lt;/big&gt; 
-Install WebApps with your favourite web browser as a backend,
+Install WebApps with your favourite web browser as a backend.
 Turn your favourite WebApps into native desktop applications.
 </property>
                                 <property name="use-markup">True</property>
