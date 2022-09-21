@@ -79,7 +79,7 @@ class Application:
     
     ### NVIDIA ###
     def     enter_nvidia(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/nvidia.sh")
+        os.system("/usr/bin/hwcheck")
     ### AMD PRO ###
     def enter_amd(self, widget):
         os.system("/usr/bin/nobara-amdgpu-config")
