@@ -21,6 +21,7 @@ Requires:	nobara-login
 Requires:	nobara-login-config
 Requires:	nobara-controller-config
 Requires:	nobara-amdgpu-config
+Requires:	webapp-manager
 
 %install
 tar -xf %{SOURCE0}
