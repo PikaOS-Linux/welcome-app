@@ -581,7 +581,7 @@ Turn your favourite WebApps into native desktop applications.
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <property name="title" translatable="yes">Nobara Welcome</property>
-        <property name="subtitle" translatable="yes">Welcome to  the Nobara Project</property>
+        <property name="subtitle" translatable="yes">Welcome to the The Nobara Linux Project</property>
         <property name="show-close-button">True</property>
         <child>
           <object class="GtkCheckButton" id="startup_switch">
