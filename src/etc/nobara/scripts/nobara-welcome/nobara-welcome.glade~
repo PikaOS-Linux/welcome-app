@@ -140,7 +140,7 @@ Enjoy!
                               <object class="GtkLabel" id="nvidia_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install Proprietary &lt;b&gt;NVIDIA®&lt;/b&gt; Drivers&lt;/big&gt; 
+                                <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;NVIDIA®&lt;/b&gt; drivers&lt;/big&gt; 
 Installs proprietary NVIDIA® drivers that significantly increase performance for nvidia cards. 
 (GTX 9XX till latest cards)
 </property>
@@ -200,7 +200,7 @@ Installs proprietary NVIDIA® drivers that significantly increase performance fo
                               <object class="GtkLabel" id="amd_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install Proprietary &lt;b&gt;AMD®&lt;/b&gt; Drivers&lt;/big&gt; 
+                                <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;AMD®&lt;/b&gt; drivers&lt;/big&gt; 
 Installs proprietary AMD® drivers that add a few neat features, not found in the FOSS Stack. 
 (RX 4XX till latest cards)
 </property>
@@ -260,9 +260,9 @@ Installs proprietary AMD® drivers that add a few neat features, not found in th
                               <object class="GtkLabel" id="rocm_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install The &lt;b&gt;ROCm®&lt;/b&gt; Drivers&lt;/big&gt; 
+                                <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;ROCm&lt;/b&gt; drivers&lt;/big&gt; 
 Installs the Radeon Open Compute drivers (AMD's CUDA) that add high performace APIs and 
-features, like OpenCL, HIP (Used by blender) and much more. 
+features, like OpenCL, HIP (Used by blender) and many more APIs. 
 (RX 4XX till latest cards)
 </property>
                                 <property name="use-markup">True</property>
@@ -321,7 +321,7 @@ features, like OpenCL, HIP (Used by blender) and much more.
                               <object class="GtkLabel" id="xone_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install The &lt;b&gt;XONE&lt;/b&gt; Drivers&lt;/big&gt; 
+                                <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;XONE&lt;/b&gt; drivers&lt;/big&gt; 
 Installs the XONE and the XPADNEO drivers that  provide  Xbox one and Xbox series * controllers 
 many more features and improvements. 
 </property>
@@ -381,8 +381,8 @@ many more features and improvements.
                               <object class="GtkLabel" id="software_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install More Apps From The App Store&lt;/big&gt; 
-Install and update software , using GNOME SOFTWARE on GNOME, and Discover on KDE. 
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;/b&gt;more apps&lt;/b&gt; from the software center&lt;/big&gt; 
+Install and update software, using Gnome Software on GNOME, and Discover on KDE. 
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0.05999999865889549</property>
@@ -440,8 +440,8 @@ Install and update software , using GNOME SOFTWARE on GNOME, and Discover on KDE
                               <object class="GtkLabel" id="webapps_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;WebApps®&lt;/b&gt;&lt;/big&gt; 
-Install WebApps with your favourite web broweser as a backend,
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;webapps&lt;/b&gt;&lt;/big&gt; 
+Install webapps with your favourite web browser as a backend,
 Turn your favourite webapps into native desktop class
 applications.
 </property>
