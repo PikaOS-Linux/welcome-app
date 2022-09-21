@@ -261,8 +261,8 @@ Installs proprietary AMD® drivers that add a few neat features not found in the
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;ROCm&lt;/b&gt; drivers&lt;/big&gt; 
-Installs the Radeon Open Compute drivers (AMD's CUDA) that adds high performance APIs and 
-features, like OpenCL, HIP (Used by blender) and many more APIs. 
+Installs the Radeon Open Compute drivers (AMD's CUDA Drivers) that 
+add high performance APIs and features, like OpenCL, HIP (Used by blender) and many more APIs. 
 (RX 4XX till latest cards)
 </property>
                                 <property name="use-markup">True</property>
