@@ -79,7 +79,7 @@ class Application:
     def enter_apps(self, widget):
         os.system("/etc/nobara/scripts/nobara-welcome/apps.sh")
     ### WEBAPPS ###
-    def enter_apps(self, widget):
+    def enter_webapps(self, widget):
         os.system("/usr/bin/webapp-manager")
 
     ##### QUICK SETUP ENTRIES #####
