@@ -60,6 +60,6 @@ Name[zh_HK]=歡迎使用 Nobara
 Name[zh_TW]=歡迎使用 Nobara
 Name=Welcome to Nobara
 Exec=/usr/bin/nobara-welcome
-Icon=Nobara-welcome
+Icon=fedora-logo-icon
 Terminal=false
 Type=Application
