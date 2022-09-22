@@ -514,7 +514,6 @@ native desktop applications.
                           <object class="GtkBox" id="dm_box">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="spacing">10</property>
                             <child>
                               <object class="GtkImage" id="dm_logo">
                                 <property name="visible">True</property>
@@ -536,7 +535,7 @@ native desktop applications.
 A login manager is what you see before getting into the Desktop Environment.
 </property>
                                 <property name="use-markup">True</property>
-                                <property name="xalign">0</property>
+                                <property name="xalign">0.05999999865889549</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -574,7 +573,6 @@ A login manager is what you see before getting into the Desktop Environment.
                           <object class="GtkBox" id="layout_box">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="spacing">10</property>
                             <child>
                               <object class="GtkImage" id="layout_logo">
                                 <property name="visible">True</property>
@@ -596,7 +594,7 @@ A login manager is what you see before getting into the Desktop Environment.
 Choose the overall layout of your Desktop Environment.
 </property>
                                 <property name="use-markup">True</property>
-                                <property name="xalign">0</property>
+                                <property name="xalign">0.019999999552965164</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -634,7 +632,6 @@ Choose the overall layout of your Desktop Environment.
                           <object class="GtkBox" id="theme_box">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="spacing">10</property>
                             <child>
                               <object class="GtkImage" id="theme_logo">
                                 <property name="visible">True</property>
@@ -656,7 +653,7 @@ Choose the overall layout of your Desktop Environment.
 Themes are what the overall look and feel of your Desktop Environment is. Choose wisely.
 </property>
                                 <property name="use-markup">True</property>
-                                <property name="xalign">0</property>
+                                <property name="xalign">0.05999999865889549</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -694,7 +691,6 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
                           <object class="GtkBox" id="pling_box">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="spacing">10</property>
                             <child>
                               <object class="GtkImage" id="pling_logo">
                                 <property name="visible">True</property>
@@ -716,7 +712,7 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
 Download new themes and icon themes for your Desktop Environment.
 </property>
                                 <property name="use-markup">True</property>
-                                <property name="xalign">0</property>
+                                <property name="xalign">0.029999999329447746</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
