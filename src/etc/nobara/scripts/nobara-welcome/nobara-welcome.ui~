@@ -143,7 +143,7 @@ Enjoy!
                                 <property name="can-focus">False</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;NVIDIA®&lt;/b&gt; drivers&lt;/big&gt; 
 Installs proprietary NVIDIA® drivers that significantly increase performance for NVIDIA cards. 
-(GTX 9XX and newer)
+(GTX 9XX till latest cards)
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -204,7 +204,7 @@ Installs proprietary NVIDIA® drivers that significantly increase performance fo
                                 <property name="can-focus">False</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;AMD®&lt;/b&gt; drivers&lt;/big&gt; 
 Installs proprietary AMD® drivers that add a few neat features not found in the FOSS Stack. 
-(RX 4XX and newer)
+(RX 4XX till latest cards)
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -266,7 +266,7 @@ Installs proprietary AMD® drivers that add a few neat features not found in the
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;ROCm&lt;/b&gt; drivers&lt;/big&gt; 
 Installs the Radeon Open Compute drivers (AMD's CUDA Drivers) that add high performance 
 APIs and features, like OpenCL, HIP (Used by Blender) and many more APIs. 
-(RX 4XX and newer)
+(RX 4XX till latest cards)
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
