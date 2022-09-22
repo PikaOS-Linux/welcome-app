@@ -712,7 +712,7 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
                               <object class="GtkLabel" id="pling_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Get &lt;b&gt;New&lt;/b&gt; Themes&lt;/big&gt; 
+                                <property name="label" translatable="yes">&lt;big&gt;Get &lt;b&gt;New&lt;/b&gt; themes and icons&lt;/big&gt; 
 Download new themes and icon themes for your Desktop Environment.
 </property>
                                 <property name="use-markup">True</property>
