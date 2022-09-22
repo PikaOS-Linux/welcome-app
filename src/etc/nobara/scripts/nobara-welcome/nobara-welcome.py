@@ -15,7 +15,7 @@ class Application:
         self.df = None
         
         self.builder = Gtk.Builder()
-        self.builder.add_from_file("nobara-welcome.ui")
+        self.builder.add_from_file("/etc/nobara/scripts/nobara-welcome/nobara-welcome.ui")
         self.builder.connect_signals(self)
         win = self.builder.get_object("main_Window")
         win.connect("destroy", Gtk.main_quit)
@@ -56,37 +56,60 @@ class Application:
     def close_driver(self, widget, event):
         return self.builder.get_object("driver_Window").hide_on_delete()
     
-    ### Simple Entries
+    ##### FIRST STEPS ENTRIES #####
     
-    ### APP WINDOW ###
-    def enter_apps(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/apps.sh")
-    ### DOC WINDOW ###
-    def enter_doc(self, widget):
-        os.system("xdg-open https://nobaraproject.org/docs/")
-    ### PROB WINDOW ###
-    def enter_prob(self, widget):
-        os.system("xdg-open https://nobaraproject.org/docs/upgrade-troubleshooting/")
-    ### WEBSITE WINDOW ###
-    def enter_website(self, widget):
-        os.system("xdg-open https://nobaraproject.org/")
-    
-    
-    
-    ### LOOK ENTRIES ###
-    
-    ### DRIVER ENTRIES ###
+    #### DRIVER ENTRIES ####
     
     ### NVIDIA ###
-    def     enter_nvidia(self, widget):
-        os.system("/usr/bin/hwcheck")
+    def enter_nvidia(self, widget):
+        os.system("/etc/nobara/scripts/nobara-welcome/nvidia.sh")
     ### AMD PRO ###
     def enter_amd(self, widget):
         os.system("/usr/bin/nobara-amdgpu-config")
     ### ROCm ###
     def enter_rocm(self, widget):
         os.system("/etc/nobara/scripts/nobara-welcome/rocm.sh")
+    ### XONE ###
+    def enter_xone(self, widget):
+        os.system("/usr/bin/nobara-controller-config")
+   
+    #### Apps Entries ####
+   
+    ### APPS ###
+    def enter_apps(self, widget):
+        os.system("/etc/nobara/scripts/nobara-welcome/apps.sh")
+    ### WEBAPPS ###
+    def enter_apps(self, widget):
+        os.system("/usr/bin/webapp-manager")
+
+    ##### QUICK SETUP ENTRIES #####
     
+    ### LOGIN MANAGER ###
+    def enter_dm(self, widget):
+        os.system("/usr/bin/nobara-login-config")
+    ### LAYOUTS ###
+    def enter_layout(self, widget):
+        os.system("z/etc/nobara/scripts/nobara-welcome/layout.sh")
+    ### THEMES ###
+    def enter_theme(self, widget):
+        os.system("/etc/nobara/scripts/nobara-welcome/theme.sh")
+    ### PLING ###
+    def enter_pling(self, widget):
+        os.system("xdg-open https://pling.com/")
+    
+    ### ### DOC WINDOW ###
+    ### def enter_doc(self, widget):
+    ###    os.system("xdg-open https://nobaraproject.org/docs/")
+    ### PROB WINDOW ###
+    ### def enter_prob(self, widget):
+    ###    os.system("xdg-open https://nobaraproject.org/docs/upgrade-troubleshooting/")
+    ### WEBSITE WINDOW ###
+    ### def enter_website(self, widget):
+    ###    os.system("xdg-open https://nobaraproject.org/")
+    
+    
+    
+
     
 Application()
 Gtk.main()
