@@ -537,6 +537,7 @@ native desktop applications.
                               <object class="GtkImage" id="dm_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">user</property>
                               </object>
@@ -585,6 +586,7 @@ A login manager is what you see before getting into the Desktop Environment.
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">0</property>
                           </packing>
                         </child>
@@ -597,6 +599,7 @@ A login manager is what you see before getting into the Desktop Environment.
                               <object class="GtkImage" id="layout_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">desktop</property>
                               </object>
@@ -645,6 +648,7 @@ Choose the overall layout of your Desktop Environment.
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">1</property>
                           </packing>
                         </child>
@@ -657,6 +661,7 @@ Choose the overall layout of your Desktop Environment.
                               <object class="GtkImage" id="theme_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">applications-graphics</property>
                               </object>
@@ -705,6 +710,7 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">2</property>
                           </packing>
                         </child>
@@ -717,6 +723,7 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
                               <object class="GtkImage" id="pling_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">download</property>
                               </object>
@@ -765,6 +772,7 @@ Download new themes and icon themes for your Desktop Environment.
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">3</property>
                           </packing>
                         </child>
