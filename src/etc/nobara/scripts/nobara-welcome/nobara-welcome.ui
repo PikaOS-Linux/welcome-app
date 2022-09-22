@@ -128,6 +128,7 @@ Enjoy!
                               <object class="GtkImage" id="nvidia_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">nvidia</property>
                               </object>
@@ -192,6 +193,7 @@ Installs proprietary NVIDIA® drivers that significantly increase performance fo
                               <object class="GtkImage" id="amd_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">amd</property>
                               </object>
@@ -254,6 +256,7 @@ Installs proprietary AMD® drivers that add a few neat features not found in the
                               <object class="GtkImage" id="rocm_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">amd</property>
                               </object>
@@ -317,6 +320,7 @@ APIs and features, like OpenCL, HIP (Used by Blender) and many more APIs.
                               <object class="GtkImage" id="xone_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">input-gaming</property>
                               </object>
@@ -380,6 +384,7 @@ with many features and improvements.
                               <object class="GtkImage" id="software_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">software</property>
                               </object>
@@ -443,6 +448,7 @@ Install and update software, using Gnome Software on GNOME, and Discover on KDE.
                               <object class="GtkImage" id="webapps_logo">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="icon-name">applications-internet</property>
                               </object>
