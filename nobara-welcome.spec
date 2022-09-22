@@ -27,7 +27,6 @@ Requires:	webapp-manager
 tar -xf %{SOURCE0}
 mv usr %{buildroot}/
 mv etc %{buildroot}/
-mkdir -p %{buildroot}/usr/share/icons/hicolor/scalable/apps/
 mkdir -p %{buildroot}/usr/share/licenses/nobara-welcome
 wget https://raw.githubusercontent.com/CosmicFusion/cosmo-welcome-glade/main/LICENSE.md -O %{buildroot}/usr/share/licenses/nobara-welcome/LICENSE
 
@@ -42,4 +41,5 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0644, root, root) "/etc/nobara/scripts/nobara-welcome/nobara-welcome.ui"
 %attr(0644, root, root) "/usr/share/licenses/nobara-welcome/LICENSE"
 %attr(0644, root, root) "/usr/share/applications/nobara-welcome.desktop" 
-#%attr(0644, root, root) "/usr/share/icons/hicolor/scalable/apps/nobara-welcome.svg"
+%attr(0644, root, root) "/usr/share/icons/hicolor/scalable/apps/amd.svg"
+%attr(0644, root, root) "/usr/share/icons/hicolor/scalable/apps/nvidia.svg"
