@@ -144,9 +144,11 @@ Enjoy!
                                 <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;NVIDIA®&lt;/b&gt; drivers&lt;/big&gt; 
 Installs proprietary NVIDIA® drivers that significantly increase performance for NVIDIA cards. 
 (GTX 9XX and newer)
+
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
+                                <property name="yalign">0.5</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -177,6 +179,7 @@ Installs proprietary NVIDIA® drivers that significantly increase performance fo
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">0</property>
                           </packing>
                         </child>
@@ -238,6 +241,7 @@ Installs proprietary AMD® drivers that add a few neat features not found in the
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">1</property>
                           </packing>
                         </child>
@@ -300,6 +304,7 @@ APIs and features, like OpenCL, HIP (Used by Blender) and many more APIs.
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">2</property>
                           </packing>
                         </child>
@@ -328,6 +333,7 @@ APIs and features, like OpenCL, HIP (Used by Blender) and many more APIs.
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;XONE&lt;/b&gt; drivers&lt;/big&gt; 
 Installs the XONE and the XPADNEO drivers that provide Xbox One and Xbox Series controllers 
 with many features and improvements. 
+
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -361,6 +367,7 @@ with many features and improvements.
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">3</property>
                           </packing>
                         </child>
@@ -388,6 +395,8 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install more apps from the &lt;b&gt;Software Center&lt;/b&gt; &lt;/big&gt; 
 Install and update software, using Gnome Software on GNOME, and Discover on KDE. 
+
+
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -421,6 +430,7 @@ Install and update software, using Gnome Software on GNOME, and Discover on KDE.
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">4</property>
                           </packing>
                         </child>
@@ -449,6 +459,7 @@ Install and update software, using Gnome Software on GNOME, and Discover on KDE.
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;WebApps&lt;/b&gt;&lt;/big&gt; 
 Install WebApps with your favourite web browser as a backend. Turn your favourite WebApps into 
 native desktop applications.
+
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -482,6 +493,7 @@ native desktop applications.
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">5</property>
                           </packing>
                         </child>
