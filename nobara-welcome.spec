@@ -41,5 +41,5 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0644, root, root) "/etc/nobara/scripts/nobara-welcome/nobara-welcome.ui"
 %attr(0644, root, root) "/usr/share/licenses/nobara-welcome/LICENSE"
 %attr(0644, root, root) "/usr/share/applications/nobara-welcome.desktop" 
-%attr(0644, root, root) "/usr/share/icons/hicolor/scalable/apps/amd.svg"
-%attr(0644, root, root) "/usr/share/icons/hicolor/scalable/apps/nvidia.svg"
+%attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/amd.svg"
+%attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/nvidia.svg"
