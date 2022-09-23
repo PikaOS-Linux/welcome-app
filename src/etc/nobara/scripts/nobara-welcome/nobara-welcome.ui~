@@ -1089,10 +1089,10 @@ Download new themes and icon themes for your Desktop Environment.
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
+                                <property name="margin-right">10</property>
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <signal name="pressed" handler="enter_youtube" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
