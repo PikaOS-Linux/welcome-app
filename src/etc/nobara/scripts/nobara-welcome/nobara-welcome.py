@@ -36,7 +36,7 @@ class Application:
             startup_switch.set_active(True)
     
     def on_startup_switch(self, switch, state):
-        if switch.get_active():
+        if switch.get_active() == True :
             os.system("cp /usr/share/applications/nobara-welcome.desktop ~/.config/autostart/nobara-welcome.desktop && echo 'X-GNOME-Autostart-enabled=true' >> ~/.config/autostart/nobara-welcome.desktop ")
         else:
             os.system("rm ~/.config/autostart/nobara-welcome.desktop")
