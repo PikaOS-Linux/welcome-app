@@ -89,23 +89,31 @@ class Application:
         os.system("/usr/bin/nobara-login-config")
     ### LAYOUTS ###
     def enter_layout(self, widget):
-        os.system("z/etc/nobara/scripts/nobara-welcome/layout.sh")
+        os.system("/usr/bin/nobara-gnome-layouts")
     ### THEMES ###
     def enter_theme(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/theme.sh")
+        os.system("/usr/bin/gnome-tweaks")
     ### PLING ###
     def enter_pling(self, widget):
         os.system("xdg-open https://pling.com/")
     
-    ### ### DOC WINDOW ###
-    ### def enter_doc(self, widget):
-    ###    os.system("xdg-open https://nobaraproject.org/docs/")
-    ### PROB WINDOW ###
-    ### def enter_prob(self, widget):
-    ###    os.system("xdg-open https://nobaraproject.org/docs/upgrade-troubleshooting/")
-    ### WEBSITE WINDOW ###
-    ### def enter_website(self, widget):
-    ###    os.system("xdg-open https://nobaraproject.org/")
+    #### COMMUNITY ENTRIES ####
+    
+    ### discord ###
+    def enter_discord(self, widget):
+        os.system("xdg-open https://discord.gg/6y3BdzC")
+    ### reddit ###
+    def enter_reddit(self, widget):
+        os.system("xdg-open https://www.reddit.com/r/NobaraProject/")
+    ### blog ###
+    def enter_blog(self, widget):
+        os.system("xdg-open https://www.gloriouseggroll.tv/")
+    ### twitter ###
+    def enter_blog(self, widget):
+        os.system("xdg-open https://twitter.com/GloriousEggroll/")
+    ### youtube ###
+    def enter_youtube(self, widget):
+        os.system("xdg-open https://www.youtube.com/channel/UCUMSHXWczvxHy9e8silnVNw")
     
     
     

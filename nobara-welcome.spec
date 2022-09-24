@@ -1,7 +1,7 @@
 BuildArch:              noarch
 
 Name:          nobara-welcome
-Version:       0.3
+Version:       0.5
 Release:       1%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
@@ -20,6 +20,7 @@ Requires:	gtk3
 Requires:	nobara-login
 Requires:	nobara-login-config
 Requires:	nobara-controller-config
+Requires:	nobara-gnome-layouts
 Requires:	nobara-amdgpu-config
 Requires:	webapp-manager
 
