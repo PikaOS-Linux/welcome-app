@@ -23,6 +23,16 @@ class Application:
         self.window = self.builder.get_object("main_Window")
         self.window.show()
         
+        theme_box = self.builder.get_object("theme_box")
+        layout_box = self.builder.get_object("layout_box")
+        
+        desktop_output = subprocess.run(["echo $XDG_SESSION_DESKTOP | grep gnome"], shell=True)
+        if (desktop_output.returncode) != 0:
+            theme_box.hide()
+            layout_box.hide()
+        
+
+        
         
         
         
