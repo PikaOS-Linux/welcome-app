@@ -114,9 +114,24 @@ class Application:
     ### youtube ###
     def enter_youtube(self, widget):
         os.system("xdg-open https://www.youtube.com/channel/UCUMSHXWczvxHy9e8silnVNw")
+        
+    #### Contribute ENTRIES ####
     
-    
-    
+    ### patreon ###
+    def enter_patreon(self, widget):
+        os.system("xdg-open https://www.patreon.com/gloriouseggroll")
+    ### design ###
+    def enter_design(self, widget):
+        os.system("xdg-open https://discord.com/channels/110175050006577152/1015154123114549309")
+    ### GE GITLAB ###
+    def enter_ge_gitlab(self, widget):
+        os.system("xdg-open https://gitlab.com/GloriousEggroll")
+    ### GE GITHUB ###
+    def enter_ge_github(self, widget):
+        os.system("xdg-open https://github.com/GloriousEggroll")
+    ### COSMO GITHUB ###
+    def enter_cosmo_github(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")
 
     
 Application()
