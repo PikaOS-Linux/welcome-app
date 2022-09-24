@@ -109,7 +109,7 @@ class Application:
     def enter_blog(self, widget):
         os.system("xdg-open https://www.gloriouseggroll.tv/")
     ### twitter ###
-    def enter_blog(self, widget):
+    def enter_twitter(self, widget):
         os.system("xdg-open https://twitter.com/GloriousEggroll/")
     ### youtube ###
     def enter_youtube(self, widget):
