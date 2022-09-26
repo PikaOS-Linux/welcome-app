@@ -2,7 +2,7 @@
 (
 echo "1"
 echo "# Syncing." ; sleep 2
-pkexec env PATH=$PATH DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY LOGNAME=$LOGNAME bash -c "sudo dnf distro-sync -y --refresh && sudo dnf update --refresh && touch /tmp/sync.success & chown $LOGNAME:$LOGNAME /tmp/sync.success"
+pkexec env PATH=$PATH DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY LOGNAME=$LOGNAME bash -c "sudo dnf distro-sync -y --refresh && sudo dnf update --refresh && touch /tmp/sync.success && chown $LOGNAME:$LOGNAME /tmp/sync.success"
 echo "# Done!" ; sleep 2
 echo "100"
 ) | 
