@@ -32,81 +32,109 @@
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <child>
-              <object class="GtkBox" id="WelcomePage">
+              <object class="GtkScrolledWindow" id="Welcome_Scroll">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="halign">center</property>
-                <property name="valign">center</property>
-                <property name="hexpand">True</property>
-                <property name="vexpand">True</property>
-                <property name="orientation">vertical</property>
+                <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <property name="shadow-type">in</property>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkViewport">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="valign">start</property>
-                    <property name="margin-start">15</property>
-                    <property name="margin-end">15</property>
-                    <property name="margin-top">15</property>
-                    <property name="label" translatable="yes">&lt;big&gt;Welcome to &lt;b&gt;Nobara Linux 36&lt;/b&gt;&lt;/big&gt;</property>
-                    <property name="use-markup">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkImage">
-                    <property name="visible">True</property>
-                    <property name="can-focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="valign">start</property>
-                    <property name="margin-start">15</property>
-                    <property name="margin-end">15</property>
-                    <property name="margin-top">15</property>
-                    <property name="margin-bottom">15</property>
-                    <property name="pixel-size">192</property>
-                    <property name="icon-name">fedora-logo-icon</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can-focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="valign">center</property>
-                    <property name="margin-start">15</property>
-                    <property name="margin-end">15</property>
-                    <property name="margin-bottom">15</property>
-                    <property name="label" translatable="yes">Thank you for choosing Nobara!
+                    <child>
+                      <object class="GtkBox" id="WelcomePage">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkBox" id="Welcome_Main_box">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="hexpand">True</property>
+                            <property name="vexpand">True</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="margin-left">15</property>
+                                <property name="margin-right">15</property>
+                                <property name="margin-start">15</property>
+                                <property name="margin-end">15</property>
+                                <property name="margin-top">15</property>
+                                <property name="hexpand">True</property>
+                                <property name="vexpand">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Welcome to &lt;b&gt;Nobara Linux 36&lt;/b&gt;&lt;/big&gt;</property>
+                                <property name="use-markup">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="margin-top">15</property>
+                                <property name="margin-bottom">15</property>
+                                <property name="hexpand">True</property>
+                                <property name="vexpand">True</property>
+                                <property name="pixel-size">192</property>
+                                <property name="icon-name">fedora-logo-icon</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="hexpand">True</property>
+                            <property name="vexpand">True</property>
+                            <property name="label" translatable="yes">Thank you for choosing Nobara!
 This welcome screen will help guide you through the
 available resources for Nobara as well as help you setup 
 your computer to your likings.
 
 Enjoy!
 &lt;3 - the Nobara &amp; risiOS team</property>
-                    <property name="wrap">True</property>
-                    <property name="yalign">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
                   </object>
-                  <packing>
-                    <property name="expand">True</property>
-                    <property name="fill">False</property>
-                    <property name="position">2</property>
-                  </packing>
                 </child>
               </object>
               <packing>
-                <property name="name">welcome</property>
+                <property name="name">WelcomePage</property>
                 <property name="title" translatable="yes">Welcome</property>
-                <property name="icon-name">go-home-symbolic</property>
               </packing>
             </child>
             <child>
@@ -508,13 +536,16 @@ native desktop applications.
                             <property name="position">5</property>
                           </packing>
                         </child>
+                        <child>
+                          <placeholder/>
+                        </child>
                       </object>
                     </child>
                   </object>
                 </child>
               </object>
               <packing>
-                <property name="name">firststeps</property>
+                <property name="name">FirstStepsPage</property>
                 <property name="title" translatable="yes">First Steps</property>
                 <property name="position">1</property>
               </packing>
@@ -571,6 +602,7 @@ A login manager is what you see before getting into the Desktop Environment.
                             <child>
                               <object class="GtkButton" id="dm_button">
                                 <property name="label" translatable="yes">Launch</property>
+                                <property name="name">000</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">True</property>
@@ -793,9 +825,217 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
                 </child>
               </object>
               <packing>
-                <property name="name">quicksetup</property>
+                <property name="name">QuickSetupPage</property>
                 <property name="title" translatable="yes">Quick Setup</property>
                 <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="troubleshoot_Scroll">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="shadow-type">in</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkBox" id="troubleshoot-main_box">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkBox" id="dm_box1">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="GtkImage" id="dm_logo1">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="icon-name">user</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="dm_text1">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Login Manager&lt;/b&gt;&lt;/big&gt; 
+A login manager is what you see before getting into the Desktop Environment.
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="dm_button1">
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="margin-bottom">10</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="pling_box1">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="GtkImage" id="pling_logo1">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="icon-name">download</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="pling_text1">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Get &lt;b&gt;New&lt;/b&gt; themes and icons&lt;/big&gt; 
+Download new themes and icon themes for your Desktop Environment.
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="pling_button1">
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="margin-bottom">10</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="theme_box1">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="GtkImage" id="theme_logo1">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="icon-name">applications-graphics</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="theme_text1">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Theme&lt;/b&gt; your desktop&lt;/big&gt; 
+Themes are what the overall look and feel of your Desktop Environment is. Choose wisely.
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="theme_button1">
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="margin-bottom">10</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">TroubleshootIssuesPage</property>
+                <property name="title" translatable="yes">Troubleshoot Issues</property>
+                <property name="position">3</property>
               </packing>
             </child>
             <child>
@@ -1122,9 +1362,9 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
                 </child>
               </object>
               <packing>
-                <property name="name">community</property>
+                <property name="name">JoinTheCommunityPage</property>
                 <property name="title" translatable="yes">Join The Community</property>
-                <property name="position">3</property>
+                <property name="position">4</property>
               </packing>
             </child>
             <child>
@@ -1448,14 +1688,14 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
                 </child>
               </object>
               <packing>
-                <property name="name">contribute</property>
-                <property name="title" translatable="yes">Contribute to Nobara</property>
-                <property name="position">4</property>
+                <property name="name">ContributeToNobaraPage</property>
+                <property name="title" translatable="yes">Contribute To Nobara</property>
+                <property name="position">5</property>
               </packing>
             </child>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
