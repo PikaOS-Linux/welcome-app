@@ -106,7 +106,20 @@ class Application:
     ### PLING ###
     def enter_pling(self, widget):
         os.system("xdg-open https://pling.com/")
+
+    #### TROUBLESHOOT ENTRIES ####
     
+    ### Troubleshoot ###
+    def enter_troubleshoot(self, widget):
+        os.system("xdg-open https://nobaraproject.org/docs/upgrade-troubleshooting/")
+    ### Docs ###
+    def enter_doc(self, widget):
+        os.system("xdg-open https://nobaraproject.org/docs/")
+    ### Distro Sync ###
+    def enter_distrosync(self, widget):
+        os.system("/etc/nobara/scripts/nobara-welcome/refresh.sh")
+
+
     #### COMMUNITY ENTRIES ####
     
     ### discord ###
