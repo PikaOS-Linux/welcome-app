@@ -1,5 +1,5 @@
 #! /bin/bash
-if echo $XDG_SESSION_DESKTOP | grep KDE ;
+if echo $XDG_SESSION_DESKTOP | grep -i KDE ;
 then
 /usr/bin/plasma-discover
 else
