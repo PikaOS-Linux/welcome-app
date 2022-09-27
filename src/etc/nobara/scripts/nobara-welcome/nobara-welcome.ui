@@ -416,7 +416,7 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">software</property>
+                                <property name="icon-name">media-floppy</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -572,7 +572,7 @@ native desktop applications.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">user</property>
+                                <property name="icon-name">emblem-readonly</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -635,7 +635,7 @@ A login manager is what you see before getting into the Desktop Environment.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">download</property>
+                                <property name="icon-name">emblem-downloads</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
