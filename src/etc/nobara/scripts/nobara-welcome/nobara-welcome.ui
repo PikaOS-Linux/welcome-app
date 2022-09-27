@@ -45,12 +45,13 @@
                       <object class="GtkBox" id="WelcomePage">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin-end">160</property>
                         <property name="orientation">vertical</property>
                         <child>
                           <object class="GtkBox" id="Welcome_Main_box">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>
@@ -61,13 +62,9 @@
                                 <property name="can-focus">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-left">15</property>
-                                <property name="margin-right">15</property>
-                                <property name="margin-start">15</property>
-                                <property name="margin-end">15</property>
                                 <property name="margin-top">15</property>
                                 <property name="hexpand">True</property>
-                                <property name="vexpand">False</property>
+                                <property name="vexpand">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Welcome to &lt;b&gt;Nobara Linux 36&lt;/b&gt;&lt;/big&gt;</property>
                                 <property name="use-markup">True</property>
                               </object>
