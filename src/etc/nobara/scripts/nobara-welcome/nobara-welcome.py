@@ -1,10 +1,12 @@
 import gi
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk
+from gi.repository import Gtk, Gio
 import subprocess
 import os
 import os.path
 from pathlib import Path
+
+settings = Gio.Settings.new("org.nobara.welcome")
 
 class Application:
     
@@ -13,6 +15,7 @@ class Application:
         self.column_names = False
         self.drop_nan = False
         self.df = None
+        application_id="org.nobara.welcome"
         
         self.builder = Gtk.Builder()
         self.builder.add_from_file("/etc/nobara/scripts/nobara-welcome/nobara-welcome.ui")
@@ -40,16 +43,9 @@ class Application:
         
         startup_switch = self.builder.get_object("startup_switch")
         
-        startup_file = Path('/home/' + os.getlogin() + '/.config/autostart/nobara-welcome.desktop')
-        
-        if startup_file.is_file():
-            startup_switch.set_active(True)
+        startup_switch.set_active(settings.get_boolean("startup-show"))
     
-    def on_startup_switch(self, switch, state):
-        if switch.get_active() == True :
-            os.system("mkdir -p ~/.config/autostart/ cp /usr/share/applications/nobara-welcome.desktop ~/.config/autostart/nobara-welcome.desktop && echo 'X-GNOME-Autostart-enabled=true' >> ~/.config/autostart/nobara-welcome.desktop ")
-        else:
-            os.system("rm ~/.config/autostart/nobara-welcome.desktop")
+        startup_switch.connect("toggled", lambda btn: settings.set_boolean("startup-show", btn.get_active()))
     
     ### ENTER LOOK WINDOW ###
     def enter_look(self, widget):

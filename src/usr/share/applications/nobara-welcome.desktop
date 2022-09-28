@@ -63,3 +63,7 @@ Exec=/usr/bin/nobara-welcome
 Icon=fedora-logo-icon
 Terminal=false
 Type=Application
+Terminal=false
+Categories=GNOME;GTK;Utility;
+Keywords=Gnome;GTK;risi;
+AutostartCondition=GSettings org.nobara.welcome startup-show

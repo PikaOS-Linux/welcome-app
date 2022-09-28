@@ -22,6 +22,7 @@ Requires:	nobara-login-config
 Requires:	nobara-controller-config
 Requires:	nobara-amdgpu-config
 Requires:	webapp-manager
+Requires: 	glib2
 
 Suggests:	nobara-gnome-layouts
 Requires:	gnome-tweaks
@@ -37,6 +38,7 @@ wget https://raw.githubusercontent.com/CosmicFusion/cosmo-welcome-glade/main/LIC
 Nobara's Python3 & GTK3 built Welcome App
 %files
 %attr(0755, root, root) "/usr/bin/nobara-welcome"
+%attr(0644, root, root) "/usr/share/glib-2.0/schemas/org.nobara.welcome.gschema.xml"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/apps.sh"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/nobara-welcome.py"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/nvidia.sh"
@@ -47,3 +49,6 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0644, root, root) "/usr/share/applications/nobara-welcome.desktop" 
 %attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/amd.svg"
 %attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/nvidia.svg"
+
+%post
+glib-compile-schemas /usr/share/glib-2.0/schemas/

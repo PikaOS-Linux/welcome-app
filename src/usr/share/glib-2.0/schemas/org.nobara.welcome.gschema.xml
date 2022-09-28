@@ -1,0 +1,11 @@
+<schemalist>
+  <schema path="/org/nobara/welcome/" id="org.nobara.welcome">
+    <key type="b" name="startup-show">
+      <default>true</default>
+      <summary>Show Nobara Welcome on startup.</summary>
+      <description>
+        Show Nobara Welcome on startup.
+      </description>
+    </key>
+  </schema>
+</schemalist>
