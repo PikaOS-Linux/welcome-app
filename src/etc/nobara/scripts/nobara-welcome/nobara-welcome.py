@@ -28,11 +28,13 @@ class Application:
         
         theme_box = self.builder.get_object("theme_box")
         layout_box = self.builder.get_object("layout_box")
+        extension_box = self.builder.get_object("extension_box")
         
         desktop_output = subprocess.run(["echo $XDG_SESSION_DESKTOP | grep -i gnome"], shell=True)
         if (desktop_output.returncode) != 0:
             theme_box.hide()
             layout_box.hide()
+            extension_box.hide()
         
 
         
@@ -102,6 +104,9 @@ class Application:
     ### PLING ###
     def enter_pling(self, widget):
         os.system("xdg-open https://pling.com/")
+    ### EXTENSION ###
+    def enter_extension(self, widget):
+        os.system("/usr/bin/extension-manager")
 
     #### TROUBLESHOOT ENTRIES ####
     

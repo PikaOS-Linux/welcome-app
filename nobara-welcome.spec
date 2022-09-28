@@ -2,7 +2,7 @@ BuildArch:              noarch
 
 Name:          nobara-welcome
 Version:       1.1
-Release:       2%{?dist}
+Release:       3%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
 Summary:       Nobara's Welcome App
@@ -31,6 +31,7 @@ Requires:	gnome-tweaks
 tar -xf %{SOURCE0}
 mv usr %{buildroot}/
 mv etc %{buildroot}/
+mkdir -p %{buildroot}%{_sysconfdir}/xdg/autostart/
 cp %{buildroot}/usr/share/applications/nobara-welcome.desktop %{buildroot}%{_sysconfdir}/xdg/autostart/
 mkdir -p %{buildroot}/usr/share/licenses/nobara-welcome
 wget https://raw.githubusercontent.com/CosmicFusion/cosmo-welcome-glade/main/LICENSE.md -O %{buildroot}/usr/share/licenses/nobara-welcome/LICENSE
