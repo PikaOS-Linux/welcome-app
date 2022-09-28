@@ -65,5 +65,5 @@ Terminal=false
 Type=Application
 Terminal=false
 Categories=GNOME;GTK;Utility;
-Keywords=Gnome;GTK;risi;
+Keywords=Gnome;GTK
 AutostartCondition=GSettings org.nobara.welcome startup-show

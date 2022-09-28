@@ -1,7 +1,7 @@
 BuildArch:              noarch
 
 Name:          nobara-welcome
-Version:       1.0
+Version:       1.1
 Release:       2%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
@@ -31,6 +31,7 @@ Requires:	gnome-tweaks
 tar -xf %{SOURCE0}
 mv usr %{buildroot}/
 mv etc %{buildroot}/
+cp %{buildroot}/usr/share/applications/nobara-welcome.desktop %{buildroot}%{_sysconfdir}/xdg/autostart/
 mkdir -p %{buildroot}/usr/share/licenses/nobara-welcome
 wget https://raw.githubusercontent.com/CosmicFusion/cosmo-welcome-glade/main/LICENSE.md -O %{buildroot}/usr/share/licenses/nobara-welcome/LICENSE
 
@@ -49,6 +50,7 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0644, root, root) "/usr/share/applications/nobara-welcome.desktop" 
 %attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/amd.svg"
 %attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/nvidia.svg"
+%attr(0644, root, root) "%{_sysconfdir}/xdg/autostart/nobara-welcome.desktop"
 
 %post
 glib-compile-schemas /usr/share/glib-2.0/schemas/
