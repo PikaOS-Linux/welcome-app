@@ -1229,186 +1229,6 @@ Add Extensions and improvement to your Desktop Environment.
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox" id="blog_box">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="spacing">10</property>
-                            <child>
-                              <object class="GtkImage" id="blog_logo">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="margin-start">10</property>
-                                <property name="pixel-size">80</property>
-                                <property name="icon-name">emblem-documents</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="blog_text">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;See &lt;b&gt;GloriousEggroll's Blog page&lt;/b&gt;&lt;/big&gt;</property>
-                                <property name="use-markup">True</property>
-                                <property name="xalign">0</property>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="blog_button">
-                                <property name="label" translatable="yes">Open</property>
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <signal name="pressed" handler="enter_blog" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="padding">4</property>
-                            <property name="position">2</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="twitter_box">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="spacing">10</property>
-                            <child>
-                              <object class="GtkImage" id="twitter_logo">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="margin-start">10</property>
-                                <property name="pixel-size">80</property>
-                                <property name="icon-name">twitter</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="twitter_text">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Visit &lt;b&gt;GloriousEggroll's&lt;/b&gt; twitter page&lt;/big&gt;</property>
-                                <property name="use-markup">True</property>
-                                <property name="xalign">0</property>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="twitter_button">
-                                <property name="label" translatable="yes">Open</property>
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <signal name="pressed" handler="enter_twitter" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="padding">4</property>
-                            <property name="position">3</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="youtube_box">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="spacing">10</property>
-                            <child>
-                              <object class="GtkImage" id="youtube_logo">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="margin-start">10</property>
-                                <property name="pixel-size">80</property>
-                                <property name="icon-name">youtube</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="youtube_text">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Checkout &lt;b&gt;GloriousEggroll's&lt;/b&gt; YouTube channel&lt;/big&gt;</property>
-                                <property name="use-markup">True</property>
-                                <property name="xalign">0</property>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="youtube_button">
-                                <property name="label" translatable="yes">Open</property>
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <signal name="pressed" handler="enter_youtube" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="padding">4</property>
-                            <property name="position">4</property>
-                          </packing>
-                        </child>
-                        <child>
                           <placeholder/>
                         </child>
                       </object>
@@ -1460,7 +1280,7 @@ Add Extensions and improvement to your Desktop Environment.
                               <object class="GtkLabel" id="patreon_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Donate to GlouriousEggroll's &lt;b&gt;Patreon&lt;/b&gt;&lt;/big&gt;</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Donate to GloriousEggroll's &lt;b&gt;Patreon&lt;/b&gt;&lt;/big&gt;</property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -1580,7 +1400,7 @@ Add Extensions and improvement to your Desktop Environment.
                               <object class="GtkLabel" id="ge_gitlab_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Contribute code to GlouriousEggroll's &lt;b&gt;Gitlab&lt;/b&gt;&lt;/big&gt;</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Contribute code to GloriousEggroll's &lt;b&gt;Gitlab&lt;/b&gt;&lt;/big&gt;</property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -1640,7 +1460,7 @@ Add Extensions and improvement to your Desktop Environment.
                               <object class="GtkLabel" id="ge_github_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Contribute code to GlouriousEggroll's &lt;b&gt;Github&lt;/b&gt;&lt;/big&gt;</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Contribute code to GloriousEggroll's &lt;b&gt;Github&lt;/b&gt;&lt;/big&gt;</property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>

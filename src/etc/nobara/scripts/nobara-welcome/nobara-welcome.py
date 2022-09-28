@@ -129,15 +129,6 @@ class Application:
     ### reddit ###
     def enter_reddit(self, widget):
         os.system("xdg-open https://www.reddit.com/r/NobaraProject/")
-    ### blog ###
-    def enter_blog(self, widget):
-        os.system("xdg-open https://www.gloriouseggroll.tv/")
-    ### twitter ###
-    def enter_twitter(self, widget):
-        os.system("xdg-open https://twitter.com/GloriousEggroll/")
-    ### youtube ###
-    def enter_youtube(self, widget):
-        os.system("xdg-open https://www.youtube.com/channel/UCUMSHXWczvxHy9e8silnVNw")
         
     #### Contribute ENTRIES ####
     

@@ -1,8 +1,8 @@
 BuildArch:              noarch
 
 Name:          nobara-welcome
-Version:       1.1
-Release:       3%{?dist}
+Version:       1.2
+Release:       1%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
 Summary:       Nobara's Welcome App
@@ -24,6 +24,7 @@ Requires:	nobara-amdgpu-config
 Requires:	webapp-manager
 Requires: 	glib2
 Requires:	gnome-extension-manager
+Requires:	python3-gobject
 
 Suggests:	nobara-gnome-layouts
 Requires:	gnome-tweaks
