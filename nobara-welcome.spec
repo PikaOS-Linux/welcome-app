@@ -23,6 +23,7 @@ Requires:	nobara-controller-config
 Requires:	nobara-amdgpu-config
 Requires:	webapp-manager
 Requires: 	glib2
+Requires:	gnome-extension-manager
 
 Suggests:	nobara-gnome-layouts
 Requires:	gnome-tweaks
