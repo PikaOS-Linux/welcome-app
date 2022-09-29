@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Update & Sync
+Exec="/etc/nobara/scripts/nobara-welcome/xdg-terminal /etc/nobara/scripts/nobara-welcome/refresh.sh"
+Icon=fedora-logo-icon
+Terminal=false
+Type=Application
+Terminal=false
