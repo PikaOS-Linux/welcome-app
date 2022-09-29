@@ -22,7 +22,7 @@ fi
 
 if cat /tmp/sync.success ; then
     if [[ $STATE_CHANGE == true ]]; then
-    	if zenity --question --title='Sync Repos and Packages' --text='Sync complete. For the best result, please reboot your system. Reboot now?' 
+    	if zenity --question --title='Sync Repos and Packages' --text='Sync complete! It is recommended to reboot to apply changes. Reboot now?' 
     	then
     		rm /tmp/sync.success
     		systemctl reboot
@@ -31,7 +31,7 @@ if cat /tmp/sync.success ; then
     	fi
     fi
 else
-	zenity --error --title='Sync Repos and Packages' --text="Failed to sync, make sure you have a stable internet connection."
+	zenity --error --title='Sync Repos and Packages' --text="Failed to sync! make sure you have a stable internet connection."
 	rm /tmp/sync.success
 fi
 rm /tmp/sync.success
