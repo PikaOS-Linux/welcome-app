@@ -48,6 +48,7 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/nvidia.sh"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/rocm.sh"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/refresh.sh"
+%attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/xdg-terminal"
 %attr(0644, root, root) "/etc/nobara/scripts/nobara-welcome/nobara-welcome.ui"
 %attr(0644, root, root) "/usr/share/licenses/nobara-welcome/LICENSE"
 %attr(0644, root, root) "/usr/share/applications/nobara-welcome.desktop" 
