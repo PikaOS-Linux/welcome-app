@@ -17,7 +17,6 @@ install_progress() {
 internet_check
 if [[ $INTERNET == yes ]]; then
 	install_progress
- fi
 fi
 
 if cat /tmp/sync.success ; then
