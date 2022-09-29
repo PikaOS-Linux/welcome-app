@@ -584,9 +584,7 @@ native desktop applications.
                               <object class="GtkLabel" id="dm_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Login Manager&lt;/b&gt;&lt;/big&gt; 
-A login manager is what you see before getting into the Desktop Environment.
-</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Login Manager&lt;/b&gt;&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -647,9 +645,7 @@ A login manager is what you see before getting into the Desktop Environment.
                               <object class="GtkLabel" id="pling_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Get &lt;b&gt;New&lt;/b&gt; themes and icons&lt;/big&gt; 
-Download new themes and icon themes for your Desktop Environment.
-</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Get &lt;b&gt;New&lt;/b&gt; themes and icons&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -709,9 +705,7 @@ Download new themes and icon themes for your Desktop Environment.
                               <object class="GtkLabel" id="layout_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Layout&lt;/b&gt;&lt;/big&gt; 
-Choose the overall layout of your Desktop Environment.
-</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Layout&lt;/b&gt;&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -771,9 +765,7 @@ Choose the overall layout of your Desktop Environment.
                               <object class="GtkLabel" id="theme_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Theme&lt;/b&gt; your desktop&lt;/big&gt; 
-Themes are what the overall look and feel of your Desktop Environment is. Choose wisely.
-</property>
+                                <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Theme&lt;/b&gt; your desktop&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -833,9 +825,7 @@ Themes are what the overall look and feel of your Desktop Environment is. Choose
                               <object class="GtkLabel" id="extension_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Add &lt;b&gt;Extensions&lt;/b&gt; to your desktop&lt;/big&gt; 
-Add Extensions and improvement to your Desktop Environment.
-</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Add &lt;b&gt;Extensions&lt;/b&gt; to your desktop&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -923,8 +913,7 @@ Add Extensions and improvement to your Desktop Environment.
                               <object class="GtkLabel" id="troubleshoot_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;See our &lt;b&gt;Troubleshooting/Issues&lt;/b&gt; Page&lt;/big&gt; 
-</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Visit our &lt;b&gt;Troubleshooting/Issues&lt;/b&gt; Page&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -984,7 +973,7 @@ Add Extensions and improvement to your Desktop Environment.
                               <object class="GtkLabel" id="doc_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;See our &lt;b&gt;Documentation&lt;/b&gt; Page&lt;/big&gt; </property>
+                                <property name="label" translatable="yes">&lt;big&gt; Visit our &lt;b&gt;Documentation&lt;/b&gt; Page&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
@@ -1044,8 +1033,7 @@ Add Extensions and improvement to your Desktop Environment.
                               <object class="GtkLabel" id="distrosync_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Sync &lt;b&gt;Repos and Packages&lt;/b&gt;&lt;/big&gt; 
-</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Sync &lt;b&gt;Repos and Packages&lt;/b&gt;&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>

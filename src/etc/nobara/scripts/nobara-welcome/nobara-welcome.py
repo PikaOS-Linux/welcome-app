@@ -118,7 +118,7 @@ class Application:
         os.system("xdg-open https://nobaraproject.org/docs/")
     ### Distro Sync ###
     def enter_distrosync(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/refresh.sh")
+        os.system("/etc/nobara/scripts/nobara-welcome/xdg-terminal /etc/nobara/scripts/nobara-welcome/refresh.sh")
 
 
     #### COMMUNITY ENTRIES ####
