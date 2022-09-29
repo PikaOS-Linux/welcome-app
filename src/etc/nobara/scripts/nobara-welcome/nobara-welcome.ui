@@ -111,10 +111,10 @@
                             <property name="label" translatable="yes">Thank you for choosing Nobara!
 This welcome screen will help guide you through the
 available resources for Nobara as well as help you setup 
-your computer to your likings.
+your computer to your liking.
 
 Enjoy!
-&lt;3 - the Nobara &amp; risiOS team</property>
+&lt;3 - the Nobara Project team</property>
                             <property name="justify">center</property>
                             <property name="xalign">0</property>
                           </object>
