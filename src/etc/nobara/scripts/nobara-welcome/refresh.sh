@@ -29,7 +29,7 @@ if cat /tmp/sync.success ; then
     	rm /tmp/sync.success
     fi
 else
-zenity --error --text="Failed to sync, make sure you have a stable internet connection."
+	zenity --error --text="Failed to sync, make sure you have a stable internet connection."
+	rm /tmp/sync.success
 fi
-
 rm /tmp/sync.success
