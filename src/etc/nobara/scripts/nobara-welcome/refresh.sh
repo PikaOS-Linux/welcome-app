@@ -22,7 +22,7 @@ fi
 
 if cat /tmp/sync.success ; then
     if [[ $STATE_CHANGE == true ]]; then
-    	if zenity --question --title='Sync Repos and Packages' --text='Sync complete! It is recommended to reboot to apply changes. Reboot now?' 
+    	if zenity --question --title='Sync Repos and Packages' --text='Sync complete! It is recommended to reboot for changes to apply properly. Reboot now?' 
     	then
     		rm /tmp/sync.success
     		systemctl reboot
