@@ -15,6 +15,11 @@ class Application:
     
     ### MAIN WINDOW ###
     def __init__(self):
+        
+        # GIVE DNF FUNCTIONS TIME TO LOAD
+        
+        subprocess.run(["dnf list --installed && dnf list --installed"], shell=True, stdout=subprocess.DEVNULL)
+        
         self.column_names = False
         self.drop_nan = False
         self.df = None
@@ -28,6 +33,7 @@ class Application:
         
         self.window = self.builder.get_object("main_Window")
         self.window.show()
+        
         
         theme_box = self.builder.get_object("theme_box")
         layout_box = self.builder.get_object("layout_box")
@@ -45,6 +51,9 @@ class Application:
         global app_state_refresh
         app_state_refresh = True
         
+        global app_state_done
+        app_state_done = False
+        
         def app_state_refresh_func(): 
             while app_state_refresh == True:
                 codec_install_button = self.builder.get_object("codec_install_button")
@@ -53,7 +62,6 @@ class Application:
                 if (codec_output.returncode) == 0:
                     codec_install_button.set_sensitive(False)
                     codec_remove_button.set_sensitive(True)
-
         
                 blender_install_button = self.builder.get_object("blender_install_button")
                 blender_remove_button = self.builder.get_object("blender_remove_button")
@@ -61,7 +69,6 @@ class Application:
                 if (blender_output.returncode) == 0:
                     blender_install_button.set_sensitive(False)
                     blender_remove_button.set_sensitive(True)
-
 
 
                 discord_install_button = self.builder.get_object("discord_install_button")
@@ -72,14 +79,12 @@ class Application:
                     discord_remove_button.set_sensitive(True)
 
 
-
                 kdenlive_install_button = self.builder.get_object("kdenlive_install_button")
                 kdenlive_remove_button = self.builder.get_object("kdenlive_remove_button")
                 kdenlive_output = subprocess.run(["dnf list --installed | egrep 'kdenlive.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
                 if (kdenlive_output.returncode) == 0:
                     kdenlive_install_button.set_sensitive(False)
                     kdenlive_remove_button.set_sensitive(True)
-
 
                     
                 obs_install_button = self.builder.get_object("obs_install_button")
@@ -88,10 +93,7 @@ class Application:
                 if (obs_output.returncode) == 0:
                     obs_install_button.set_sensitive(False)
                     obs_remove_button.set_sensitive(True)
-
-
-
-                time.sleep(10.0)
+        
         t1 = threading.Thread(target=app_state_refresh_func)
         t1.start()
         
@@ -100,7 +102,6 @@ class Application:
             app_state_refresh = False
         
         win.connect("destroy", app_state_refresh_kill)
-        
         
     ### Start up Switch ###
         

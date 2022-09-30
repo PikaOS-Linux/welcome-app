@@ -71,6 +71,7 @@ applications and provide hardware accelerated video playback/decoding and encodi
                           <object class="GtkButton" id="codec_install_button">
                             <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -90,6 +91,7 @@ applications and provide hardware accelerated video playback/decoding and encodi
                           <object class="GtkButton" id="codec_remove_button">
                             <property name="label" translatable="yes">Remove</property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -152,6 +154,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                           <object class="GtkButton" id="blender_install_button">
                             <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -171,6 +174,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                           <object class="GtkButton" id="blender_remove_button">
                             <property name="label" translatable="yes">Remove</property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -233,6 +237,7 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                           <object class="GtkButton" id="kdenlive_install_button">
                             <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -252,6 +257,7 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                           <object class="GtkButton" id="kdenlive_remove_button">
                             <property name="label" translatable="yes">Remove</property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -315,6 +321,7 @@ Open Broadcaster Software the free and open source software for video recording 
                           <object class="GtkButton" id="obs_install_button">
                             <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -334,6 +341,7 @@ Open Broadcaster Software the free and open source software for video recording 
                           <object class="GtkButton" id="obs_remove_button">
                             <property name="label" translatable="yes">Remove</property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -396,6 +404,7 @@ communities called "servers".</property>
                           <object class="GtkButton" id="discord_install_button">
                             <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
@@ -415,6 +424,7 @@ communities called "servers".</property>
                           <object class="GtkButton" id="discord_remove_button">
                             <property name="label" translatable="yes">Remove</property>
                             <property name="visible">True</property>
+                            <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">center</property>
