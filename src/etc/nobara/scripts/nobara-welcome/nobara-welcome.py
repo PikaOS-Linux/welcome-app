@@ -50,19 +50,12 @@ class Application:
         startup_switch.connect("toggled", lambda btn: settings.set_boolean("startup-show", btn.get_active()))
     
     ### ENTER LOOK WINDOW ###
-    def enter_look(self, widget):
-        look_window =  self.builder.get_object("look_Window")
-        look_window.show()
+    def enter_add_software(self, widget):
+        install_window =  self.builder.get_object("install_Window")
+        install_window.show()
     ### EXIT LOOK WINDOW ###
     def close_look(self, widget, event):
-        return self.builder.get_object("look_Window").hide_on_delete()
-    ### ENTER DRIVER WINDOW ###
-    def enter_driver(self, widget):
-        driver_window =  self.builder.get_object("driver_Window")
-        driver_window.show()
-    ### EXIT DRIVER WINDOW ###
-    def close_driver(self, widget, event):
-        return self.builder.get_object("driver_Window").hide_on_delete()
+        return self.builder.get_object("install_Window").hide_on_delete()
     
     ##### FIRST STEPS ENTRIES #####
     
