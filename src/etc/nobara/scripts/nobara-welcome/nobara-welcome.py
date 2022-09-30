@@ -16,10 +16,6 @@ class Application:
     ### MAIN WINDOW ###
     def __init__(self):
         
-        # GIVE DNF FUNCTIONS TIME TO LOAD
-        
-        subprocess.run(["dnf list --installed && dnf list --installed"], shell=True, stdout=subprocess.DEVNULL)
-        
         self.column_names = False
         self.drop_nan = False
         self.df = None
@@ -216,7 +212,39 @@ class Application:
     ### COSMO GITHUB ###
     def enter_cosmo_github(self, widget):
         os.system("xdg-open https://github.com/CosmicFusion")
-
+    ###############################################################
+    #### Install Window ####
     
+    ### CODEC ###
+    def enter_install_codec(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")
+    def enter_remove_codec(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")
+    
+    
+    ### Blender ###
+    def enter_install_blender(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")
+    def enter_remove_blender(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")
+    
+    ### KDENLIVE ###
+    def enter_install_kdenlive(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")
+    def enter_remove_kdenlive(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")        
+    
+    ### OBS STUDIO ###
+    def enter_install_obs(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")        
+    def enter_remove_obs(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")        
+    
+    ### DISCORD ###
+    def enter_install_discord(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")        
+    def enter_remove_discord(self, widget):
+        os.system("xdg-open https://github.com/CosmicFusion")        
+        
 Application()
 Gtk.main()
