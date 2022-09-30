@@ -10,6 +10,7 @@
     <property name="default-height">500</property>
     <property name="icon-name">fedora-logo-icon</property>
     <property name="startup-id">nobara_welcome</property>
+    <signal name="destroy-event" handler="close_add_software" swapped="no"/>
     <child>
       <object class="GtkBox" id="install_box">
         <property name="visible">True</property>
@@ -303,6 +304,7 @@ Open Broadcaster Software the free and open source software for video recording 
         <property name="title" translatable="yes">Nobara Additional Software</property>
         <property name="subtitle" translatable="yes">Install additional software</property>
         <property name="show-close-button">True</property>
+        <signal name="destroy" handler="close_add_software" swapped="no"/>
         <child>
           <placeholder/>
         </child>

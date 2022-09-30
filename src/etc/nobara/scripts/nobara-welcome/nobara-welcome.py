@@ -54,7 +54,7 @@ class Application:
         install_window =  self.builder.get_object("install_Window")
         install_window.show()
     ### EXIT LOOK WINDOW ###
-    def close_look(self, widget, event):
+    def close_add_software(self, widget, event):
         return self.builder.get_object("install_Window").hide_on_delete()
     
     ##### FIRST STEPS ENTRIES #####
