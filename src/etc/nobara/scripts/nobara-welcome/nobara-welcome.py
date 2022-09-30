@@ -47,9 +47,6 @@ class Application:
         global app_state_refresh
         app_state_refresh = True
         
-        global app_state_done
-        app_state_done = False
-        
         def app_state_refresh_func(): 
             while app_state_refresh == True:
                 codec_install_button = self.builder.get_object("codec_install_button")
@@ -108,7 +105,7 @@ class Application:
         t1.start()
         
         def app_state_refresh_kill(self):
-            global extension_refresh
+            global app_state_refresh
             app_state_refresh = False
         
         win.connect("destroy", app_state_refresh_kill)
@@ -183,7 +180,7 @@ class Application:
         os.system("xdg-open https://nobaraproject.org/docs/")
     ### Distro Sync ###
     def enter_distrosync(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/xdg-terminal /etc/nobara/scripts/nobara-welcome/refresh.sh")
+        os.system("/usr/bin/nobara-sync")
 
 
     #### COMMUNITY ENTRIES ####
@@ -217,34 +214,35 @@ class Application:
     
     ### CODEC ###
     def enter_install_codec(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal pkexec bash -c 'dnf install -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686'' "], shell=True)
     def enter_remove_codec(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686'"], shell=True)
+        
     
     
     ### Blender ###
     def enter_install_blender(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
     def enter_remove_blender(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
     
     ### KDENLIVE ###
     def enter_install_kdenlive(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")        
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
     
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")        
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
     def enter_remove_obs(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")        
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
     
     ### DISCORD ###
     def enter_install_discord(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")        
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
     def enter_remove_discord(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")        
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
         
 Application()
 Gtk.main()
