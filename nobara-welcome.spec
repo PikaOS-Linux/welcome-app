@@ -2,7 +2,7 @@ BuildArch:              noarch
 
 Name:          nobara-welcome
 Version:       1.2
-Release:       5%{?dist}
+Release:       6%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
 Summary:       Nobara's Welcome App
@@ -17,17 +17,25 @@ Requires:      /usr/bin/bash
 Requires:	python3
 Requires:	python
 Requires:	gtk3
+Requires: 	glib2
+
+
+
+# App Deps
+Requires:	python3-gobject
 Requires:	nobara-login
 Requires:	nobara-login-config
 Requires:	nobara-controller-config
 Requires:	nobara-amdgpu-config
 Requires:	webapp-manager
-Requires: 	glib2
-Requires:	gnome-extension-manager
-Requires:	python3-gobject
 
+# Gnome Deps
 Suggests:	nobara-gnome-layouts
-Requires:	gnome-tweaks
+Suggests:	gnome-tweaks
+Suggests:	gnome-extension-manager
+
+# KDE Deps
+Suggests:	kde-runtime
 
 %install
 tar -xf %{SOURCE0}
