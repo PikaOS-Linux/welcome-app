@@ -211,29 +211,32 @@ class Application:
     ###############################################################
     #### Install Window ####
     
+    
+    ### NOTE : ADD --allowerasing --best , so ffmpeg can replace ffmpeg-free ###
+    
     ### CODEC ###
     def enter_install_codec(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686 --allowerasing --best'"], shell=True)
     def enter_remove_codec(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686 --allowerasing --best'"], shell=True)
     
     ### Blender ###
     def enter_install_blender(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y blender'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y blender --allowerasing --best'"], shell=True)
     def enter_remove_blender(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y blender'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y blender --allowerasing --best'"], shell=True)
     
     ### KDENLIVE ###
     def enter_install_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y kdenlive'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y kdenlive --allowerasing --best'"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y kdenlive'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y kdenlive --allowerasing --best'"], shell=True)
     
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y obs-studio'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y obs-studio --allowerasing --best'"], shell=True)
     def enter_remove_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y obs-studio'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y obs-studio --allowerasing --best'"], shell=True)
     
     ### DISCORD ###
     def enter_install_discord(self, widget):
