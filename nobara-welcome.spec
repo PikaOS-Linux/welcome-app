@@ -18,7 +18,7 @@ Requires:	python3
 Requires:	python
 Requires:	gtk3
 Requires: 	glib2
-
+Provides:	nobara-sync
 
 
 # App Deps
