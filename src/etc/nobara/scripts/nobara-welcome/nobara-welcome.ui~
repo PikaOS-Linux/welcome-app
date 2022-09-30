@@ -99,7 +99,6 @@ applications and provide hardware accelerated video playback/decoding and encodi
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
-                            <signal name="pressed" handler="enter_remove_codec" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -183,7 +182,6 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
-                            <signal name="pressed" handler="enter_remove_blender" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -267,7 +265,6 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
-                            <signal name="pressed" handler="enter_remove_kdenlive" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -352,7 +349,6 @@ Open Broadcaster Software the free and open source software for video recording 
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
-                            <signal name="pressed" handler="enter_remove_obs" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -436,7 +432,6 @@ communities called "servers".</property>
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
-                            <signal name="pressed" handler="enter_remove_discord" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
