@@ -15,6 +15,7 @@
       <object class="GtkBox" id="install_box">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
+        <property name="vexpand">True</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkScrolledWindow" id="apps-install_Scroll">
@@ -22,6 +23,7 @@
             <property name="can-focus">True</property>
             <property name="hscrollbar-policy">never</property>
             <property name="shadow-type">in</property>
+            <property name="propagate-natural-height">True</property>
             <child>
               <object class="GtkViewport">
                 <property name="visible">True</property>
@@ -99,6 +101,7 @@ applications and provide hardware accelerated video playback/decoding and encodi
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
+                            <signal name="pressed" handler="enter_remove_codec" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -182,6 +185,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
+                            <signal name="pressed" handler="enter_remove_blender" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -265,6 +269,7 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
+                            <signal name="pressed" handler="enter_remove_kdenlive" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -349,6 +354,7 @@ Open Broadcaster Software the free and open source software for video recording 
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
+                            <signal name="pressed" handler="enter_remove_obs" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -432,6 +438,7 @@ communities called "servers".</property>
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
+                            <signal name="pressed" handler="enter_remove_discord" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -453,7 +460,7 @@ communities called "servers".</property>
             </child>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">0</property>
           </packing>
