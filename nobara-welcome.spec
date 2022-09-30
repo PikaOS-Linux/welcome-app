@@ -2,7 +2,7 @@ BuildArch:              noarch
 
 Name:          nobara-welcome
 Version:       1.2
-Release:       8%{?dist}
+Release:       9%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
 Summary:       Nobara's Welcome App
@@ -58,6 +58,7 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/rocm.sh"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/refresh.sh"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/xdg-terminal"
+%attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/rpm-check.sh"
 %attr(0644, root, root) "/etc/nobara/scripts/nobara-welcome/nobara-welcome.ui"
 %attr(0644, root, root) "/usr/share/licenses/nobara-welcome/LICENSE"
 %attr(0644, root, root) "/usr/share/applications/nobara-welcome.desktop" 
