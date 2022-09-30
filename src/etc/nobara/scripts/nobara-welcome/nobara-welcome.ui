@@ -69,7 +69,7 @@ applications and provide hardware accelerated video playback/decoding and encodi
                         </child>
                         <child>
                           <object class="GtkButton" id="codec_install_button">
-                            <property name="label" translatable="yes">Install</property>
+                            <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -84,6 +84,24 @@ applications and provide hardware accelerated video playback/decoding and encodi
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="codec_remove_button">
+                            <property name="label" translatable="yes">Remove</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="receives-default">True</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-end">10</property>
+                            <property name="margin-top">10</property>
+                            <property name="margin-bottom">10</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                       </object>
@@ -132,7 +150,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                         </child>
                         <child>
                           <object class="GtkButton" id="blender_install_button">
-                            <property name="label" translatable="yes">Install</property>
+                            <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -147,6 +165,24 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="blender_remove_button">
+                            <property name="label" translatable="yes">Remove</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="receives-default">True</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-end">10</property>
+                            <property name="margin-top">10</property>
+                            <property name="margin-bottom">10</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                       </object>
@@ -195,7 +231,7 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                         </child>
                         <child>
                           <object class="GtkButton" id="kdenlive_install_button">
-                            <property name="label" translatable="yes">Install</property>
+                            <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -210,6 +246,24 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="kdenlive_remove_button">
+                            <property name="label" translatable="yes">Remove</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="receives-default">True</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-end">10</property>
+                            <property name="margin-top">10</property>
+                            <property name="margin-bottom">10</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                       </object>
@@ -259,7 +313,7 @@ Open Broadcaster Software the free and open source software for video recording 
                         </child>
                         <child>
                           <object class="GtkButton" id="obs_install_button">
-                            <property name="label" translatable="yes">Install</property>
+                            <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -274,6 +328,24 @@ Open Broadcaster Software the free and open source software for video recording 
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="obs_remove_button">
+                            <property name="label" translatable="yes">Remove</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="receives-default">True</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-end">10</property>
+                            <property name="margin-top">10</property>
+                            <property name="margin-bottom">10</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                       </object>
@@ -322,7 +394,7 @@ communities called "servers".</property>
                         </child>
                         <child>
                           <object class="GtkButton" id="discord_install_button">
-                            <property name="label" translatable="yes">Install</property>
+                            <property name="label" translatable="yes"> Install  </property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -337,6 +409,24 @@ communities called "servers".</property>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="discord_remove_button">
+                            <property name="label" translatable="yes">Remove</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="receives-default">True</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-end">10</property>
+                            <property name="margin-top">10</property>
+                            <property name="margin-bottom">10</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                       </object>

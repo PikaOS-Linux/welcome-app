@@ -47,35 +47,40 @@ class Application:
         
         def app_state_refresh_func(): 
             while app_state_refresh == True:
-                codec_button = self.builder.get_object("codec_install_button")
+                codec_install_button = self.builder.get_object("codec_install_button")
+                codec_remove_button = self.builder.get_object("codec_remove_button")
                 codec_output = subprocess.run(["dnf list --installed | egrep 'ffmpeg-libs.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
                 if (codec_output.returncode) == 0:
                     codec_button.set_sensitive(False)
 
 
         
-                blender_button = self.builder.get_object("blender_install_button")
+                blender_install_button = self.builder.get_object("blender_install_button")
+                blender_remove_button = self.builder.get_object("blender_remove_button")
                 blender_output = subprocess.run(["dnf list --installed | egrep 'blender.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
                 if (blender_output.returncode) == 0:
                     blender_button.set_sensitive(False)
 
 
 
-                discord_button = self.builder.get_object("discord_install_button")
+                discord_install_button = self.builder.get_object("discord_install_button")
+                blender_remove_button = self.builder.get_object("discord_remove_button")
                 discord_output = subprocess.run(["dnf list --installed | egrep 'discord.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
                 if (discord_output.returncode) == 0:
                     discord_button.set_sensitive(False)
 
 
 
-                kdenlive_button = self.builder.get_object("kdenlive_install_button")
+                kdenlive_install_button = self.builder.get_object("kdenlive_install_button")
+                blender_remove_button = self.builder.get_object("kdenlive_remove_button")
                 kdenlive_output = subprocess.run(["dnf list --installed | egrep 'kdenlive.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
                 if (kdenlive_output.returncode) == 0:
                     kdenlive_button.set_sensitive(False)
 
 
                     
-                obs_button = self.builder.get_object("obs_install_button")
+                obs_install_button = self.builder.get_object("obs_install_button")
+                obs_remove_button = self.builder.get_object("obs_remove_button")                
                 obs_output = subprocess.run(["dnf list --installed | egrep 'obs-studio.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
                 if (obs_output.returncode) == 0:
                     obs_button.set_sensitive(False)
