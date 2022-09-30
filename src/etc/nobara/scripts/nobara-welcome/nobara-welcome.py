@@ -6,6 +6,9 @@ import os
 import os.path
 from pathlib import Path
 
+import time
+import threading
+
 settings = Gio.Settings.new("org.nobara.welcome")
 
 class Application:
@@ -37,7 +40,55 @@ class Application:
             extension_box.hide()
         
 
+        ### app state refresh ###
         
+        global app_state_refresh
+        app_state_refresh = True
+        
+        def app_state_refresh_func(): 
+            while app_state_refresh == True:
+                codec_button = self.builder.get_object("codec_install_button")
+                codec_output = subprocess.run(["dnf list --installed | egrep 'ffmpeg-libs.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
+                if (codec_output.returncode) == 0:
+                    codec_button.set_label("Remove")
+                else:
+                    codec_button.set_label("Install")
+        
+                blender_button = self.builder.get_object("blender_install_button")
+                blender_output = subprocess.run(["dnf list --installed | egrep 'blender.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
+                if (blender_output.returncode) == 0:
+                    blender_button.set_label("Remove")
+                else:
+                    blender_button.set_label("Install")
+
+                discord_button = self.builder.get_object("discord_install_button")
+                discord_output = subprocess.run(["dnf list --installed | egrep 'discord.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
+                if (discord_output.returncode) == 0:
+                    discord_button.set_label("Remove")
+                else:
+                    discord_button.set_label("Install")
+
+                kdenlive_button = self.builder.get_object("kdenlive_install_button")
+                kdenlive_output = subprocess.run(["dnf list --installed | egrep 'kdenlive.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
+                if (kdenlive_output.returncode) == 0:
+                    kdenlive_button.set_label("Remove")
+                else:
+                    kdenlive_button.set_label("Install")
+                    
+                obs_button = self.builder.get_object("obs_install_button")
+                obs_output = subprocess.run(["dnf list --installed | egrep 'obs-studio.x86_64'"], shell=True, stdout=subprocess.DEVNULL)
+                if (obs_output.returncode) == 0:
+                    obs_button.set_label("Remove")
+                else:
+                    obs_button.set_label("Install")
+
+                time.sleep(10.0)
+        t1 = threading.Thread(target=app_state_refresh_func)
+        t1.start()
+        
+        def app_state_refresh_kill(self):
+            global extension_refresh
+            app_state_refresh = False
         
         
         
