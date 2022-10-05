@@ -1,7 +1,7 @@
 BuildArch:              noarch
 
 Name:          nobara-welcome
-Version:       1.3
+Version:       1.4
 Release:       1%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
@@ -10,7 +10,7 @@ Summary:       Nobara's Welcome App
 
 URL:           https://github.com/CosmicFusion/cosmo-welcome-glade
 
-Source0:        %{name}-%{version}-%{release}.tar.gz
+Source0:        %{name}-%{version}.tar.gz
 
 BuildRequires:	wget
 Requires:      /usr/bin/bash
@@ -53,6 +53,7 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0755, root, root) "/usr/bin/nobara-sync"
 %attr(0644, root, root) "/usr/share/glib-2.0/schemas/org.nobara.welcome.gschema.xml"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/apps.sh"
+%attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/codec.sh"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/nobara-welcome.py"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/nvidia.sh"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/rocm.sh"

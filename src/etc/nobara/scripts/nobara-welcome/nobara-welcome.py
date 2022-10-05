@@ -49,16 +49,6 @@ class Application:
         
         def app_state_refresh_func(): 
             while app_state_refresh == True:
-                codec_install_button = self.builder.get_object("codec_install_button")
-                codec_remove_button = self.builder.get_object("codec_remove_button")
-                codec_output = subprocess.run(["/etc/nobara/scripts/nobara-welcome/rpm-check.sh | grep 1Affmpeg-libs1A "], shell=True, stdout=subprocess.DEVNULL)
-                if (codec_output.returncode) == 0:
-                    codec_install_button.set_sensitive(False)
-                    codec_remove_button.set_sensitive(True)
-                else:
-                    codec_install_button.set_sensitive(True)
-                    codec_remove_button.set_sensitive(False)        
-                time.sleep(10.0)
                 blender_install_button = self.builder.get_object("blender_install_button")
                 blender_remove_button = self.builder.get_object("blender_remove_button")
                 blender_output = subprocess.run(["/etc/nobara/scripts/nobara-welcome/rpm-check.sh | grep 1Ablender1A "], shell=True, stdout=subprocess.DEVNULL)
@@ -129,6 +119,9 @@ class Application:
     
     #### DRIVER ENTRIES ####
     
+    ### CODEC ###
+    def enter_install_codec(self, widget):
+        os.system("/etc/nobara/scripts/nobara-welcome/codec.sh")
     ### NVIDIA ###
     def enter_nvidia(self, widget):
         os.system("/etc/nobara/scripts/nobara-welcome/nvidia.sh")
@@ -210,15 +203,6 @@ class Application:
         os.system("xdg-open https://github.com/CosmicFusion")
     ###############################################################
     #### Install Window ####
-    
-    
-    ### NOTE : ADD --allowerasing --best , so ffmpeg can replace ffmpeg-free ###
-    
-    ### CODEC ###
-    def enter_install_codec(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686 --allowerasing --best' && codeccheck"], shell=True)
-    def enter_remove_codec(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686 --allowerasing --best'"], shell=True)
     
     ### Blender ###
     def enter_install_blender(self, widget):
