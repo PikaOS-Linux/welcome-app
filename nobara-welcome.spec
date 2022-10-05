@@ -1,8 +1,8 @@
 BuildArch:              noarch
 
 Name:          nobara-welcome
-Version:       1.2
-Release:       9%{?dist}
+Version:       1.3
+Release:       1%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
 Summary:       Nobara's Welcome App

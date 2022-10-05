@@ -216,7 +216,7 @@ class Application:
     
     ### CODEC ###
     def enter_install_codec(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686 --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686 --allowerasing --best' && codeccheck"], shell=True)
     def enter_remove_codec(self, widget):
         subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y ffmpeg ffmpeg-libs.x86_64 ffmpeg-libs.i686 --allowerasing --best'"], shell=True)
     
@@ -234,9 +234,9 @@ class Application:
     
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y obs-studio --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y obs-studio obs-gamecapture.x86_64 obs-gamecapture.i686 --allowerasing --best'"], shell=True)
     def enter_remove_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y obs-studio --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y obs-studio obs-gamecapture.x86_64 obs-gamecapture.i686 --allowerasing --best'"], shell=True)
     
     ### DISCORD ###
     def enter_install_discord(self, widget):
