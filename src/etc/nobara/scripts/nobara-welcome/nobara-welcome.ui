@@ -2063,7 +2063,6 @@ communities called "servers".</property>
             <property name="can-focus">True</property>
             <property name="receives-default">False</property>
             <property name="draw-indicator">True</property>
-            <signal name="notify::active" handler="on_startup_switch" swapped="no"/>
           </object>
         </child>
       </object>
