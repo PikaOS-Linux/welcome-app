@@ -29,6 +29,8 @@ if cat /tmp/sync.success ; then
     	else
     		rm /tmp/sync.success
     	fi
+    else
+    	zenity --info --title='Sync Repos and Packages' --text='No Transaction happened, your system is up to date!' 
     fi
 else
 	zenity --error --title='Sync Repos and Packages' --text="Failed to sync! Make sure you have a stable internet connection."
