@@ -13,12 +13,25 @@ internet_check() {
 internet_check
 
 if [[ $INTERNET == yes ]]; then
-	/etc/nobara/scripts/nobara-welcome/xdg-terminal "pkcon $1 -y $2" && zenity --notification --text="$2 has been $1ed!" && export SUCCESS=yes
+	pkcon $1 -y $2 $3 $4 $5 $6 $7
+
+	if [[ $1 == 'install' ]]; then
+		if [[ ! -z $(rpm -qa| grep -i $2) ]]; then
+			zenity --notification --text="$2 has been installed! Buttons may take a minute to refresh." && export SUCCESS=yes
+		else
+			zenity --notification --text="$2 $1 has failed!" && export SUCCESS=no
+		fi
+	fi
+
+	if [[ $1 == 'remove' ]]; then
+		if [[ -z $(rpm -qa| grep -i $2) ]]; then
+			zenity --notification --text="$2 has been removed! Buttons may take a minute to refresh." && export SUCCESS=yes
+		else
+			zenity --notification --text="$2 $1 has failed!" && export SUCCESS=no
+		fi
+	fi
 else
 	zenity --error --text="No internet connection."
 fi
 
-if [[ $SUCCESS != yes ]]; then
-	zenity --error --text="Failed to $1 $2! Make sure you have a stable internet connection."
-fi
 

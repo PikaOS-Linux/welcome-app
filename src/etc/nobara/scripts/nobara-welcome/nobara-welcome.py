@@ -206,27 +206,27 @@ class Application:
     
     ### Blender ###
     def enter_install_blender(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install -y  blender'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install blender'"], shell=True)
     def enter_remove_blender(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove -y  blender'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove blender'"], shell=True)
     
     ### KDENLIVE ###
     def enter_install_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install -y  kdenlive'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install kdenlive'"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove -y  kdenlive'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove kdenlive'"], shell=True)
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install -y obs-studio obs-gamecapture"], shell=True)
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install -y  obs-gamecapture --filter ~arch"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install obs-studio obs-gamecapture"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install obs-gamecapture --filter ~arch"], shell=True)
     def enter_remove_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove -y  obs-studio obs-gamecapture'"], shell=True)
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove -y  obs-gamecapture --filter ~arch'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove obs-studio obs-gamecapture'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove obs-gamecapture --filter ~arch'"], shell=True)
     ### DISCORD ###
     def enter_install_discord(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install -y  discord'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install discord'"], shell=True)
     def enter_remove_discord(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove -y  discord'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove discord'"], shell=True)
         
 Application()
 Gtk.main()
