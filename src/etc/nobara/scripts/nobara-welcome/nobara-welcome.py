@@ -206,27 +206,27 @@ class Application:
     
     ### Blender ###
     def enter_install_blender(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y blender --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install blender'"], shell=True)
     def enter_remove_blender(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y blender --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove blender'"], shell=True)
     
     ### KDENLIVE ###
     def enter_install_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y kdenlive --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install kdenlive'"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y kdenlive --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove kdenlive'"], shell=True)
     
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y obs-studio obs-gamecapture.x86_64 obs-gamecapture.i686 --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install obs-studio obs-gamecapture.x86_64 obs-gamecapture.i686"], shell=True)
     def enter_remove_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y obs-studio obs-gamecapture.x86_64 obs-gamecapture.i686 --allowerasing --best'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove obs-studio obs-gamecapture.x86_64 obs-gamecapture.i686'"], shell=True)
     
     ### DISCORD ###
     def enter_install_discord(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf install -y discord'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon install discord'"], shell=True)
     def enter_remove_discord(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkexec dnf remove -y discord'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal 'pkcon remove discord'"], shell=True)
         
 Application()
 Gtk.main()
