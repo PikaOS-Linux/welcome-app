@@ -58,7 +58,7 @@ class Application:
                 else:
                     blender_install_button.set_sensitive(True)
                     blender_remove_button.set_sensitive(False)
-                time.sleep(10.0)
+                time.sleep(3.0)
                 discord_install_button = self.builder.get_object("discord_install_button")
                 discord_remove_button = self.builder.get_object("discord_remove_button")
                 discord_output = subprocess.run(["/etc/nobara/scripts/nobara-welcome/rpm-check.sh | grep  1Adiscord1A "], shell=True, stdout=subprocess.DEVNULL)
@@ -68,7 +68,7 @@ class Application:
                 else:
                     discord_install_button.set_sensitive(True)
                     discord_remove_button.set_sensitive(False)
-                time.sleep(10.0)
+                time.sleep(3.0)
                 kdenlive_install_button = self.builder.get_object("kdenlive_install_button")
                 kdenlive_remove_button = self.builder.get_object("kdenlive_remove_button")
                 kdenlive_output = subprocess.run(["/etc/nobara/scripts/nobara-welcome/rpm-check.sh | grep  1Akdenlive1A "], shell=True, stdout=subprocess.DEVNULL)
@@ -78,17 +78,17 @@ class Application:
                 else:
                     kdenlive_install_button.set_sensitive(True)
                     kdenlive_remove_button.set_sensitive(False)
-                time.sleep(10.0)    
+                time.sleep(3.0)    
                 obs_install_button = self.builder.get_object("obs_install_button")
                 obs_remove_button = self.builder.get_object("obs_remove_button")                
-                obs_output = subprocess.run(["/etc/nobara/scripts/nobara-welcome/rpm-check.sh | grep  1Aobs-studio1A "], shell=True, stdout=subprocess.DEVNULL)
+                obs_output = subprocess.run(["/etc/nobara/scripts/nobara-welcome/rpm-check.sh | grep 1Aobs-studio1A "], shell=True, stdout=subprocess.DEVNULL)
                 if (obs_output.returncode) == 0:
                     obs_install_button.set_sensitive(False)
                     obs_remove_button.set_sensitive(True)
                 else:
                     obs_install_button.set_sensitive(True)
                     obs_remove_button.set_sensitive(False)                
-                time.sleep(10.0)
+                time.sleep(3.0)
         
         t1 = threading.Thread(target=app_state_refresh_func)
         t1.start()
