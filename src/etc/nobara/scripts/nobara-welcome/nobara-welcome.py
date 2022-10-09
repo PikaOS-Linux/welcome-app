@@ -212,7 +212,7 @@ class Application:
     
     ### KDENLIVE ###
     def enter_install_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install kdenlive'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install kdenlive mlt mlt-freeworld libmediainfo mediainfo'"], shell=True)
     def enter_remove_kdenlive(self, widget):
         subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove kdenlive'"], shell=True)
     ### OBS STUDIO ###
