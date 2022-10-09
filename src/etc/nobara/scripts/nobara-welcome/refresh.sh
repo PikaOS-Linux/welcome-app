@@ -12,7 +12,7 @@ internet_check() {
 }
 
 install_progress() {	
-	pkexec bash -c "sudo -S dnf distro-sync -y --refresh && sudo -S dnf update --refresh && touch /tmp/sync.success && chown $LOGNAME:$LOGNAME /tmp/sync.success" | tee /dev/tty | grep -i 'Running transaction check' && export STATE_CHANGE=true
+	pkexec bash -c "sudo dnf update -y rpmfusion-nonfree-release fedora-repos nobara-repos --refresh && sudo -S dnf distro-sync -y --refresh && sudo -S dnf update --refresh && touch /tmp/sync.success && chown $LOGNAME:$LOGNAME /tmp/sync.success" | tee /dev/tty | grep -i 'Running transaction check' && export STATE_CHANGE=true
 }
 
 internet_check
