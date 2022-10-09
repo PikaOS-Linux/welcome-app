@@ -20,7 +20,7 @@ if [[ $INTERNET == yes ]]; then
 
 	if [[ $1 == 'install' ]]; then
 		if [[ ! -z $(rpm -qa| grep -i $2) ]]; then
-			zenity --notification --text="$2 has been installed! Buttons may take a minute to refresh." && export SUCCESS=yes
+			zenity --notification --text="$2 has been installed!" && export SUCCESS=yes
 		else
 			zenity --notification --text="$2 $1 has failed!" && export SUCCESS=no
 		fi
@@ -28,7 +28,7 @@ if [[ $INTERNET == yes ]]; then
 
 	if [[ $1 == 'remove' ]]; then
 		if [[ -z $(rpm -qa| grep -i $2) ]]; then
-			zenity --notification --text="$2 has been removed! Buttons may take a minute to refresh." && export SUCCESS=yes
+			zenity --notification --text="$2 has been removed!" && export SUCCESS=yes
 		else
 			zenity --notification --text="$2 $1 has failed!" && export SUCCESS=no
 		fi
