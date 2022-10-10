@@ -28,6 +28,7 @@ Requires:	nobara-login-config
 Requires:	nobara-controller-config
 Requires:	nobara-amdgpu-config
 Requires:	webapp-manager
+Requires:	papirus-icon-theme
 
 # Gnome Deps
 Suggests:	nobara-gnome-layouts
