@@ -210,7 +210,7 @@ class Application:
     def enter_install_kdenlive(self, widget):
         subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install kdenlive'"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove kdenlive'"], shell=True)
+        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove kdenlive catdoc dvdauthor kdenlive kf5-kfilemetadata kf5-knotifyconfig qt5-qtnetworkauth'"], shell=True)
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
         subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install obs-studio'"], shell=True)
