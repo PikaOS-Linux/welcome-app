@@ -8,8 +8,18 @@ from pathlib import Path
 
 import time
 import threading
+import subprocess
 
 settings = Gio.Settings.new("org.nobara.welcome")
+
+proc1 = subprocess.Popen(['ps', 'aux'], stdout=subprocess.PIPE)
+proc2 = subprocess.Popen(['grep', '/etc/nobara/scripts/nobara-welcome/nobara-welcome.py'], stdin=proc1.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+proc3 = subprocess.Popen(['grep', '-v', 'grep'], stdin=proc2.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+proc4 = subprocess.Popen(['wc', '-l'], stdin=proc3.stdout, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+result = proc4.stdout.read()
+print(int(result))
+if int(result) > 1:
+    quit()
 
 class Application:
     
