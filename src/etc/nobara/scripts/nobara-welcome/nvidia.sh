@@ -1,6 +1,6 @@
 #! /bin/bash
 nvgpu=$(lspci | grep -iE 'VGA|3D' | grep -i nvidia | cut -d ":" -f 3)
-nvkernmod=$(lspci -k | grep -iEA3 '^[[:digit:]]{2}:[[:digit:]]{2}.*VGA|3D' | grep -iA3 nvidia | grep -i 'kernel driver' | grep -iE 'vfio-pci|nvidia')
+nvkernmod=$(lspci -k | grep -iEA3 '^[[:alnum:]]{2}:[[:alnum:]]{2}.*VGA|3D' | grep -iA3 nvidia | grep -i 'kernel driver' | grep -iE 'vfio-pci|nvidia')
 
 /usr/bin/hwcheck
 if [ $? -eq 0 ]; then
