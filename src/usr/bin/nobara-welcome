@@ -1,9 +1,6 @@
 #! /bin/bash
 DISPLAY_CHECK=$(echo $DISPLAY)
 WHO=$(whoami)
-
 if [[ $DISPLAY_CHECK ]] && [[ $WHO != "liveuser" ]] && [[ $WHO != "gnome-initial-setup" ]]; then
-
-python3 /etc/nobara/scripts/nobara-welcome/nobara-welcome.py
-
+	python3 /etc/nobara/scripts/nobara-welcome/nobara-welcome.py
 fi

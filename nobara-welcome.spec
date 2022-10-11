@@ -1,7 +1,7 @@
 BuildArch:              noarch
 
 Name:          nobara-welcome
-Version:       1.6.11
+Version:       1.6.12
 Release:       1%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
@@ -43,7 +43,7 @@ tar -xf %{SOURCE0}
 mv usr %{buildroot}/
 mv etc %{buildroot}/
 mkdir -p %{buildroot}%{_sysconfdir}/xdg/autostart/
-cp %{buildroot}/usr/share/applications/nobara-welcome.desktop %{buildroot}%{_sysconfdir}/xdg/autostart/
+mv %{buildroot}/usr/share/applications/nobara-autostart.desktop %{buildroot}%{_sysconfdir}/xdg/autostart/
 mkdir -p %{buildroot}/usr/share/licenses/nobara-welcome
 wget https://raw.githubusercontent.com/CosmicFusion/cosmo-welcome-glade/main/LICENSE.md -O %{buildroot}/usr/share/licenses/nobara-welcome/LICENSE
 
@@ -51,6 +51,7 @@ wget https://raw.githubusercontent.com/CosmicFusion/cosmo-welcome-glade/main/LIC
 Nobara's Python3 & GTK3 built Welcome App
 %files
 %attr(0755, root, root) "/usr/bin/nobara-welcome"
+%attr(0755, root, root) "/usr/bin/nobara-autostart"
 %attr(0755, root, root) "/usr/bin/nobara-sync"
 %attr(0644, root, root) "/usr/share/glib-2.0/schemas/org.nobara.welcome.gschema.xml"
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-welcome/apps.sh"
@@ -68,7 +69,7 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0644, root, root) "/usr/share/applications/nobara-sync.desktop" 
 %attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/amd.svg"
 %attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/nvidia.svg"
-%attr(0644, root, root) "%{_sysconfdir}/xdg/autostart/nobara-welcome.desktop"
+%attr(0644, root, root) "%{_sysconfdir}/xdg/autostart/nobara-autostart.desktop"
 
 %post
 glib-compile-schemas /usr/share/glib-2.0/schemas/
