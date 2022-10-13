@@ -157,7 +157,12 @@ class Application:
         os.system("/usr/bin/nobara-login-config")
     ### LAYOUTS ###
     def enter_layout(self, widget):
-        os.system("/usr/bin/nobara-gnome-layouts")
+        layouts_file = Path('/usr/bin/nobara-gnome-layouts')
+        if layouts_file.is_file():
+            os.system("/usr/bin/nobara-gnome-layouts")
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install nobara-gnome-layouts'"], shell=True)
+        pass
     ### THEMES ###
     def enter_theme(self, widget):
         os.system("/usr/bin/gnome-tweaks")
