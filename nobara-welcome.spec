@@ -1,7 +1,7 @@
 BuildArch:              noarch
 
 Name:          nobara-welcome
-Version:       1.6.16
+Version:       1.6.17
 Release:       1%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
