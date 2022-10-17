@@ -69,6 +69,7 @@ Nobara's Python3 & GTK3 built Welcome App
 %attr(0644, root, root) "/usr/share/applications/nobara-sync.desktop" 
 %attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/amd.svg"
 %attr(0644, root, root) "/usr/share/icons/hicolor/16x16/apps/nvidia.svg"
+%attr(0644, root, root) "/usr/share/icons/*
 %attr(0644, root, root) "%{_sysconfdir}/xdg/autostart/nobara-autostart.desktop"
 
 %post
