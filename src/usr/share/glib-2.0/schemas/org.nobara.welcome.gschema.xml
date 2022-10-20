@@ -8,7 +8,7 @@
       </description>
     </key>
     <key type="b" name="use-system-icons">
-      <default>fasle</default>
+      <default>false</default>
       <summary>Disables Hardcoded icons in Nobara Welcome.</summary>
       <description>
         Disables Hardcoded icons in Nobara Welcome.

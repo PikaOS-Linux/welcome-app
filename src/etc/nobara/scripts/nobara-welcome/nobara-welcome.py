@@ -113,7 +113,9 @@ class Application:
         startup_switch.set_active(settings.get_boolean("startup-show"))
     
         startup_switch.connect("toggled", lambda btn: settings.set_boolean("startup-show", btn.get_active()))
-    
+        
+        print (settings.get_boolean("startup-show"))
+        
     ### ENTER LOOK WINDOW ###
     def enter_add_software(self, widget):
         install_window =  self.builder.get_object("install_Window")
