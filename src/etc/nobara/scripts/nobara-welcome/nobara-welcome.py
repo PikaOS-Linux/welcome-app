@@ -116,7 +116,7 @@ class Application:
     
     
     ### Hardcoded icons ###
-        if (settings.get_boolean("startup-show")) == True:
+        if (settings.get_boolean("use-system-icons")) == True:
             update_logo = self.builder.get_object("distrosync_logo_2")
             codec_install_logo = self.builder.get_object("codec_install_logo")
             nvidia_logo = self.builder.get_object("nvidia_logo")
