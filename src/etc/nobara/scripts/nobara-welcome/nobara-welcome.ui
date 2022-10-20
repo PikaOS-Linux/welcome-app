@@ -1324,7 +1324,7 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">application-x-addon</property>
+                                <property name="icon-name">nobara-application-x-addon</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -1947,7 +1947,7 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">nobara-ithub</property>
+                                <property name="icon-name">nobara-github</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
