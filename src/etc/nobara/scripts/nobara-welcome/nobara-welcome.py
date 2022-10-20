@@ -113,8 +113,56 @@ class Application:
         startup_switch.set_active(settings.get_boolean("startup-show"))
     
         startup_switch.connect("toggled", lambda btn: settings.set_boolean("startup-show", btn.get_active()))
-        
-        print (settings.get_boolean("startup-show"))
+    
+    
+    ### Hardcoded icons ###
+        if (settings.get_boolean("startup-show")) == True:
+            update_logo = self.builder.get_object("distrosync_logo_2")
+            codec_install_logo = self.builder.get_object("codec_install_logo")
+            nvidia_logo = self.builder.get_object("nvidia_logo")
+            software_logo = self.builder.get_object("software_logo")
+            webapps_logo = self.builder.get_object("webapps_logo")
+            blender_install_logo = self.builder.get_object("blender_install_logo")
+            kdenlive_install_logo = self.builder.get_object("kdenlive_install_logo")
+            obs_install_logo = self.builder.get_object("obs_install_logo")
+            discord_install_logo = self.builder.get_object("discord_install_logo")
+            amd_logo = self.builder.get_object("amd_logo")
+            rocm_logo = self.builder.get_object("rocm_logo")
+            xone_logo = self.builder.get_object("xone_logo")
+            layout_logo = self.builder.get_object("layout_logo")
+            theme_logo = self.builder.get_object("theme_logo")
+            extension_logo = self.builder.get_object("extension_logo")
+            distrosync_logo = self.builder.get_object("distrosync_logo")
+            discord_logo = self.builder.get_object("discord_logo")
+            reddit_logo = self.builder.get_object("reddit_logo")
+            design_logo = self.builder.get_object("design_logo")
+            ge_gitlab_logo = self.builder.get_object("ge_gitlab_logo")
+            ge_github_logo = self.builder.get_object("ge_github_logo")
+            cosmo_github_logo = self.builder.get_object("cosmo_github_logo")
+            
+            update_logo.set_from_icon_name("system-software-update", 80)
+            codec_install_logo.set_from_icon_name("media-tape", 80)
+            nvidia_logo.set_from_icon_name("nvidia", 80)
+            software_logo.set_from_icon_name("media-floppy", 80)
+            webapps_logo.set_from_icon_name("applications-internet", 80)
+            blender_install_logo.set_from_icon_name("blender", 80)
+            kdenlive_install_logo.set_from_icon_name("kdenlive", 80)
+            obs_install_logo.set_from_icon_name("obs", 80)
+            discord_install_logo.set_from_icon_name("discord", 80)
+            amd_logo.set_from_icon_name("amd", 80)
+            rocm_logo.set_from_icon_name("amd", 80)
+            xone_logo.set_from_icon_name("input-gaming", 80)
+            layout_logo.set_from_icon_name("desktop", 80)
+            theme_logo.set_from_icon_name("applications-graphics", 80)
+            extension_logo.set_from_icon_name("application-x-addon", 80)
+            distrosync_logo.set_from_icon_name("system-software-update", 80)
+            discord_logo.set_from_icon_name("discord", 80)
+            reddit_logo.set_from_icon_name("reddit", 80)
+            design_logo.set_from_icon_name("applications-graphics", 80)
+            ge_gitlab_logo.set_from_icon_name("gitlab", 80)
+            ge_github_logo.set_from_icon_name("github", 80)
+            cosmo_github_logo.set_from_icon_name("github", 80)
+        pass
         
     ### ENTER LOOK WINDOW ###
     def enter_add_software(self, widget):
