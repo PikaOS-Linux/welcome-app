@@ -1083,7 +1083,7 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">emblem-readonly</property>
+                                <property name="icon-name">nobara-emblem-readonly</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -1144,7 +1144,7 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">emblem-downloads</property>
+                                <property name="icon-name">nobara-emblem-downloads</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -1412,7 +1412,7 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">emblem-important</property>
+                                <property name="icon-name">nobara-emblem-important</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -1472,7 +1472,7 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">emblem-documents</property>
+                                <property name="icon-name">nobara-emblem-documents</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -1767,7 +1767,7 @@ with many features and improvements.
                                 <property name="can-focus">False</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
-                                <property name="icon-name">emblem-favorite</property>
+                                <property name="icon-name">nobara-emblem-favorite</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -1839,7 +1839,7 @@ with many features and improvements.
                               <object class="GtkLabel" id="design_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Submit Designs and wallpaper to our &lt;b&gt;#memes Discord Channel&lt;/b&gt;&lt;/big&gt;</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Submit Designs and Wallpapers to our &lt;b&gt;#memes Discord Channel&lt;/b&gt;&lt;/big&gt;</property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
