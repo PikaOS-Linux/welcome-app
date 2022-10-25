@@ -131,6 +131,7 @@ class Application:
             amd_logo = self.builder.get_object("amd_logo")
             rocm_logo = self.builder.get_object("rocm_logo")
             xone_logo = self.builder.get_object("xone_logo")
+            protonup_logo = self.builder.get_object("protonup_logo")
             
             dm_logo = self.builder.get_object("dm_logo")
             pling_logo = self.builder.get_object("pling_logo")
@@ -151,6 +152,8 @@ class Application:
             ge_github_logo = self.builder.get_object("ge_github_logo")
             cosmo_github_logo = self.builder.get_object("cosmo_github_logo")
             
+            ###
+            
             update_logo.set_from_icon_name("system-software-update", 80)
             codec_install_logo.set_from_icon_name("media-tape", 80)
             nvidia_logo.set_from_icon_name("nvidia", 80)
@@ -165,6 +168,7 @@ class Application:
             amd_logo.set_from_icon_name("amd", 80)
             rocm_logo.set_from_icon_name("amd", 80)
             xone_logo.set_from_icon_name("input-gaming", 80)
+            protonup_logo.set_from_icon_name("net.davidotek.pupgui2", 80)
             
             dm_logo.set_from_icon_name("applications-graphics", 80)
             pling_logo.set_from_icon_name("applications-graphics", 80)
@@ -279,6 +283,10 @@ class Application:
     ### XONE ###
     def enter_xone(self, widget):
         os.system("/usr/bin/nobara-controller-config")
+    ### PROTONUP ###
+    def enter_protonup(self, widget):
+        os.system("/usr/bin/protonup-qt") 
+   
    
     #### Apps Entries ####
    
