@@ -1753,7 +1753,7 @@ this tool allows steam to run windows games natively on linux.
                               <object class="GtkLabel" id="reddit_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt; Dive into our Community (Unofficial) &lt;b&gt;Subreddit&lt;/b&gt;&lt;/big&gt;</property>
+                                <property name="label" translatable="yes">&lt;big&gt; Dive into our &lt;b&gt;Subreddit&lt;/b&gt;&lt;/big&gt;</property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
                               </object>
