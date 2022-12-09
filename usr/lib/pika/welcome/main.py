@@ -10,10 +10,10 @@ import time
 import threading
 import subprocess
 
-settings = Gio.Settings.new("org.nobara.welcome")
+settings = Gio.Settings.new("org.pika.welcome")
 
 proc1 = subprocess.Popen(['ps', 'aux'], stdout=subprocess.PIPE)
-proc2 = subprocess.Popen(['grep', '/etc/nobara/scripts/nobara-welcome/nobara-welcome.py'], stdin=proc1.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+proc2 = subprocess.Popen(['grep', '/usr/lib/pika/welcome/main.py'], stdin=proc1.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 proc3 = subprocess.Popen(['grep', '-v', 'grep'], stdin=proc2.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 proc4 = subprocess.Popen(['wc', '-l'], stdin=proc3.stdout, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 result = proc4.stdout.read()
@@ -29,10 +29,10 @@ class Application:
         self.column_names = False
         self.drop_nan = False
         self.df = None
-        application_id="org.nobara.welcome"
+        application_id="org.pika.welcome"
         
         self.builder = Gtk.Builder()
-        self.builder.add_from_file("/etc/nobara/scripts/nobara-welcome/nobara-welcome.ui")
+        self.builder.add_from_file("/usr/lib/pika/welcome/main.ui")
         self.builder.connect_signals(self)
         win = self.builder.get_object("main_Window")
         win.connect("destroy", Gtk.main_quit)
@@ -45,7 +45,7 @@ class Application:
         layout_box = self.builder.get_object("layout_box")
         extension_box = self.builder.get_object("extension_box")
         
-        desktop_output = subprocess.run(["echo $XDG_SESSION_DESKTOP | grep -i gnome"], shell=True)
+        desktop_output = subprocess.run(["echo $XDG_SESSION_DESKTOP | grep -i ubuntu"], shell=True)
         if (desktop_output.returncode) != 0:
             theme_box.hide()
             layout_box.hide()
@@ -60,42 +60,42 @@ class Application:
         def app_state_refresh_func(): 
             blender_install_button = self.builder.get_object("blender_install_button")
             blender_remove_button = self.builder.get_object("blender_remove_button")
-            discord_install_button = self.builder.get_object("discord_install_button")
-            discord_remove_button = self.builder.get_object("discord_remove_button")
+#            discord_install_button = self.builder.get_object("discord_install_button")
+#            discord_remove_button = self.builder.get_object("discord_remove_button")
             kdenlive_install_button = self.builder.get_object("kdenlive_install_button")
             kdenlive_remove_button = self.builder.get_object("kdenlive_remove_button")
             obs_install_button = self.builder.get_object("obs_install_button")
             obs_remove_button = self.builder.get_object("obs_remove_button")
             while app_state_refresh == True:
-                blender_output = subprocess.run(["rpm -q blender"], shell=True, stdout=subprocess.DEVNULL)
+                blender_output = subprocess.run(["dpkg-query -l blender"], shell=True, stdout=subprocess.DEVNULL)
                 if (blender_output.returncode) == 0:
                     blender_install_button.set_sensitive(False)
                     blender_remove_button.set_sensitive(True)
                 else:
                     blender_install_button.set_sensitive(True)
                     blender_remove_button.set_sensitive(False)
-                discord_output = subprocess.run(["rpm -q discord"], shell=True, stdout=subprocess.DEVNULL)
-                if (discord_output.returncode) == 0:
-                    discord_install_button.set_sensitive(False)
-                    discord_remove_button.set_sensitive(True)
-                else:
-                    discord_install_button.set_sensitive(True)
-                    discord_remove_button.set_sensitive(False)
-                kdenlive_output = subprocess.run(["rpm -q kdenlive"], shell=True, stdout=subprocess.DEVNULL)
+#                discord_output = subprocess.run(["dpkg-query -l discord"], shell=True, stdout=subprocess.DEVNULL)
+#                if (discord_output.returncode) == 0:
+#                    discord_install_button.set_sensitive(False)
+#                    discord_remove_button.set_sensitive(True)
+#                else:
+#                    discord_install_button.set_sensitive(True)
+#                    discord_remove_button.set_sensitive(False)
+                kdenlive_output = subprocess.run(["dpkg-query -l kdenlive"], shell=True, stdout=subprocess.DEVNULL)
                 if (kdenlive_output.returncode) == 0:
                     kdenlive_install_button.set_sensitive(False)
                     kdenlive_remove_button.set_sensitive(True)
                 else:
                     kdenlive_install_button.set_sensitive(True)
                     kdenlive_remove_button.set_sensitive(False)
-                obs_output = subprocess.run(["rpm -q obs-studio"], shell=True, stdout=subprocess.DEVNULL)
+                obs_output = subprocess.run(["dpkg-query -l obs-studio"], shell=True, stdout=subprocess.DEVNULL)
                 if (obs_output.returncode) == 0:
                     obs_install_button.set_sensitive(False)
                     obs_remove_button.set_sensitive(True)
                 else:
                     obs_install_button.set_sensitive(True)
                     obs_remove_button.set_sensitive(False)                
-                time.sleep(1)
+                time.sleep(10)
         
         t1 = threading.Thread(target=app_state_refresh_func)
         t1.start()
@@ -126,12 +126,12 @@ class Application:
             blender_install_logo = self.builder.get_object("blender_install_logo")
             kdenlive_install_logo = self.builder.get_object("kdenlive_install_logo")
             obs_install_logo = self.builder.get_object("obs_install_logo")
-            discord_install_logo = self.builder.get_object("discord_install_logo")
+#            discord_install_logo = self.builder.get_object("discord_install_logo")
             
             amd_logo = self.builder.get_object("amd_logo")
-            rocm_logo = self.builder.get_object("rocm_logo")
+#            rocm_logo = self.builder.get_object("rocm_logo")
             xone_logo = self.builder.get_object("xone_logo")
-            protonup_logo = self.builder.get_object("protonup_logo")
+#            protonup_logo = self.builder.get_object("protonup_logo")
             
             dm_logo = self.builder.get_object("dm_logo")
             pling_logo = self.builder.get_object("pling_logo")
@@ -139,18 +139,18 @@ class Application:
             theme_logo = self.builder.get_object("theme_logo")
             extension_logo = self.builder.get_object("extension_logo")
             
-            troubleshoot_logo = self.builder.get_object("troubleshoot_logo")
-            doc_logo = self.builder.get_object("doc_logo")
-            distrosync_logo = self.builder.get_object("distrosync_logo")
+#            troubleshoot_logo = self.builder.get_object("troubleshoot_logo")
+#            doc_logo = self.builder.get_object("doc_logo")
+#            distrosync_logo = self.builder.get_object("distrosync_logo")
             
-            discord_logo = self.builder.get_object("discord_logo")
-            reddit_logo = self.builder.get_object("reddit_logo")
+#            discord_logo = self.builder.get_object("discord_logo")
+#            reddit_logo = self.builder.get_object("reddit_logo")
             
-            patreon_logo = self.builder.get_object("patreon_logo")
-            design_logo = self.builder.get_object("design_logo")
-            ge_gitlab_logo = self.builder.get_object("ge_gitlab_logo")
-            ge_github_logo = self.builder.get_object("ge_github_logo")
-            cosmo_github_logo = self.builder.get_object("cosmo_github_logo")
+#            patreon_logo = self.builder.get_object("patreon_logo")
+#            design_logo = self.builder.get_object("design_logo")
+#            ge_gitlab_logo = self.builder.get_object("ge_gitlab_logo")
+#            ge_github_logo = self.builder.get_object("ge_github_logo")
+#            cosmo_github_logo = self.builder.get_object("cosmo_github_logo")
             
             ###
             
@@ -163,12 +163,12 @@ class Application:
             blender_install_logo.set_from_icon_name("blender", 80)
             kdenlive_install_logo.set_from_icon_name("kdenlive", 80)
             obs_install_logo.set_from_icon_name("obs", 80)
-            discord_install_logo.set_from_icon_name("discord", 80)
+#            discord_install_logo.set_from_icon_name("discord", 80)
             
             amd_logo.set_from_icon_name("amd", 80)
-            rocm_logo.set_from_icon_name("amd", 80)
+#            rocm_logo.set_from_icon_name("amd", 80)
             xone_logo.set_from_icon_name("input-gaming", 80)
-            protonup_logo.set_from_icon_name("net.davidotek.pupgui2", 80)
+#            protonup_logo.set_from_icon_name("net.davidotek.pupgui2", 80)
             
             dm_logo.set_from_icon_name("applications-graphics", 80)
             pling_logo.set_from_icon_name("applications-graphics", 80)
@@ -176,12 +176,12 @@ class Application:
             theme_logo.set_from_icon_name("applications-graphics", 80)
             extension_logo.set_from_icon_name("application-x-addon", 80)
             
-            troubleshoot_logo.set_from_icon_name("applications-graphics", 80)
-            doc_logo.set_from_icon_name("applications-graphics", 80)
-            distrosync_logo.set_from_icon_name("system-software-update", 80)
+#            troubleshoot_logo.set_from_icon_name("applications-graphics", 80)
+#            doc_logo.set_from_icon_name("applications-graphics", 80)
+#            distrosync_logo.set_from_icon_name("system-software-update", 80)
             
-            discord_logo.set_from_icon_name("discord", 80)
-            reddit_logo.set_from_icon_name("reddit", 80)
+#            discord_logo.set_from_icon_name("discord", 80)
+#            reddit_logo.set_from_icon_name("reddit", 80)
             
             update_logo = self.builder.get_object("distrosync_logo_2")
             codec_install_logo = self.builder.get_object("codec_install_logo")
@@ -192,10 +192,10 @@ class Application:
             blender_install_logo = self.builder.get_object("blender_install_logo")
             kdenlive_install_logo = self.builder.get_object("kdenlive_install_logo")
             obs_install_logo = self.builder.get_object("obs_install_logo")
-            discord_install_logo = self.builder.get_object("discord_install_logo")
+#            discord_install_logo = self.builder.get_object("discord_install_logo")
             
             amd_logo = self.builder.get_object("amd_logo")
-            rocm_logo = self.builder.get_object("rocm_logo")
+#            rocm_logo = self.builder.get_object("rocm_logo")
             xone_logo = self.builder.get_object("xone_logo")
             
             dm_logo = self.builder.get_object("dm_logo")
@@ -208,7 +208,7 @@ class Application:
             doc_logo = self.builder.get_object("doc_logo")
             distrosync_logo = self.builder.get_object("distrosync_logo")
             
-            discord_logo = self.builder.get_object("discord_logo")
+#            discord_logo = self.builder.get_object("discord_logo")
             reddit_logo = self.builder.get_object("reddit_logo")
             
             patreon_logo = self.builder.get_object("patreon_logo")
@@ -226,10 +226,10 @@ class Application:
             blender_install_logo.set_from_icon_name("blender", 80)
             kdenlive_install_logo.set_from_icon_name("kdenlive", 80)
             obs_install_logo.set_from_icon_name("obs", 80)
-            discord_install_logo.set_from_icon_name("discord", 80)
+#            discord_install_logo.set_from_icon_name("discord", 80)
             
             amd_logo.set_from_icon_name("amd", 80)
-            rocm_logo.set_from_icon_name("amd", 80)
+#            rocm_logo.set_from_icon_name("amd", 80)
             xone_logo.set_from_icon_name("input-gaming", 80)
             
             dm_logo.set_from_icon_name("emblem-readonly", 80)
@@ -238,22 +238,22 @@ class Application:
             theme_logo.set_from_icon_name("applications-graphics", 80)
             extension_logo.set_from_icon_name("application-x-addon", 80)
             
-            troubleshoot_logo.set_from_icon_name("emblem-important", 80)
-            doc_logo.set_from_icon_name("emblem-documents", 80)
-            distrosync_logo.set_from_icon_name("system-software-update", 80)
+#            troubleshoot_logo.set_from_icon_name("emblem-important", 80)
+#            doc_logo.set_from_icon_name("emblem-documents", 80)
+#            distrosync_logo.set_from_icon_name("system-software-update", 80)
             
-            discord_logo.set_from_icon_name("discord", 80)
-            reddit_logo.set_from_icon_name("reddit", 80)
+#            discord_logo.set_from_icon_name("discord", 80)
+#            reddit_logo.set_from_icon_name("reddit", 80)
             
-            patreon_logo.set_from_icon_name("emblem-favorite", 80)
-            design_logo.set_from_icon_name("applications-graphics", 80)
-            ge_gitlab_logo.set_from_icon_name("gitlab", 80)
-            ge_github_logo.set_from_icon_name("github", 80)
-            cosmo_github_logo.set_from_icon_name("github", 80)
-            design_logo.set_from_icon_name("applications-graphics", 80)
-            ge_gitlab_logo.set_from_icon_name("gitlab", 80)
-            ge_github_logo.set_from_icon_name("github", 80)
-            cosmo_github_logo.set_from_icon_name("github", 80)
+#            patreon_logo.set_from_icon_name("emblem-favorite", 80)
+#            design_logo.set_from_icon_name("applications-graphics", 80)
+#            ge_gitlab_logo.set_from_icon_name("gitlab", 80)
+#            ge_github_logo.set_from_icon_name("github", 80)
+#            cosmo_github_logo.set_from_icon_name("github", 80)
+#            design_logo.set_from_icon_name("applications-graphics", 80)
+#            ge_gitlab_logo.set_from_icon_name("gitlab", 80)
+#            ge_github_logo.set_from_icon_name("github", 80)
+#            cosmo_github_logo.set_from_icon_name("github", 80)
         pass
         
     ### ENTER LOOK WINDOW ###
@@ -270,19 +270,19 @@ class Application:
     
     ### CODEC ###
     def enter_install_codec(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/codec.sh")
+        os.system("/usr/lib/pika/welcome/codec.sh")
     ### NVIDIA ###
     def enter_nvidia(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/nvidia.sh")
+        os.system("/usr/lib/pika/welcome/nvidia.sh")
     ### AMD PRO ###
     def enter_amd(self, widget):
-        os.system("/usr/bin/nobara-amdgpu-config")
+        os.system("/usr/bin/pika-amdgpu-config")
     ### ROCm ###
     def enter_rocm(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/rocm.sh")
+        os.system("/usr/lib/pika/welcome/rocm.sh")
     ### XONE ###
     def enter_xone(self, widget):
-        os.system("/usr/bin/nobara-controller-config")
+        os.system("/usr/bin/pika-controller-config")
     ### PROTONUP ###
     def enter_protonup(self, widget):
         os.system("/usr/bin/protonup-qt") 
@@ -292,7 +292,7 @@ class Application:
    
     ### APPS ###
     def enter_apps(self, widget):
-        os.system("/etc/nobara/scripts/nobara-welcome/apps.sh")
+        os.system("/usr/lib/pika/welcome/apps.sh")
     ### WEBAPPS ###
     def enter_webapps(self, widget):
         os.system("/usr/bin/webapp-manager")
@@ -301,14 +301,14 @@ class Application:
     
     ### LOGIN MANAGER ###
     def enter_dm(self, widget):
-        os.system("/usr/bin/nobara-login-config")
+        os.system("/usr/bin/pika-login-config")
     ### LAYOUTS ###
     def enter_layout(self, widget):
-        layouts_file = Path('/usr/bin/nobara-gnome-layouts')
+        layouts_file = Path('/usr/bin/pika-gnome-layouts')
         if layouts_file.is_file():
-            os.system("/usr/bin/nobara-gnome-layouts")
+            os.system("/usr/bin/pika-gnome-layouts")
         else:
-            subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install nobara-gnome-layouts'"], shell=True)
+            subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gnome-layouts'"], shell=True)
         pass
     ### THEMES ###
     def enter_theme(self, widget):
@@ -324,13 +324,13 @@ class Application:
     
     ### Troubleshoot ###
     def enter_troubleshoot(self, widget):
-        os.system("xdg-open https://nobaraproject.org/docs/upgrade-troubleshooting/")
+        os.system("xdg-open https://pikaproject.org/docs/upgrade-troubleshooting/")
     ### Docs ###
     def enter_doc(self, widget):
-        os.system("xdg-open https://nobaraproject.org/docs/")
+        os.system("xdg-open https://pikaproject.org/docs/")
     ### Distro Sync ###
     def enter_distrosync(self, widget):
-        os.system("/usr/bin/nobara-sync")
+        os.system("mintupdate")
 
 
     #### COMMUNITY ENTRIES ####
@@ -340,7 +340,7 @@ class Application:
         os.system("xdg-open https://discord.gg/6y3BdzC")
     ### reddit ###
     def enter_reddit(self, widget):
-        os.system("xdg-open https://www.reddit.com/r/NobaraProject/")
+        os.system("xdg-open https://www.reddit.com/r/pikaProject/")
         
     #### Contribute ENTRIES ####
     
@@ -364,25 +364,25 @@ class Application:
     
     ### Blender ###
     def enter_install_blender(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install blender'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install blender'"], shell=True)
     def enter_remove_blender(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove blender'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove blender'"], shell=True)
     
     ### KDENLIVE ###
     def enter_install_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install kdenlive'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install kdenlive'"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove kdenlive catdoc dvdauthor kdenlive kf5-kfilemetadata kf5-knotifyconfig qt5-qtnetworkauth'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove kdenlive catdoc dvdauthor kdenlive kf5-kfilemetadata kf5-knotifyconfig qt5-qtnetworkauth'"], shell=True)
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install obs-studio'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install obs-studio'"], shell=True)
     def enter_remove_obs(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove obs-studio'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove obs-studio'"], shell=True)
     ### DISCORD ###
     def enter_install_discord(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh install discord'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install discord'"], shell=True)
     def enter_remove_discord(self, widget):
-        subprocess.run(["/etc/nobara/scripts/nobara-welcome/xdg-terminal '/etc/nobara/scripts/nobara-welcome/pkcon-install.sh remove discord'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove discord'"], shell=True)
         
 Application()
 Gtk.main()

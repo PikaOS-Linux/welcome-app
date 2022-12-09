@@ -1,0 +1,5 @@
+#! /bin/bash
+AUTOSTART=$(gsettings get org.pika.welcome startup-show)
+if [[ "$AUTOSTART" == "true" ]]; then
+	pika-welcome
+fi

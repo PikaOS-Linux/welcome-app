@@ -1,0 +1,1197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <!-- interface-name main.ui -->
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkApplicationWindow" id="main_Window">
+    <property name="can-focus">False</property>
+    <property name="default-height">500</property>
+    <property name="default-width">850</property>
+    <property name="height-request">500</property>
+    <property name="icon">pika-logo</property>
+    <property name="icon-name">pika-logo</property>
+    <property name="startup-id">pika_welcome</property>
+    <property name="title">PikaOS Welcome</property>
+    <property name="width-request">850</property>
+    <child>
+      <object class="GtkBox" id="main_Box">
+        <property name="can-focus">False</property>
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkStackSidebar" id="main_Sidebar">
+            <property name="can-focus">False</property>
+            <property name="stack">Stack</property>
+            <property name="visible">True</property>
+            <property name="width-request">125</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStack" id="Stack">
+            <property name="can-focus">False</property>
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkScrolledWindow" id="Welcome_Scroll">
+                <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <property name="shadow-type">in</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="can-focus">False</property>
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkBox" id="WelcomePage">
+                        <property name="can-focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin-end">160</property>
+                        <property name="orientation">vertical</property>
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkBox" id="Welcome_Main_box">
+                            <property name="can-focus">False</property>
+                            <property name="hexpand">True</property>
+                            <property name="orientation">vertical</property>
+                            <property name="valign">center</property>
+                            <property name="vexpand">True</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="hexpand">True</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Welcome to &lt;b&gt;PikaOS&lt;/b&gt;&lt;/big&gt;</property>
+                                <property name="margin-top">15</property>
+                                <property name="use-markup">True</property>
+                                <property name="valign">center</property>
+                                <property name="vexpand">True</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="hexpand">True</property>
+                                <property name="icon-name">pika-logo</property>
+                                <property name="margin-bottom">15</property>
+                                <property name="margin-top">15</property>
+                                <property name="pixel-size">192</property>
+                                <property name="valign">center</property>
+                                <property name="vexpand">True</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="hexpand">True</property>
+                            <property name="justify">center</property>
+                            <property name="label" translatable="yes">Thank you for choosing PikaOS!
+This welcome screen will help guide you through the
+available resources for PikaOS as well as help you setup 
+your computer to your liking.
+
+Enjoy!
+&lt;3 - the PikaOS team</property>
+                            <property name="valign">center</property>
+                            <property name="vexpand">True</property>
+                            <property name="visible">True</property>
+                            <property name="xalign">0</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">WelcomePage</property>
+                <property name="title">Welcome</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="first-steps_Scroll">
+                <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <property name="shadow-type">in</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="can-focus">False</property>
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkBox" id="first-steps-main_box">
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkBox" id="distrosync_box_2">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="distrosync_logo_2">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-system-software-update</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="distrosync_text_2">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Update my system&lt;/big&gt; </property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="distrosync_button_2">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_distrosync" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="codec_install_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="codec_install_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-media-tape</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="codec_install_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Patented&lt;/b&gt; Media Codecs and Libraries&lt;/big&gt; 
+Get media codecs and libraries (Such as : FFMPEG, and VA-API) which are needed for many creative
+applications and provide hardware accelerated video playback/decoding and encoding.
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="codec_install_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_install_codec" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="nvidia_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="nvidia_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-nvidia</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="nvidia_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;NVIDIA®&lt;/b&gt; drivers&lt;/big&gt; 
+Installs proprietary NVIDIA® drivers that significantly increase performance for NVIDIA cards. 
+(GTX 9XX and newer)
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                                <property name="yalign">0.5</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="nvidia_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_nvidia" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="software_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="software_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-media-floppy</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="software_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install more apps from the &lt;b&gt;Software Manager&lt;/b&gt; &lt;/big&gt; 
+Install and update software using the PikaOS Software Manager.
+
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="software_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_apps" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="webapps_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="webapps_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-applications-internet</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="webapps_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;WebApps&lt;/b&gt;&lt;/big&gt; 
+Install WebApps with your favourite web browser as a backend. Turn your favourite WebApps into 
+native desktop applications.
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="webapps_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_webapps" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">FirstStepsPage</property>
+                <property name="title">First Steps</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="apps-install_Scroll">
+                <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <property name="shadow-type">in</property>
+                <property name="vexpand">True</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="can-focus">False</property>
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkBox" id="apps-install_box">
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkBox" id="blender_install_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="blender_install_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-blender</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="blender_install_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Blender&lt;/b&gt;&lt;/big&gt; 
+Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline. 
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="blender_install_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_install_blender" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="blender_remove_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Remove</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_remove_blender" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="kdenlive_install_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="kdenlive_install_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-kdenlive</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="kdenlive_install_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Kdenlive&lt;/b&gt;&lt;/big&gt; 
+KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE Frameworks libraries
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="kdenlive_install_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_install_kdenlive" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="kdenlive_remove_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Remove</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_remove_kdenlive" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="obs_install_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="obs_install_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-obs</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="obs_install_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;OBS Studio&lt;/b&gt;&lt;/big&gt; 
+Open Broadcaster Software the free and open source software for video recording and live streaming. 
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                                <property name="yalign">0.5</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="obs_install_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_install_obs" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="obs_remove_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Remove</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_remove_obs" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">RecommendedAdditions</property>
+                <property name="title">Recommended Additions</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="optional_Scroll">
+                <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <property name="shadow-type">in</property>
+                <property name="vexpand">True</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="can-focus">False</property>
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkBox" id="optional-steps-main_box">
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkBox" id="amd_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="amd_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-amd</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="amd_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;AMD®&lt;/b&gt; drivers&lt;/big&gt; 
+Installs proprietary AMD® drivers that add a few neat features not found in the FOSS Stack. 
+(RX 4XX and newer)
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="amd_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_amd" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="xone_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="xone_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-input-gaming</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="xone_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;XONE&lt;/b&gt; drivers&lt;/big&gt; 
+Installs the XONE and the XPADNEO drivers that provide Xbox One and Xbox Series controllers 
+with many features and improvements. 
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="xone_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_xone" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">OptionalSteps</property>
+                <property name="title">Optional Steps</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="quick-setup_Scroll">
+                <property name="can-focus">True</property>
+                <property name="shadow-type">in</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkViewport">
+                    <property name="can-focus">False</property>
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkBox" id="quick-setup-main_box">
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkBox" id="dm_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="dm_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-emblem-readonly</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="dm_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Login Manager&lt;/b&gt;&lt;/big&gt; </property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="dm_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="name">000</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_dm" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="pling_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="pling_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-emblem-downloads</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="pling_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Get &lt;b&gt;New&lt;/b&gt; themes and icons&lt;/big&gt; </property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="pling_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_pling" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="layout_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="layout_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-desktop</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="layout_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Layout&lt;/b&gt;&lt;/big&gt; </property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="layout_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_layout" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="theme_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="theme_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-applications-graphics</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="theme_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Theme&lt;/b&gt; your desktop&lt;/big&gt; </property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="theme_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_theme" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="extension_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="extension_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-application-x-addon</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="extension_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Add &lt;b&gt;Extensions&lt;/b&gt; to your desktop&lt;/big&gt; </property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="extension_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Launch</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_extension" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">QuickSetupPage</property>
+                <property name="title">Look and Feel</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="main_Header">
+        <property name="can-focus">False</property>
+        <property name="show-close-button">True</property>
+        <property name="subtitle" translatable="yes">Welcome to PikaOS the Cool birb OS</property>
+        <property name="title" translatable="yes">PikaOS Welcome</property>
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkCheckButton" id="startup_switch">
+            <property name="can-focus">True</property>
+            <property name="draw-indicator">True</property>
+            <property name="label" translatable="yes">Show on startup</property>
+            <property name="receives-default">False</property>
+            <property name="visible">True</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
