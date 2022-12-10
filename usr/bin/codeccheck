@@ -30,9 +30,6 @@ SUCCESSFUL="no"
 codec_install() {
       (
         PASSWORD=$(zenity --password --title='Password Authentication') 
-        echo "10"; sleep 1
-	echo "# Enabling H.264 for Steam broadcasts"
-	echo $PASSWORD | sudo -S bash -c 'echo "Exec=steam steam://unlockh264" >> /usr/share/applications/steam.desktop'
 	echo "15"; sleep 1
         echo "# Updating repository information"
 	# refresh repo metadata
