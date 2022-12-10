@@ -1,0 +1,101 @@
+#! /usr/bin/bash
+export LANG=C
+DISPLAY_CHECK=$(echo $DISPLAY)
+WHO=$(whoami)
+
+### INTERNET CHECK ###
+INTERNET="no"
+
+internet_check() {
+      # Check for internet connection
+      wget -q --spider http://google.com
+      if [ $? -eq 0 ]; then
+          export INTERNET="yes"
+      fi
+}
+
+### VIDEO CODEC CHECK ####
+INSTALLED="no"
+
+package_check() {
+      # Check if codecs are already installed
+      dpkg-query -l pika-codecs-meta
+      if [ $? -eq 0 ]; then
+          export INSTALLED="yes"
+      fi
+}
+
+SUCCESSFUL="no"
+
+codec_install() {
+      (
+        PASSWORD=$(zenity --password --title='Password Authentication') 
+        echo "10"; sleep 1
+	echo "# Enabling H.264 for Steam broadcasts"
+	echo $PASSWORD | sudo -S bash -c 'echo "Exec=steam steam://unlockh264" >> /usr/share/applications/steam.desktop'
+	echo "15"; sleep 1
+        echo "# Updating repository information"
+	# refresh repo metadata
+	echo $PASSWORD | sudo -S pkcon refresh force &>/tmp/codeccheck.log
+	# update repos so that we can see any new repo package changes
+	echo $PASSWORD | sudo -S pkcon update -y pika-sources &>>/tmp/codeccheck.log
+	# refresh repo data again.
+	echo $PASSWORD | sudo -S pkcon refresh force &>>/tmp/codeccheck.log
+        echo "20"; sleep 1
+	echo "# Installing codec packages"
+	echo $PASSWORD | sudo -S pkcon install -y pika-codecs-meta
+        echo "60"; sleep 1
+	echo "# Installing hardware video encoding and decoding drivers"
+	echo $PASSWORD | sudo -S pkcon install -y intel-media-va-driver nvidia-vaapi-driver va-driver-all vdpau-driver-all &>>/tmp/codeccheck.log
+        echo "80"; sleep 1
+	echo "# Installing ffmpeg"
+	echo $PASSWORD | sudo -S pkcon install -y ffmpeg ffmpegthumbs gstreamer1.0-libav6 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav:i386 gstreamer1.0-plugins-bad:i386 gstreamer1.0-plugins-ugly:i386 exe-thumbnailer kio-extras fluidsynth timidity
+        echo "100"; sleep 1
+      ) | zenity --title "Video Playback and Encoding enablement" --progress --width=600 --no-cancel --auto-close --percentage=0
+}
+
+codec_ask() {
+		            	if zenity --question \
+		              	--title="Video Playback and Encoding enablement" \
+		              	--width=600 \
+		              	--text="`printf "Due to U.S. patent laws we are not able to include some important video playback and 
+encoding packages on the PikaOS installation media, -HOWEVER- these are freely
+available to download and install with your consent, which we are asking for now! \n
+			  
+Please note that without these packages installed, video playback in some games, browsers,
+and media players will not work correctly. Additionally, without these packages you will
+be unable to use video encoding in OBS studio and Blender.\n
+                          
+Would you like to install the required video playback and encoding packages now to resolve
+the issue? (strongly recommended) \n"`"
+				then
+					codec_install && export SUCCESSFUL="yes"
+		              		if [[ $SUCCESSFUL == "yes" ]]; then
+						if zenity --question --title='Complete!' --text="$(printf "Installation Complete! \nYou may want to reboot for changes to take effect.\n Reboot Now?")"
+						then
+							systemctl reboot
+						fi
+					else
+						zenity --error --title='Failed!' --text='Failed to install codecs!'
+					fi
+				fi
+}
+
+package_check
+internet_check
+
+### Start Program ###
+
+if [[ $INSTALLED == "no" ]]; then
+	if [[ $INTERNET == "yes" ]]; then
+		if [[ $DISPLAY_CHECK ]] && [[ $WHO != "liveuser" ]] && [[ $WHO != "gnome-initial-setup" ]]; then
+		  # sometimes if this tries to run too early when the session is still starting KDE will freeze
+		  sleep 5
+		  codec_ask
+		fi
+	else
+	zenity --error --title='Failed!' --text='No Internet Connection!'
+	fi
+else
+	echo "codecs are already installed!" 
+fi
