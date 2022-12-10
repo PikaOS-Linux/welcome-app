@@ -16,7 +16,7 @@ Depends: python3 (>= 3.3),
          packagekit,
          packagekit-tools,
          zenity,
-         libgtk3-perl
+         libgtk3-perl,
          ${misc:Depends},
          pika-amdgpu-config,
          pika-controller-config,
