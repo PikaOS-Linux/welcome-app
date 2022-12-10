@@ -67,28 +67,28 @@ class Application:
             obs_install_button = self.builder.get_object("obs_install_button")
             obs_remove_button = self.builder.get_object("obs_remove_button")
             while app_state_refresh == True:
-                blender_output = subprocess.run(["dpkg-query -l blender"], shell=True, stdout=subprocess.DEVNULL)
+                blender_output = subprocess.run(["dpkg -l blender"], shell=True, stdout=subprocess.DEVNULL)
                 if (blender_output.returncode) == 0:
                     blender_install_button.set_sensitive(False)
                     blender_remove_button.set_sensitive(True)
                 else:
                     blender_install_button.set_sensitive(True)
                     blender_remove_button.set_sensitive(False)
-#                discord_output = subprocess.run(["dpkg-query -l discord"], shell=True, stdout=subprocess.DEVNULL)
+#                discord_output = subprocess.run(["dpkg -l discord"], shell=True, stdout=subprocess.DEVNULL)
 #                if (discord_output.returncode) == 0:
 #                    discord_install_button.set_sensitive(False)
 #                    discord_remove_button.set_sensitive(True)
 #                else:
 #                    discord_install_button.set_sensitive(True)
 #                    discord_remove_button.set_sensitive(False)
-                kdenlive_output = subprocess.run(["dpkg-query -l kdenlive"], shell=True, stdout=subprocess.DEVNULL)
+                kdenlive_output = subprocess.run(["dpkg -l kdenlive"], shell=True, stdout=subprocess.DEVNULL)
                 if (kdenlive_output.returncode) == 0:
                     kdenlive_install_button.set_sensitive(False)
                     kdenlive_remove_button.set_sensitive(True)
                 else:
                     kdenlive_install_button.set_sensitive(True)
                     kdenlive_remove_button.set_sensitive(False)
-                obs_output = subprocess.run(["dpkg-query -l obs-studio"], shell=True, stdout=subprocess.DEVNULL)
+                obs_output = subprocess.run(["dpkg -l obs-studio"], shell=True, stdout=subprocess.DEVNULL)
                 if (obs_output.returncode) == 0:
                     obs_install_button.set_sensitive(False)
                     obs_remove_button.set_sensitive(True)
