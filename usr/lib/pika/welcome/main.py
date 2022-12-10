@@ -50,6 +50,10 @@ class Application:
             theme_box.hide()
             layout_box.hide()
             extension_box.hide()
+            
+        ### Hidden Entries ###
+        self.builder.get_object("dm_box").hide()
+        layout_box.hide()
         
 
         ### app state refresh ###
@@ -113,10 +117,6 @@ class Application:
         startup_switch.set_active(settings.get_boolean("startup-show"))
     
         startup_switch.connect("toggled", lambda btn: settings.set_boolean("startup-show", btn.get_active()))
-    
-        
-    ### Hidden Entries ###
-    dm_box.hide()
         
     ### Hardcoded icons ###
         if (settings.get_boolean("use-system-icons")) == True:
