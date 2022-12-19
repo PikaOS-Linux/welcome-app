@@ -805,7 +805,7 @@
 	(17,1,82,"GtkButton","pressed","enter_layout",None,None,"yes",None,None),
 	(18,1,86,"GtkButton","pressed","enter_theme",None,None,"yes",None,None),
 	(19,1,90,"GtkButton","pressed","enter_extension",None,None,"yes",None,None),
-	(22,1,96,"GtkButton","pressed","enter_install_obs",None,None,"yes",None,None),
+	(22,1,96,"GtkButton","pressed","enter_install_gameutils",None,None,"yes",None,None),
 	(23,1,97,"GtkButton","pressed","enter_remove_gameutils",None,None,"yes",None,None)
   </object_signal>
 </cambalache-project>

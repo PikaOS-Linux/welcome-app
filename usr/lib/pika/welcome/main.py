@@ -397,6 +397,11 @@ class Application:
         subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install discord'"], shell=True)
     def enter_remove_discord(self, widget):
         subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove discord'"], shell=True)
+    ### GAME UTILS ###
+    def enter_install_gameutils(self, widget):
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta'"], shell=True)
+    def enter_remove_gameutils(self, widget):
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta'"], shell=True)
         
 Application()
 Gtk.main()

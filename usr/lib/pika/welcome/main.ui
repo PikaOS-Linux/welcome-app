@@ -754,7 +754,7 @@ and many more...
                                 <property name="sensitive">False</property>
                                 <property name="valign">center</property>
                                 <property name="visible">True</property>
-                                <signal name="pressed" handler="enter_install_obs" swapped="yes"/>
+                                <signal name="pressed" handler="enter_install_gameutils" swapped="yes"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
