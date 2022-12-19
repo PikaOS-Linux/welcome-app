@@ -9,4 +9,4 @@ Terminal=false
 Categories=GNOME;GTK;Utility;
 Keywords=Gnome;GTK
 NoDisplay=true
-AutostartCondition=GSettings io.risi.Welcome startup-show
+AutostartCondition=GSettings org.pika.welcome startup-show

@@ -1,3 +1,9 @@
+pika-welcome (1.0-99pika5) kinetic; urgency=low
+
+  * Fix bugs
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
+
 pika-welcome (1.0-99pika3) kinetic; urgency=low
 
   * Add post scripts
