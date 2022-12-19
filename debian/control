@@ -20,4 +20,6 @@ Depends: python3 (>= 3.3),
          ${misc:Depends},
          pika-amdgpu-config,
          pika-controller-config,
+         webapp-manager,
+Recommends: pika-gnome-layouts
 Description: PikaOS Welcome App
