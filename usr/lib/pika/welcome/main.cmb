@@ -95,7 +95,12 @@
 	(1,89,"GtkLabel","extension_text",87,None,None,None,1),
 	(1,90,"GtkButton","extension_button",87,None,None,None,2),
 	(1,91,"GtkHeaderBar","main_Header",1,None,"titlebar",None,1),
-	(1,92,"GtkCheckButton","startup_switch",91,None,None,None,None)
+	(1,92,"GtkCheckButton","startup_switch",91,None,None,None,None),
+	(1,93,"GtkBox","gameutils_install_box",37,None,None,None,3),
+	(1,94,"GtkImage","gameutils_install_logo",93,None,None,None,None),
+	(1,95,"GtkLabel","gameutils_install_text",93,None,None,None,1),
+	(1,96,"GtkButton","gameutils_install_button",93,None,None,None,2),
+	(1,97,"GtkButton","gameutils_remove_button",93,None,None,None,3)
   </object>
   <object_property>
 	(1,1,"GtkWidget","can-focus","False",None,None,None,None,None),
@@ -572,7 +577,41 @@
 	(1,92,"GtkToggleButton","draw-indicator","True",None,None,None,None,None),
 	(1,92,"GtkWidget","can-focus","True",None,None,None,None,None),
 	(1,92,"GtkWidget","receives-default","False",None,None,None,None,None),
-	(1,92,"GtkWidget","visible","True",None,None,None,None,None)
+	(1,92,"GtkWidget","visible","True",None,None,None,None,None),
+	(1,93,"GtkBox","spacing","10",None,None,None,None,None),
+	(1,93,"GtkWidget","can-focus","False",None,None,None,None,None),
+	(1,93,"GtkWidget","visible","True",None,None,None,None,None),
+	(1,94,"GtkImage","icon-name","pika-input-gaming",None,None,None,None,None),
+	(1,94,"GtkImage","pixel-size","80",None,None,None,None,None),
+	(1,94,"GtkWidget","can-focus","False",None,None,None,None,None),
+	(1,94,"GtkWidget","margin-start","10",None,None,None,None,None),
+	(1,94,"GtkWidget","visible","True",None,None,None,None,None),
+	(1,95,"GtkLabel","label","&lt;big&gt;Install the &lt;b&gt;PikaOS Game Utilites &lt;/b&gt;&lt;/big&gt; \nA meta package that installs: Steam, Lutris, Goverlay + Mangohud, Wine, Winetricks, VKBasalt, \nand many more...\n","yes",None,None,None,None),
+	(1,95,"GtkLabel","use-markup","True",None,None,None,None,None),
+	(1,95,"GtkLabel","xalign","0",None,None,None,None,None),
+	(1,95,"GtkLabel","yalign","0.5",None,None,None,None,None),
+	(1,95,"GtkWidget","can-focus","False",None,None,None,None,None),
+	(1,95,"GtkWidget","visible","True",None,None,None,None,None),
+	(1,96,"GtkButton","label"," Install  ","yes",None,None,None,None),
+	(1,96,"GtkWidget","can-focus","True",None,None,None,None,None),
+	(1,96,"GtkWidget","halign","center",None,None,None,None,None),
+	(1,96,"GtkWidget","margin-bottom","10",None,None,None,None,None),
+	(1,96,"GtkWidget","margin-end","10",None,None,None,None,None),
+	(1,96,"GtkWidget","margin-top","10",None,None,None,None,None),
+	(1,96,"GtkWidget","receives-default","True",None,None,None,None,None),
+	(1,96,"GtkWidget","sensitive","False",None,None,None,None,None),
+	(1,96,"GtkWidget","valign","center",None,None,None,None,None),
+	(1,96,"GtkWidget","visible","True",None,None,None,None,None),
+	(1,97,"GtkButton","label","Remove","yes",None,None,None,None),
+	(1,97,"GtkWidget","can-focus","True",None,None,None,None,None),
+	(1,97,"GtkWidget","halign","center",None,None,None,None,None),
+	(1,97,"GtkWidget","margin-bottom","10",None,None,None,None,None),
+	(1,97,"GtkWidget","margin-end","10",None,None,None,None,None),
+	(1,97,"GtkWidget","margin-top","10",None,None,None,None,None),
+	(1,97,"GtkWidget","receives-default","True",None,None,None,None,None),
+	(1,97,"GtkWidget","sensitive","False",None,None,None,None,None),
+	(1,97,"GtkWidget","valign","center",None,None,None,None,None),
+	(1,97,"GtkWidget","visible","True",None,None,None,None,None)
   </object_property>
   <object_layout_property>
 	(1,2,3,"GtkBoxLayoutChild","expand","False",None,None,None,None),
@@ -736,7 +775,16 @@
 	(1,87,89,"GtkBoxLayoutChild","expand","True",None,None,None,None),
 	(1,87,89,"GtkBoxLayoutChild","fill","True",None,None,None,None),
 	(1,87,90,"GtkBoxLayoutChild","expand","False",None,None,None,None),
-	(1,87,90,"GtkBoxLayoutChild","fill","True",None,None,None,None)
+	(1,87,90,"GtkBoxLayoutChild","fill","True",None,None,None,None),
+	(1,93,94,"GtkBoxLayoutChild","expand","False",None,None,None,None),
+	(1,93,94,"GtkBoxLayoutChild","fill","True",None,None,None,None),
+	(1,93,95,"GtkBoxLayoutChild","expand","True",None,None,None,None),
+	(1,93,95,"GtkBoxLayoutChild","fill","True",None,None,None,None),
+	(1,93,95,"GtkBoxLayoutChild","position","1",None,None,None,None),
+	(1,93,96,"GtkBoxLayoutChild","expand","False",None,None,None,None),
+	(1,93,96,"GtkBoxLayoutChild","fill","True",None,None,None,None),
+	(1,93,97,"GtkBoxLayoutChild","expand","False",None,None,None,None),
+	(1,93,97,"GtkBoxLayoutChild","fill","True",None,None,None,None)
   </object_layout_property>
   <object_signal>
 	(1,1,18,"GtkButton","pressed","enter_distrosync",None,None,"yes",None,None),
@@ -756,6 +804,8 @@
 	(16,1,78,"GtkButton","pressed","enter_pling",None,None,"yes",None,None),
 	(17,1,82,"GtkButton","pressed","enter_layout",None,None,"yes",None,None),
 	(18,1,86,"GtkButton","pressed","enter_theme",None,None,"yes",None,None),
-	(19,1,90,"GtkButton","pressed","enter_extension",None,None,"yes",None,None)
+	(19,1,90,"GtkButton","pressed","enter_extension",None,None,"yes",None,None),
+	(22,1,96,"GtkButton","pressed","enter_install_obs",None,None,"yes",None,None),
+	(23,1,97,"GtkButton","pressed","enter_remove_gameutils",None,None,"yes",None,None)
   </object_signal>
 </cambalache-project>

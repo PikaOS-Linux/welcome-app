@@ -70,6 +70,8 @@ class Application:
             kdenlive_remove_button = self.builder.get_object("kdenlive_remove_button")
             obs_install_button = self.builder.get_object("obs_install_button")
             obs_remove_button = self.builder.get_object("obs_remove_button")
+            gameutils_install_button = self.builder.get_object("gameutils_install_button")
+            gameutils_remove_button = self.builder.get_object("gameutils_remove_button")
             while app_state_refresh == True:
                 blender_output = subprocess.run(["dpkg -l blender"], shell=True, stdout=subprocess.DEVNULL)
                 if (blender_output.returncode) == 0:
@@ -98,7 +100,14 @@ class Application:
                     obs_remove_button.set_sensitive(True)
                 else:
                     obs_install_button.set_sensitive(True)
-                    obs_remove_button.set_sensitive(False)                
+                    obs_remove_button.set_sensitive(False)       
+                gameutils_output = subprocess.run(["dpkg -l pika-gameutils-meta"], shell=True, stdout=subprocess.DEVNULL)
+                if (gameutils_output.returncode) == 0:
+                    gameutils_install_button.set_sensitive(False)
+                    gameutils_remove_button.set_sensitive(True)
+                else:
+                    gameutils_install_button.set_sensitive(True)
+                    gameutils_remove_button.set_sensitive(False)         
                 time.sleep(10)
         
         t1 = threading.Thread(target=app_state_refresh_func)
@@ -130,6 +139,7 @@ class Application:
             kdenlive_install_logo = self.builder.get_object("kdenlive_install_logo")
             obs_install_logo = self.builder.get_object("obs_install_logo")
 #            discord_install_logo = self.builder.get_object("discord_install_logo")
+            gameutils_install_logo = self.builder.get_object("gameutils_install_logo")
             
             amd_logo = self.builder.get_object("amd_logo")
 #            rocm_logo = self.builder.get_object("rocm_logo")
@@ -167,6 +177,7 @@ class Application:
             kdenlive_install_logo.set_from_icon_name("kdenlive", 80)
             obs_install_logo.set_from_icon_name("obs", 80)
 #            discord_install_logo.set_from_icon_name("discord", 80)
+            gameutils_install_logo.set_from_icon_name("input-gaming", 80)
             
             amd_logo.set_from_icon_name("amd", 80)
 #            rocm_logo.set_from_icon_name("amd", 80)
