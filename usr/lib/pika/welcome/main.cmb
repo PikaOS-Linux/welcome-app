@@ -678,7 +678,8 @@
 	(1,103,"GtkWidget","visible","True",None,None,None,None,None),
 	(1,104,"GtkLabel","justify","right",None,None,None,None,None),
 	(1,104,"GtkLabel","label","Change Desktop Layout",None,None,None,None,None),
-	(1,104,"GtkLabel","wrap-mode","char",None,None,None,None,None)
+	(1,104,"GtkLabel","wrap-mode","char",None,None,None,None,None),
+	(1,104,"GtkWidget","visible","True",None,None,None,None,None)
   </object_property>
   <object_layout_property>
 	(1,2,3,"GtkBoxLayoutChild","expand","False",None,None,None,None),
