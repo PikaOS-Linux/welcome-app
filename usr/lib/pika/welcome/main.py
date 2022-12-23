@@ -53,7 +53,6 @@ class Application:
             
         ### Hidden Entries ###
         self.builder.get_object("dm_box").hide()
-        layout_box.hide()
         
 
         ### app state refresh ###
@@ -134,6 +133,7 @@ class Application:
             nvidia_logo = self.builder.get_object("nvidia_logo")
             software_logo = self.builder.get_object("software_logo")
             webapps_logo = self.builder.get_object("webapps_logo")
+            layout_logo_2 = self.builder.get_object("layout_logo_2")
             
             blender_install_logo = self.builder.get_object("blender_install_logo")
             kdenlive_install_logo = self.builder.get_object("kdenlive_install_logo")
@@ -142,9 +142,9 @@ class Application:
             gameutils_install_logo = self.builder.get_object("gameutils_install_logo")
             
             amd_logo = self.builder.get_object("amd_logo")
-#            rocm_logo = self.builder.get_object("rocm_logo")
+            rocm_logo = self.builder.get_object("rocm_logo")
             xone_logo = self.builder.get_object("xone_logo")
-#            protonup_logo = self.builder.get_object("protonup_logo")
+            protonup_logo = self.builder.get_object("protonup_logo")
             
             dm_logo = self.builder.get_object("dm_logo")
             pling_logo = self.builder.get_object("pling_logo")
@@ -172,6 +172,7 @@ class Application:
             nvidia_logo.set_from_icon_name("nvidia", 80)
             software_logo.set_from_icon_name("media-floppy", 80)
             webapps_logo.set_from_icon_name("applications-internet", 80)
+            layout_logo_2.set_from_icon_name("desktop", 24)
             
             blender_install_logo.set_from_icon_name("blender", 80)
             kdenlive_install_logo.set_from_icon_name("kdenlive", 80)
@@ -180,9 +181,9 @@ class Application:
             gameutils_install_logo.set_from_icon_name("input-gaming", 80)
             
             amd_logo.set_from_icon_name("amd", 80)
-#            rocm_logo.set_from_icon_name("amd", 80)
+            rocm_logo.set_from_icon_name("amd", 80)
             xone_logo.set_from_icon_name("input-gaming", 80)
-#            protonup_logo.set_from_icon_name("net.davidotek.pupgui2", 80)
+            protonup_logo.set_from_icon_name("net.davidotek.pupgui2", 80)
             
             dm_logo.set_from_icon_name("applications-graphics", 80)
             pling_logo.set_from_icon_name("applications-graphics", 80)
@@ -209,7 +210,7 @@ class Application:
 #            discord_install_logo = self.builder.get_object("discord_install_logo")
             
             amd_logo = self.builder.get_object("amd_logo")
-#            rocm_logo = self.builder.get_object("rocm_logo")
+            rocm_logo = self.builder.get_object("rocm_logo")
             xone_logo = self.builder.get_object("xone_logo")
             
             dm_logo = self.builder.get_object("dm_logo")
@@ -243,7 +244,7 @@ class Application:
 #            discord_install_logo.set_from_icon_name("discord", 80)
             
             amd_logo.set_from_icon_name("amd", 80)
-#            rocm_logo.set_from_icon_name("amd", 80)
+            rocm_logo.set_from_icon_name("amd", 80)
             xone_logo.set_from_icon_name("input-gaming", 80)
             
             dm_logo.set_from_icon_name("emblem-readonly", 80)
@@ -293,13 +294,17 @@ class Application:
         os.system("/usr/bin/pika-amdgpu-config")
     ### ROCm ###
     def enter_rocm(self, widget):
-        os.system("/usr/lib/pika/welcome/rocm.sh")
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-rocm-meta'"], shell=True)
     ### XONE ###
     def enter_xone(self, widget):
         os.system("/usr/bin/pika-controller-config")
     ### PROTONUP ###
     def enter_protonup(self, widget):
-        os.system("/usr/bin/protonup-qt") 
+        flatpak_protonup_output = subprocess.run(["flatpak info net.davidotek.pupgui2"], shell=True)
+        if (flatpak_protonup_output.returncode) != 0:
+            subprocess.run(["/usr/lib/pika/welcome/xdg-terminal 'pkexec flatpak -y install net.davidotek.pupgui2'"], shell=True)
+        else:
+            subprocess.run(["flatpak run net.davidotek.pupgui2"], shell=True)
    
    
     #### Apps Entries ####
@@ -386,7 +391,7 @@ class Application:
     def enter_install_kdenlive(self, widget):
         subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install kdenlive'"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove kdenlive catdoc dvdauthor kdenlive kf5-kfilemetadata kf5-knotifyconfig qt5-qtnetworkauth'"], shell=True)
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove kdenlive'"], shell=True)
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
         subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install obs-studio'"], shell=True)
