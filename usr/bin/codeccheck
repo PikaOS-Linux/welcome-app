@@ -85,7 +85,7 @@ internet_check
 
 if [[ $INSTALLED == "no" ]]; then
 	if [[ $INTERNET == "yes" ]]; then
-		if [[ $DISPLAY_CHECK ]] && [[ $WHO != "liveuser" ]] && [[ $WHO != "gnome-initial-setup" ]]; then
+		if [[ $DISPLAY_CHECK ]] && [[ $WHO != "pikaos" ]] && [[ $WHO != "gnome-initial-setup" ]]; then
 		  # sometimes if this tries to run too early when the session is still starting KDE will freeze
 		  sleep 5
 		  codec_ask
