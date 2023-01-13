@@ -1,11 +1,11 @@
-pika-welcome (1.0-99pika11) kinetic; urgency=low
+pika-welcome (2.0-99pika11) kinetic; urgency=low
 
   * Fix liveiso username
 
  -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
 
 
-pika-welcome (1.0-99pika10) kinetic; urgency=low
+pika-welcome (2.0-99pika10) kinetic; urgency=low
 
   * Add new entries
 
