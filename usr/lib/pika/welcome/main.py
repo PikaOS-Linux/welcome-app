@@ -373,6 +373,22 @@ class Application:
         subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta'"], shell=True)
     def enter_remove_gameutils(self, widget):
         subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta'"], shell=True)
+    ### MSTTF ###
+    def enter_install_msttf(self, widget):
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt install ttf-mscorefonts-installer'"], shell=True)
+    def enter_remove_msttf(self, widget):
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt remove ttf-mscorefonts-installer'"], shell=True)
+    ### LIBREOFFICE ###
+    def enter_install_libreoffice(self, widget):
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-office-meta'"], shell=True)
+    def enter_remove_libreoffice(self, widget):
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-office-meta'"], shell=True)
+    ### KRITA ###
+    def enter_install_krita(self, widget):
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install krita'"], shell=True)
+    def enter_remove_krita(self, widget):
+        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove krita'"], shell=True)
+
         
 Application()
 Gtk.main()
