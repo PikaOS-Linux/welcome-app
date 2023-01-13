@@ -50,6 +50,9 @@ class Application:
             theme_box.hide()
             layout_box.hide()
             extension_box.hide()
+            self.builder.get_object("layout_button_2").hide()
+            self.builder.get_object("layout_text_2").hide()
+            
             
         ### Hidden Entries ###
         self.builder.get_object("dm_box").hide()
@@ -71,6 +74,12 @@ class Application:
             obs_remove_button = self.builder.get_object("obs_remove_button")
             gameutils_install_button = self.builder.get_object("gameutils_install_button")
             gameutils_remove_button = self.builder.get_object("gameutils_remove_button")
+            msttf_install_button = self.builder.get_object("msttf_install_button")
+            msttf_remove_button = self.builder.get_object("msttf_remove_button")
+            krita_install_button = self.builder.get_object("krita_install_button")
+            krita_remove_button = self.builder.get_object("krita_remove_button")
+            libreoffice_install_button = self.builder.get_object("libreoffice_install_button")
+            libreoffice_remove_button = self.builder.get_object("libreoffice_remove_button")            
             while app_state_refresh == True:
                 blender_output = subprocess.run(["dpkg -l blender"], shell=True, stdout=subprocess.DEVNULL)
                 if (blender_output.returncode) == 0:
@@ -106,7 +115,28 @@ class Application:
                     gameutils_remove_button.set_sensitive(True)
                 else:
                     gameutils_install_button.set_sensitive(True)
-                    gameutils_remove_button.set_sensitive(False)         
+                    gameutils_remove_button.set_sensitive(False)
+                krita_output = subprocess.run(["dpkg -l krita"], shell=True, stdout=subprocess.DEVNULL)
+                if (krita_output.returncode) == 0:
+                    krita_install_button.set_sensitive(False)
+                    krita_remove_button.set_sensitive(True)
+                else:
+                    krita_install_button.set_sensitive(True)
+                    krita_remove_button.set_sensitive(False)  
+                msttf_output = subprocess.run(["dpkg -l ttf-mscorefonts-installer"], shell=True, stdout=subprocess.DEVNULL)
+                if (msttf_output.returncode) == 0:
+                    msttf_install_button.set_sensitive(False)
+                    msttf_remove_button.set_sensitive(True)
+                else:
+                    msttf_install_button.set_sensitive(True)
+                    msttf_remove_button.set_sensitive(False)  
+                libreoffice_output = subprocess.run(["dpkg -l pika-office-meta"], shell=True, stdout=subprocess.DEVNULL)
+                if (libreoffice_output.returncode) == 0:
+                    libreoffice_install_button.set_sensitive(False)
+                    libreoffice_remove_button.set_sensitive(True)
+                else:
+                    libreoffice_install_button.set_sensitive(True)
+                    libreoffice_remove_button.set_sensitive(False)  
                 time.sleep(10)
         
         t1 = threading.Thread(target=app_state_refresh_func)
@@ -140,7 +170,10 @@ class Application:
             obs_install_logo = self.builder.get_object("obs_install_logo")
 #            discord_install_logo = self.builder.get_object("discord_install_logo")
             gameutils_install_logo = self.builder.get_object("gameutils_install_logo")
-            
+            msttf_install_logo = self.builder.get_object("msttf_install_logo")
+            krita_install_logo = self.builder.get_object("krita_install_logo")
+            libreoffice_install_logo = self.builder.get_object("libreoffice_install_logo")
+
             amd_logo = self.builder.get_object("amd_logo")
             rocm_logo = self.builder.get_object("rocm_logo")
             xone_logo = self.builder.get_object("xone_logo")
@@ -179,7 +212,10 @@ class Application:
             obs_install_logo.set_from_icon_name("obs", 80)
 #            discord_install_logo.set_from_icon_name("discord", 80)
             gameutils_install_logo.set_from_icon_name("input-gaming", 80)
-            
+            krita_install_logo.set_from_icon_name("krita", 80)
+            libreoffice_install_logo.set_from_icon_name("libreoffice", 80)
+            msttf_install_logo.set_from_icon_name("fonts", 80)
+
             amd_logo.set_from_icon_name("amd", 80)
             rocm_logo.set_from_icon_name("amd", 80)
             xone_logo.set_from_icon_name("input-gaming", 80)
@@ -197,78 +233,8 @@ class Application:
             
 #            discord_logo.set_from_icon_name("discord", 80)
 #            reddit_logo.set_from_icon_name("reddit", 80)
-            
-            update_logo = self.builder.get_object("distrosync_logo_2")
-            codec_install_logo = self.builder.get_object("codec_install_logo")
-            nvidia_logo = self.builder.get_object("nvidia_logo")
-            software_logo = self.builder.get_object("software_logo")
-            webapps_logo = self.builder.get_object("webapps_logo")
-            
-            blender_install_logo = self.builder.get_object("blender_install_logo")
-            kdenlive_install_logo = self.builder.get_object("kdenlive_install_logo")
-            obs_install_logo = self.builder.get_object("obs_install_logo")
-#            discord_install_logo = self.builder.get_object("discord_install_logo")
-            
-            amd_logo = self.builder.get_object("amd_logo")
-            rocm_logo = self.builder.get_object("rocm_logo")
-            xone_logo = self.builder.get_object("xone_logo")
-            
-            dm_logo = self.builder.get_object("dm_logo")
-            pling_logo = self.builder.get_object("pling_logo")
-            layout_logo = self.builder.get_object("layout_logo")
-            theme_logo = self.builder.get_object("theme_logo")
-            extension_logo = self.builder.get_object("extension_logo")
-            
-            troubleshoot_logo = self.builder.get_object("troubleshoot_logo")
-            doc_logo = self.builder.get_object("doc_logo")
-            distrosync_logo = self.builder.get_object("distrosync_logo")
-            
-#            discord_logo = self.builder.get_object("discord_logo")
-            reddit_logo = self.builder.get_object("reddit_logo")
-            
-            patreon_logo = self.builder.get_object("patreon_logo")
-            design_logo = self.builder.get_object("design_logo")
-            ge_gitlab_logo = self.builder.get_object("ge_gitlab_logo")
-            ge_github_logo = self.builder.get_object("ge_github_logo")
-            cosmo_github_logo = self.builder.get_object("cosmo_github_logo")
-            
-            update_logo.set_from_icon_name("system-software-update", 80)
-            codec_install_logo.set_from_icon_name("media-tape", 80)
-            nvidia_logo.set_from_icon_name("nvidia", 80)
-            software_logo.set_from_icon_name("media-floppy", 80)
-            webapps_logo.set_from_icon_name("applications-internet", 80)
-            
-            blender_install_logo.set_from_icon_name("blender", 80)
-            kdenlive_install_logo.set_from_icon_name("kdenlive", 80)
-            obs_install_logo.set_from_icon_name("obs", 80)
-#            discord_install_logo.set_from_icon_name("discord", 80)
-            
-            amd_logo.set_from_icon_name("amd", 80)
-            rocm_logo.set_from_icon_name("amd", 80)
-            xone_logo.set_from_icon_name("input-gaming", 80)
-            
-            dm_logo.set_from_icon_name("emblem-readonly", 80)
-            pling_logo.set_from_icon_name("emblem-downloads", 80)
-            layout_logo.set_from_icon_name("desktop", 80)
-            theme_logo.set_from_icon_name("applications-graphics", 80)
-            extension_logo.set_from_icon_name("application-x-addon", 80)
-            
-#            troubleshoot_logo.set_from_icon_name("emblem-important", 80)
-#            doc_logo.set_from_icon_name("emblem-documents", 80)
-#            distrosync_logo.set_from_icon_name("system-software-update", 80)
-            
-#            discord_logo.set_from_icon_name("discord", 80)
-#            reddit_logo.set_from_icon_name("reddit", 80)
-            
-#            patreon_logo.set_from_icon_name("emblem-favorite", 80)
-#            design_logo.set_from_icon_name("applications-graphics", 80)
-#            ge_gitlab_logo.set_from_icon_name("gitlab", 80)
-#            ge_github_logo.set_from_icon_name("github", 80)
-#            cosmo_github_logo.set_from_icon_name("github", 80)
-#            design_logo.set_from_icon_name("applications-graphics", 80)
-#            ge_gitlab_logo.set_from_icon_name("gitlab", 80)
-#            ge_github_logo.set_from_icon_name("github", 80)
-#            cosmo_github_logo.set_from_icon_name("github", 80)
+
+
         pass
         
     ### ENTER LOOK WINDOW ###

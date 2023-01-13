@@ -470,6 +470,465 @@ native desktop applications.
                         <property name="orientation">vertical</property>
                         <property name="visible">True</property>
                         <child>
+                          <object class="GtkBox" id="gameutils_install_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="gameutils_install_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-input-gaming</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                                <child>
+                                  <object class="GtkBox" id="krita_install_box">
+                                    <property name="can-focus">False</property>
+                                    <property name="spacing">10</property>
+                                    <property name="visible">True</property>
+                                    <child>
+                                      <object class="GtkImage" id="krita_install_logo">
+                                        <property name="can-focus">False</property>
+                                        <property name="icon-name">pika-obs</property>
+                                        <property name="margin-start">10</property>
+                                        <property name="pixel-size">80</property>
+                                        <property name="visible">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="krita_install_text">
+                                        <property name="can-focus">False</property>
+                                        <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;OBS Studio&lt;/b&gt;&lt;/big&gt; 
+Open Broadcaster Software the free and open source software for video recording and live streaming. 
+
+</property>
+                                        <property name="use-markup">True</property>
+                                        <property name="visible">True</property>
+                                        <property name="xalign">0</property>
+                                        <property name="yalign">0.5</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">True</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="krita_install_button">
+                                        <property name="can-focus">True</property>
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes"> Install  </property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="receives-default">True</property>
+                                        <property name="sensitive">False</property>
+                                        <property name="valign">center</property>
+                                        <property name="visible">True</property>
+                                        <signal name="pressed" handler="enter_install_krita" swapped="yes"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="krita_remove_button">
+                                        <property name="can-focus">True</property>
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">Remove</property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="receives-default">True</property>
+                                        <property name="sensitive">False</property>
+                                        <property name="valign">center</property>
+                                        <property name="visible">True</property>
+                                        <signal name="pressed" handler="enter_remove_obs" swapped="yes"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox" id="krita_install_box_2">
+                                    <property name="can-focus">False</property>
+                                    <property name="spacing">10</property>
+                                    <property name="visible">True</property>
+                                    <child>
+                                      <object class="GtkImage" id="krita_install_logo_2">
+                                        <property name="can-focus">False</property>
+                                        <property name="icon-name">pika-obs</property>
+                                        <property name="margin-start">10</property>
+                                        <property name="pixel-size">80</property>
+                                        <property name="visible">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="krita_install_text_2">
+                                        <property name="can-focus">False</property>
+                                        <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;OBS Studio&lt;/b&gt;&lt;/big&gt; 
+Open Broadcaster Software the free and open source software for video recording and live streaming. 
+
+</property>
+                                        <property name="use-markup">True</property>
+                                        <property name="visible">True</property>
+                                        <property name="xalign">0</property>
+                                        <property name="yalign">0.5</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">True</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="krita_install_button_2">
+                                        <property name="can-focus">True</property>
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes"> Install  </property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="receives-default">True</property>
+                                        <property name="sensitive">False</property>
+                                        <property name="valign">center</property>
+                                        <property name="visible">True</property>
+                                        <signal name="pressed" handler="enter_install_krita" swapped="yes"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="krita_remove_button_2">
+                                        <property name="can-focus">True</property>
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">Remove</property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="receives-default">True</property>
+                                        <property name="sensitive">False</property>
+                                        <property name="valign">center</property>
+                                        <property name="visible">True</property>
+                                        <signal name="pressed" handler="enter_remove_obs" swapped="yes"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox" id="krita_install_box_3">
+                                    <property name="can-focus">False</property>
+                                    <property name="spacing">10</property>
+                                    <property name="visible">True</property>
+                                    <child>
+                                      <object class="GtkImage" id="krita_install_logo_3">
+                                        <property name="can-focus">False</property>
+                                        <property name="icon-name">pika-obs</property>
+                                        <property name="margin-start">10</property>
+                                        <property name="pixel-size">80</property>
+                                        <property name="visible">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="krita_install_text_3">
+                                        <property name="can-focus">False</property>
+                                        <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;OBS Studio&lt;/b&gt;&lt;/big&gt; 
+Open Broadcaster Software the free and open source software for video recording and live streaming. 
+
+</property>
+                                        <property name="use-markup">True</property>
+                                        <property name="visible">True</property>
+                                        <property name="xalign">0</property>
+                                        <property name="yalign">0.5</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">True</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="krita_install_button_3">
+                                        <property name="can-focus">True</property>
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes"> Install  </property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="receives-default">True</property>
+                                        <property name="sensitive">False</property>
+                                        <property name="valign">center</property>
+                                        <property name="visible">True</property>
+                                        <signal name="pressed" handler="enter_install_krita" swapped="yes"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="krita_remove_button_3">
+                                        <property name="can-focus">True</property>
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">Remove</property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="receives-default">True</property>
+                                        <property name="sensitive">False</property>
+                                        <property name="valign">center</property>
+                                        <property name="visible">True</property>
+                                        <signal name="pressed" handler="enter_remove_obs" swapped="yes"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox" id="krita_install_box_4">
+                                    <property name="can-focus">False</property>
+                                    <property name="spacing">10</property>
+                                    <property name="visible">True</property>
+                                    <child>
+                                      <object class="GtkImage" id="krita_install_logo_4">
+                                        <property name="can-focus">False</property>
+                                        <property name="icon-name">pika-obs</property>
+                                        <property name="margin-start">10</property>
+                                        <property name="pixel-size">80</property>
+                                        <property name="visible">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="krita_install_text_4">
+                                        <property name="can-focus">False</property>
+                                        <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;OBS Studio&lt;/b&gt;&lt;/big&gt; 
+Open Broadcaster Software the free and open source software for video recording and live streaming. 
+
+</property>
+                                        <property name="use-markup">True</property>
+                                        <property name="visible">True</property>
+                                        <property name="xalign">0</property>
+                                        <property name="yalign">0.5</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">True</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="krita_install_button_4">
+                                        <property name="can-focus">True</property>
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes"> Install  </property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="receives-default">True</property>
+                                        <property name="sensitive">False</property>
+                                        <property name="valign">center</property>
+                                        <property name="visible">True</property>
+                                        <signal name="pressed" handler="enter_install_krita" swapped="yes"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="krita_remove_button_4">
+                                        <property name="can-focus">True</property>
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">Remove</property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="receives-default">True</property>
+                                        <property name="sensitive">False</property>
+                                        <property name="valign">center</property>
+                                        <property name="visible">True</property>
+                                        <signal name="pressed" handler="enter_remove_obs" swapped="yes"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="gameutils_install_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;PikaOS Game Utilites &lt;/b&gt;&lt;/big&gt; 
+A meta package that installs: Steam, Lutris, Goverlay + Mangohud, Wine, Winetricks, VKBasalt, 
+and many more...
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                                <property name="yalign">0.5</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="gameutils_install_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_install_gameutils" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="gameutils_remove_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Remove</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_remove_gameutils" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="msttf_install_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="msttf_install_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-msttf</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="msttf_install_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Microsoft True Type Fonts&lt;/b&gt;&lt;/big&gt; 
+Installs TrueType Microsoft fonts and emulate Windows' font rendering. 
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                                <property name="yalign">0.5</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="msttf_install_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_install_msttf" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="msttf_remove_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Remove</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_remove_msttf" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="padding">4</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
                           <object class="GtkBox" id="blender_install_box">
                             <property name="can-focus">False</property>
                             <property name="spacing">10</property>
@@ -546,85 +1005,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="padding">4</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="kdenlive_install_box">
-                            <property name="can-focus">False</property>
-                            <property name="spacing">10</property>
-                            <property name="visible">True</property>
-                            <child>
-                              <object class="GtkImage" id="kdenlive_install_logo">
-                                <property name="can-focus">False</property>
-                                <property name="icon-name">pika-kdenlive</property>
-                                <property name="margin-start">10</property>
-                                <property name="pixel-size">80</property>
-                                <property name="visible">True</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="kdenlive_install_text">
-                                <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Kdenlive&lt;/b&gt;&lt;/big&gt; 
-KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE Frameworks libraries
-
-</property>
-                                <property name="use-markup">True</property>
-                                <property name="visible">True</property>
-                                <property name="xalign">0</property>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="kdenlive_install_button">
-                                <property name="can-focus">True</property>
-                                <property name="halign">center</property>
-                                <property name="label" translatable="yes"> Install  </property>
-                                <property name="margin-bottom">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="receives-default">True</property>
-                                <property name="sensitive">False</property>
-                                <property name="valign">center</property>
-                                <property name="visible">True</property>
-                                <signal name="pressed" handler="enter_install_kdenlive" swapped="yes"/>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="kdenlive_remove_button">
-                                <property name="can-focus">True</property>
-                                <property name="halign">center</property>
-                                <property name="label" translatable="yes">Remove</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="receives-default">True</property>
-                                <property name="sensitive">False</property>
-                                <property name="valign">center</property>
-                                <property name="visible">True</property>
-                                <signal name="pressed" handler="enter_remove_kdenlive" swapped="yes"/>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="padding">4</property>
+                            <property name="position">2</property>
                           </packing>
                         </child>
                         <child>
@@ -705,17 +1086,18 @@ Open Broadcaster Software the free and open source software for video recording 
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="padding">4</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox" id="gameutils_install_box">
+                          <object class="GtkBox" id="kdenlive_install_box">
                             <property name="can-focus">False</property>
                             <property name="spacing">10</property>
                             <property name="visible">True</property>
                             <child>
-                              <object class="GtkImage" id="gameutils_install_logo">
+                              <object class="GtkImage" id="kdenlive_install_logo">
                                 <property name="can-focus">False</property>
-                                <property name="icon-name">pika-input-gaming</property>
+                                <property name="icon-name">pika-kdenlive</property>
                                 <property name="margin-start">10</property>
                                 <property name="pixel-size">80</property>
                                 <property name="visible">True</property>
@@ -726,11 +1108,91 @@ Open Broadcaster Software the free and open source software for video recording 
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel" id="gameutils_install_text">
+                              <object class="GtkLabel" id="kdenlive_install_text">
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;PikaOS Game Utilites &lt;/b&gt;&lt;/big&gt; 
-A meta package that installs: Steam, Lutris, Goverlay + Mangohud, Wine, Winetricks, VKBasalt, 
-and many more...
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Kdenlive&lt;/b&gt;&lt;/big&gt; 
+KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE Frameworks libraries
+
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="kdenlive_install_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_install_kdenlive" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="kdenlive_remove_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Remove</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_remove_kdenlive" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="krita_install_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="krita_install_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-krita</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="krita_install_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Krita&lt;/b&gt;&lt;/big&gt; 
+Krita is KDE's professional FREE and open source painting program. 
+
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="visible">True</property>
@@ -743,7 +1205,7 @@ and many more...
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkButton" id="gameutils_install_button">
+                              <object class="GtkButton" id="krita_install_button">
                                 <property name="can-focus">True</property>
                                 <property name="halign">center</property>
                                 <property name="label" translatable="yes"> Install  </property>
@@ -754,7 +1216,7 @@ and many more...
                                 <property name="sensitive">False</property>
                                 <property name="valign">center</property>
                                 <property name="visible">True</property>
-                                <signal name="pressed" handler="enter_install_gameutils" swapped="yes"/>
+                                <signal name="pressed" handler="enter_install_krita" swapped="yes"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -762,7 +1224,7 @@ and many more...
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkButton" id="gameutils_remove_button">
+                              <object class="GtkButton" id="krita_remove_button">
                                 <property name="can-focus">True</property>
                                 <property name="halign">center</property>
                                 <property name="label" translatable="yes">Remove</property>
@@ -773,7 +1235,7 @@ and many more...
                                 <property name="sensitive">False</property>
                                 <property name="valign">center</property>
                                 <property name="visible">True</property>
-                                <signal name="pressed" handler="enter_remove_gameutils" swapped="yes"/>
+                                <signal name="pressed" handler="enter_remove_krita" swapped="yes"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -782,8 +1244,87 @@ and many more...
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="padding">4</property>
+                            <property name="position">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="libreoffice_install_box">
+                            <property name="can-focus">False</property>
+                            <property name="spacing">10</property>
+                            <property name="visible">True</property>
+                            <child>
+                              <object class="GtkImage" id="libreoffice_install_logo">
+                                <property name="can-focus">False</property>
+                                <property name="icon-name">pika-libreoffice</property>
+                                <property name="margin-start">10</property>
+                                <property name="pixel-size">80</property>
+                                <property name="visible">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="libreoffice_install_text">
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Libreoffice&lt;/b&gt;&lt;/big&gt; 
+LibreOffice is a free and powerful office suite, and a successor to OpenOffice.org 
+(commonly known as OpenOffice).
+</property>
+                                <property name="use-markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                                <property name="yalign">0.5</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="libreoffice_install_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_install_libreoffice" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="libreoffice_remove_button">
+                                <property name="can-focus">True</property>
+                                <property name="halign">center</property>
+                                <property name="label" translatable="yes">Remove</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="receives-default">True</property>
+                                <property name="sensitive">False</property>
+                                <property name="valign">center</property>
+                                <property name="visible">True</property>
+                                <signal name="pressed" handler="enter_remove_libreoffice" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="padding">4</property>
+                            <property name="position">6</property>
                           </packing>
                         </child>
                       </object>
@@ -1390,7 +1931,8 @@ this tool allows steam to run windows games natively on linux.
           </object>
         </child>
         <child>
-          <object class="GtkLabel">
+          <object class="GtkLabel" id="layout_text_2">
+            <property name="can-focus">False</property>
             <property name="justify">right</property>
             <property name="label">Change Desktop Layout</property>
             <property name="visible">True</property>
