@@ -81,56 +81,56 @@ class Application:
             libreoffice_install_button = self.builder.get_object("libreoffice_install_button")
             libreoffice_remove_button = self.builder.get_object("libreoffice_remove_button")            
             while app_state_refresh == True:
-                blender_output = subprocess.run(["dpkg -l blender"], shell=True, stdout=subprocess.DEVNULL)
+                blender_output = subprocess.run(["dpkg -s blender"], shell=True, stdout=subprocess.DEVNULL)
                 if (blender_output.returncode) == 0:
                     blender_install_button.set_sensitive(False)
                     blender_remove_button.set_sensitive(True)
                 else:
                     blender_install_button.set_sensitive(True)
                     blender_remove_button.set_sensitive(False)
-#                discord_output = subprocess.run(["dpkg -l discord"], shell=True, stdout=subprocess.DEVNULL)
+#                discord_output = subprocess.run(["dpkg -s discord"], shell=True, stdout=subprocess.DEVNULL)
 #                if (discord_output.returncode) == 0:
 #                    discord_install_button.set_sensitive(False)
 #                    discord_remove_button.set_sensitive(True)
 #                else:
 #                    discord_install_button.set_sensitive(True)
 #                    discord_remove_button.set_sensitive(False)
-                kdenlive_output = subprocess.run(["dpkg -l kdenlive"], shell=True, stdout=subprocess.DEVNULL)
+                kdenlive_output = subprocess.run(["dpkg -s kdenlive"], shell=True, stdout=subprocess.DEVNULL)
                 if (kdenlive_output.returncode) == 0:
                     kdenlive_install_button.set_sensitive(False)
                     kdenlive_remove_button.set_sensitive(True)
                 else:
                     kdenlive_install_button.set_sensitive(True)
                     kdenlive_remove_button.set_sensitive(False)
-                obs_output = subprocess.run(["dpkg -l obs-studio"], shell=True, stdout=subprocess.DEVNULL)
+                obs_output = subprocess.run(["dpkg -s obs-studio"], shell=True, stdout=subprocess.DEVNULL)
                 if (obs_output.returncode) == 0:
                     obs_install_button.set_sensitive(False)
                     obs_remove_button.set_sensitive(True)
                 else:
                     obs_install_button.set_sensitive(True)
                     obs_remove_button.set_sensitive(False)       
-                gameutils_output = subprocess.run(["dpkg -l pika-gameutils-meta"], shell=True, stdout=subprocess.DEVNULL)
+                gameutils_output = subprocess.run(["dpkg -s pika-gameutils-meta"], shell=True, stdout=subprocess.DEVNULL)
                 if (gameutils_output.returncode) == 0:
                     gameutils_install_button.set_sensitive(False)
                     gameutils_remove_button.set_sensitive(True)
                 else:
                     gameutils_install_button.set_sensitive(True)
                     gameutils_remove_button.set_sensitive(False)
-                krita_output = subprocess.run(["dpkg -l krita"], shell=True, stdout=subprocess.DEVNULL)
+                krita_output = subprocess.run(["dpkg -s krita"], shell=True, stdout=subprocess.DEVNULL)
                 if (krita_output.returncode) == 0:
                     krita_install_button.set_sensitive(False)
                     krita_remove_button.set_sensitive(True)
                 else:
                     krita_install_button.set_sensitive(True)
                     krita_remove_button.set_sensitive(False)  
-                msttf_output = subprocess.run(["dpkg -l ttf-mscorefonts-installer"], shell=True, stdout=subprocess.DEVNULL)
+                msttf_output = subprocess.run(["dpkg -s ttf-mscorefonts-installer"], shell=True, stdout=subprocess.DEVNULL)
                 if (msttf_output.returncode) == 0:
                     msttf_install_button.set_sensitive(False)
                     msttf_remove_button.set_sensitive(True)
                 else:
                     msttf_install_button.set_sensitive(True)
                     msttf_remove_button.set_sensitive(False)  
-                libreoffice_output = subprocess.run(["dpkg -l pika-office-meta"], shell=True, stdout=subprocess.DEVNULL)
+                libreoffice_output = subprocess.run(["dpkg -s pika-office-meta"], shell=True, stdout=subprocess.DEVNULL)
                 if (libreoffice_output.returncode) == 0:
                     libreoffice_install_button.set_sensitive(False)
                     libreoffice_remove_button.set_sensitive(True)

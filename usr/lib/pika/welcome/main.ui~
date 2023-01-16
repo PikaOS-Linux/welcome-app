@@ -1736,11 +1736,12 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="hexpand">True</property>
                                 <property name="vexpand">True</property>
                                 <property name="label" translatable="yes">Made with Love by :
-⭐ Cosmo and GloriousEggroll  : The Welcome App's coding  and kernel                                                                   
+⭐ Cosmo and GloriousEggroll  : The Welcome App's coding 
+⭐ Jan Sentry : The Kernel                                                                           
 ⭐ PizzaLovingNerd - risiOS BDFL :The Welcome App's UI     
 ⭐ Linux Mint team : The Webapps manager                                  
 ⭐ ChimeraOS  : The standalone gamescope session                
-⭐ Pop!OS Team : The tiling in gnome-shell with pop-shell , firmware-manager  
+⭐ Pop!OS Team : The tiling in gnome-shell with pop-shell    
 ⭐ asus-linux :  The Hybrid GPU Controls                                        </property>
                                 <property name="justify">fill</property>
                                 <property name="selectable">True</property>
