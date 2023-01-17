@@ -1733,21 +1733,22 @@ this tool allows steam to run windows games natively on linux.
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="halign">start</property>
                                 <property name="hexpand">True</property>
                                 <property name="vexpand">True</property>
                                 <property name="label" translatable="yes">Made with Love by :
-⭐ Cosmo and GloriousEggroll  : The Welcome App's coding  and kernel                                                                   
-⭐ PizzaLovingNerd - risiOS BDFL :The Welcome App's UI     
-⭐ Linux Mint team : The Webapps manager                                  
-⭐ ChimeraOS  : The standalone gamescope session                
-⭐ Pop!OS Team : The tiling in gnome-shell with pop-shell , firmware-manager  
+⭐ Cosmo and GloriousEggroll  : The Welcome App's coding  and kernel
+⭐ PizzaLovingNerd - risiOS BDFL : The Welcome App's UI
+⭐ Linux Mint team : The Webapps manager
+⭐ ChimeraOS  : The standalone gamescope session
+⭐ Pop!OS Team : The tiling in gnome-shell with pop-shell and firmware-manager
 ⭐ asus-linux :  The Hybrid GPU Controls                                        </property>
                                 <property name="justify">fill</property>
                                 <property name="selectable">True</property>
                                 <property name="xalign">0</property>
                                 <property name="yalign">0</property>
                                 <attributes>
-                                  <attribute name="scale" value="2"/>
+                                  <attribute name="scale" value="1.5"/>
                                 </attributes>
                               </object>
                               <packing>
