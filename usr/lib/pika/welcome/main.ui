@@ -967,6 +967,7 @@ KDE Krita is a professional FREE and open source painting program.
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
+                                <signal name="pressed" handler="enter_install_krita" swapped="yes"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -986,6 +987,7 @@ KDE Krita is a professional FREE and open source painting program.
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
+                                <signal name="pressed" handler="enter_remove_krita" swapped="yes"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
