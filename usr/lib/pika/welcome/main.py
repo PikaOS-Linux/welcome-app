@@ -59,7 +59,6 @@ class Application:
         
 
         ### app state refresh ###
-        
         global app_state_refresh
         app_state_refresh = True
         
@@ -251,143 +250,143 @@ class Application:
     
     ### CODEC ###
     def enter_install_codec(self, widget):
-        os.system("/usr/lib/pika/welcome/codec.sh")
+        subprocess.Popen(["/usr/lib/pika/welcome/codec.sh"])
     ### NVIDIA ###
     def enter_nvidia(self, widget):
-        os.system("/usr/lib/pika/welcome/nvidia.sh")
+        subprocess.Popen(["/usr/lib/pika/welcome/nvidia.sh"])
     ### AMD PRO ###
     def enter_amd(self, widget):
-        os.system("/usr/bin/pika-amdgpu-config")
+        subprocess.Popen(["/usr/bin/pika-amdgpu-config"])
     ### ROCm ###
     def enter_rocm(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-rocm-meta'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-rocm-meta'"], shell=True)
     ### XONE ###
     def enter_xone(self, widget):
-        os.system("/usr/bin/pika-controller-config")
+        subprocess.Popen(["/usr/bin/pika-controller-config"])
     ### PROTONUP ###
     def enter_protonup(self, widget):
         flatpak_protonup_output = subprocess.run(["flatpak info net.davidotek.pupgui2"], shell=True)
         if (flatpak_protonup_output.returncode) != 0:
-            subprocess.run(["/usr/lib/pika/welcome/xdg-terminal 'pkexec flatpak -y install net.davidotek.pupgui2'"], shell=True)
+            subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal 'pkexec flatpak -y install net.davidotek.pupgui2'"], shell=True)
         else:
-            subprocess.run(["flatpak run net.davidotek.pupgui2"], shell=True)
+            subprocess.Popen(["flatpak run net.davidotek.pupgui2"], shell=True)
    
    
     #### Apps Entries ####
    
     ### APPS ###
     def enter_apps(self, widget):
-        os.system("/usr/lib/pika/welcome/apps.sh")
+        subprocess.Popen(["/usr/lib/pika/welcome/apps.sh"])
     ### WEBAPPS ###
     def enter_webapps(self, widget):
-        os.system("/usr/bin/webapp-manager")
+        subprocess.Popen(["/usr/bin/webapp-manager"])
 
     ##### QUICK SETUP ENTRIES #####
     
     ### LOGIN MANAGER ###
     def enter_dm(self, widget):
-        os.system("/usr/bin/pika-login-config")
+        subprocess.Popen(["/usr/bin/pika-login-config"])
     ### LAYOUTS ###
     def enter_layout(self, widget):
         layouts_file = Path('/usr/bin/pika-gnome-layouts')
         if layouts_file.is_file():
-            os.system("/usr/bin/pika-gnome-layouts")
+            subprocess.Popen(["/usr/bin/pika-gnome-layouts"])
         else:
-            subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gnome-layouts'"], shell=True)
+            subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gnome-layouts'"], shell=True)
         pass
     ### THEMES ###
     def enter_theme(self, widget):
-        os.system("/usr/bin/gnome-tweaks")
+        subprocess.Popen(["/usr/bin/gnome-tweaks"])
     ### PLING ###
     def enter_pling(self, widget):
-        os.system("xdg-open https://pling.com/")
+        subprocess.Popen(["xdg-open https://pling.com/"])
     ### EXTENSION ###
     def enter_extension(self, widget):
-        os.system("/usr/bin/extension-manager")
+        subprocess.Popen(["/usr/bin/extension-manager"])
 
     #### TROUBLESHOOT ENTRIES ####
     
     ### Troubleshoot ###
     def enter_troubleshoot(self, widget):
-        os.system("xdg-open https://pikaproject.org/docs/upgrade-troubleshooting/")
+        subprocess.Popen(["xdg-open https://pikaproject.org/docs/upgrade-troubleshooting/"])
     ### Docs ###
     def enter_doc(self, widget):
-        os.system("xdg-open https://pikaproject.org/docs/")
+        subprocess.Popen(["xdg-open https://pikaproject.org/docs/"])
     ### Distro Sync ###
     def enter_distrosync(self, widget):
-        os.system("mintupdate")
+        subprocess.Popen(["mintupdate"])
 
 
     #### COMMUNITY ENTRIES ####
     
     ### discord ###
     def enter_discord(self, widget):
-        os.system("xdg-open https://discord.gg/6y3BdzC")
+        subprocess.Popen(["xdg-open https://discord.gg/6y3BdzC"])
     ### reddit ###
     def enter_reddit(self, widget):
-        os.system("xdg-open https://www.reddit.com/r/pikaProject/")
+        subprocess.Popen(["xdg-open https://www.reddit.com/r/pikaProject/"])
         
     #### Contribute ENTRIES ####
     
     ### patreon ###
     def enter_patreon(self, widget):
-        os.system("xdg-open https://www.patreon.com/gloriouseggroll")
+        subprocess.Popen(["xdg-open https://www.patreon.com/gloriouseggroll"])
     ### design ###
     def enter_design(self, widget):
-        os.system("xdg-open https://discord.com/channels/110175050006577152/1015154123114549309")
+        subprocess.Popen(["xdg-open https://discord.com/channels/110175050006577152/1015154123114549309"])
     ### GE GITLAB ###
     def enter_ge_gitlab(self, widget):
-        os.system("xdg-open https://gitlab.com/GloriousEggroll")
+        subprocess.Popen(["xdg-open https://gitlab.com/GloriousEggroll"])
     ### GE GITHUB ###
     def enter_ge_github(self, widget):
-        os.system("xdg-open https://github.com/GloriousEggroll")
+        subprocess.Popen(["xdg-open https://github.com/GloriousEggroll"])
     ### COSMO GITHUB ###
     def enter_cosmo_github(self, widget):
-        os.system("xdg-open https://github.com/CosmicFusion")
+        subprocess.Popen(["xdg-open https://github.com/CosmicFusion"])
     ###############################################################
     #### Install Window ####
     
     ### Blender ###
     def enter_install_blender(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install blender'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install blender'"], shell=True)
     def enter_remove_blender(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove blender'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove blender'"], shell=True)
     
     ### KDENLIVE ###
     def enter_install_kdenlive(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install kdenlive'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install kdenlive'"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove kdenlive'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove kdenlive'"], shell=True)
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install obs-studio'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install obs-studio'"], shell=True)
     def enter_remove_obs(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove obs-studio'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove obs-studio'"], shell=True)
     ### DISCORD ###
     def enter_install_discord(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install discord'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install discord'"], shell=True)
     def enter_remove_discord(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove discord'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove discord'"], shell=True)
     ### GAME UTILS ###
     def enter_install_gameutils(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta'"], shell=True)
     def enter_remove_gameutils(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta'"], shell=True)
     ### MSTTF ###
     def enter_install_msttf(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt install ttf-mscorefonts-installer'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt install ttf-mscorefonts-installer'"], shell=True)
     def enter_remove_msttf(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt remove ttf-mscorefonts-installer'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt remove ttf-mscorefonts-installer'"], shell=True)
     ### LIBREOFFICE ###
     def enter_install_libreoffice(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-office-meta'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-office-meta'"], shell=True)
     def enter_remove_libreoffice(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-office-meta'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-office-meta'"], shell=True)
     ### KRITA ###
     def enter_install_krita(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install krita'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install krita'"], shell=True)
     def enter_remove_krita(self, widget):
-        subprocess.run(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove krita'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove krita'"], shell=True)
 
         
 Application()
