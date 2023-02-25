@@ -38,15 +38,9 @@ codec_install() {
 	echo $PASSWORD | sudo -S pkcon update -y pika-sources &>>/tmp/codeccheck.log
 	# refresh repo data again.
 	echo $PASSWORD | sudo -S pkcon refresh force &>>/tmp/codeccheck.log
-        echo "20"; sleep 1
-	echo "# Installing codec packages"
-	echo $PASSWORD | sudo -S pkcon install -y pika-codecs-meta
-        echo "60"; sleep 1
-	echo "# Installing hardware video encoding and decoding drivers"
-	echo $PASSWORD | sudo -S pkcon install -y intel-media-va-driver-non-free nvidia-vaapi-driver va-driver-all vdpau-driver-all &>>/tmp/codeccheck.log
-        echo "80"; sleep 1
-	echo "# Installing ffmpeg"
-	echo $PASSWORD | sudo -S pkcon install -y ffmpeg ffmpegthumbs gstreamer1.0-libav6 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav:i386 gstreamer1.0-plugins-bad:i386 gstreamer1.0-plugins-ugly:i386 exe-thumbnailer kio-extras fluidsynth timidity
+        echo "50"; sleep 1
+	echo "# Installing codec meta package, includes hardware decoding and ffmpeg stuff"
+	echo $PASSWORD | sudo -S pkcon install -y pika-codecs-meta &>>/tmp/codeccheck.log
         echo "100"; sleep 1
       ) | zenity --title "Video Playback and Encoding enablement" --progress --width=600 --no-cancel --auto-close --percentage=0
 }
