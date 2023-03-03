@@ -129,7 +129,7 @@ class Application:
                 else:
                     msttf_install_button.set_sensitive(True)
                     msttf_remove_button.set_sensitive(False)  
-                libreoffice_output = subprocess.run(["dpkg -s pika-office-meta"], shell=True, stdout=subprocess.DEVNULL)
+                libreoffice_output = subprocess.run(["dpkg -s pika-libreoffice-meta"], shell=True, stdout=subprocess.DEVNULL)
                 if (libreoffice_output.returncode) == 0:
                     libreoffice_install_button.set_sensitive(False)
                     libreoffice_remove_button.set_sensitive(True)
@@ -379,9 +379,9 @@ class Application:
         subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt remove ttf-mscorefonts-installer'"], shell=True)
     ### LIBREOFFICE ###
     def enter_install_libreoffice(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-office-meta'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-libreoffice-meta'"], shell=True)
     def enter_remove_libreoffice(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-office-meta'"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-libreoffice-meta'"], shell=True)
     ### KRITA ###
     def enter_install_krita(self, widget):
         subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install krita'"], shell=True)
