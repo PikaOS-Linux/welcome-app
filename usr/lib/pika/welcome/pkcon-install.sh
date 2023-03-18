@@ -14,9 +14,7 @@ internet_check
 
 if [[ $INTERNET == yes ]]; then
 	# always refresh repo metadata first
-	pkcon refresh force
-	
-	pkexec pkcon $1 -y $2 $3 $4 $5 $6 $7 $8 $9
+	pkexec /usr/lib/pika/welcome/pkcon-do.sh $@
 
 	if [[ $1 == 'install' ]]; then
 		if [[ ! -z $(dpkg -l $2) ]]; then

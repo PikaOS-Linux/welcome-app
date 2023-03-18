@@ -78,7 +78,12 @@ class Application:
             krita_install_button = self.builder.get_object("krita_install_button")
             krita_remove_button = self.builder.get_object("krita_remove_button")
             libreoffice_install_button = self.builder.get_object("libreoffice_install_button")
-            libreoffice_remove_button = self.builder.get_object("libreoffice_remove_button")            
+            libreoffice_remove_button = self.builder.get_object("libreoffice_remove_button")
+            gameextra_install_button = self.builder.get_object("gameextra_install_button")
+            gameextra_remove_button = self.builder.get_object("gameextra_remove_button")
+            fabiscafe_install_button = self.builder.get_object("fabiscafe_install_button")
+            fabiscafe_remove_button = self.builder.get_object("fabiscafe_remove_button")
+            
             while app_state_refresh == True:
                 blender_output = subprocess.run(["dpkg -s blender"], shell=True, stdout=subprocess.DEVNULL)
                 if (blender_output.returncode) == 0:
@@ -135,7 +140,21 @@ class Application:
                     libreoffice_remove_button.set_sensitive(True)
                 else:
                     libreoffice_install_button.set_sensitive(True)
-                    libreoffice_remove_button.set_sensitive(False)  
+                    libreoffice_remove_button.set_sensitive(False)
+                gameextra_output = subprocess.run(["dpkg -s pika-gameutils-meta-extra"], shell=True, stdout=subprocess.DEVNULL)
+                if (gameextra_output.returncode) == 0:
+                    gameextra_install_button.set_sensitive(False)
+                    gameextra_remove_button.set_sensitive(True)
+                else:
+                    gameextra_install_button.set_sensitive(True)
+                    gameextra_remove_button.set_sensitive(False)  
+                fabiscafe_output = subprocess.run(["dpkg -s fabiscafe-devices"], shell=True, stdout=subprocess.DEVNULL)
+                if (fabiscafe_output.returncode) == 0:
+                    fabiscafe_install_button.set_sensitive(False)
+                    fabiscafe_remove_button.set_sensitive(True)
+                else:
+                    fabiscafe_install_button.set_sensitive(True)
+                    fabiscafe_remove_button.set_sensitive(False)  
                 time.sleep(10)
         
         t1 = threading.Thread(target=app_state_refresh_func)
@@ -172,6 +191,8 @@ class Application:
             msttf_install_logo = self.builder.get_object("msttf_install_logo")
             krita_install_logo = self.builder.get_object("krita_install_logo")
             libreoffice_install_logo = self.builder.get_object("libreoffice_install_logo")
+            gameextra_install_logo = self.builder.get_object("gameextra_install_logo")
+            fabiscafe_install_logo = self.builder.get_object("fabiscafe_install_logo")
 
             amd_logo = self.builder.get_object("amd_logo")
             rocm_logo = self.builder.get_object("rocm_logo")
@@ -214,6 +235,7 @@ class Application:
             krita_install_logo.set_from_icon_name("krita", 80)
             libreoffice_install_logo.set_from_icon_name("libreoffice", 80)
             msttf_install_logo.set_from_icon_name("fonts", 80)
+            gameextra_install_logo.set_from_icon_name("input-gaming", 80)
 
             amd_logo.set_from_icon_name("amd", 80)
             rocm_logo.set_from_icon_name("amd", 80)
@@ -387,7 +409,16 @@ class Application:
         subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install krita'"], shell=True)
     def enter_remove_krita(self, widget):
         subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove krita'"], shell=True)
+    ### GAMEEXTRA ###
+    def enter_install_gameextra(self, widget):
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta-extra'"], shell=True)
+    def enter_remove_gameextra(self, widget):
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta-extra'"], shell=True)
+    ### FABISCAFE ###
+    def enter_install_fabiscafe(self, widget):
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install fabiscafe-devices'"], shell=True)
+    def enter_remove_fabiscafe(self, widget):
+        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove fabiscafe-devices'"], shell=True)
 
-        
 Application()
 Gtk.main()
