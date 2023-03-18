@@ -1240,7 +1240,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkButton" id="fabiscafe_remove_button">
+                              <object class="GtkButton" id="fabiscafe_remove_button1">
                                 <property name="label" translatable="yes">Remove</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
