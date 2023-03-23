@@ -1118,7 +1118,7 @@ LibreOffice is a free and powerful office suite, and a successor to OpenOffice.o
                               <object class="GtkLabel" id="gameextra_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;PikaOS Game Utilites &lt;/b&gt;&lt;/big&gt; 
+                                <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;PikaOS Game Utilites Extras&lt;/b&gt;&lt;/big&gt; 
 Installs Heroic Game Launcher and Bottles
 
 </property>
