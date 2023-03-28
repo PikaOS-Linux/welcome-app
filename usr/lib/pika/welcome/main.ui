@@ -2466,7 +2466,9 @@ nesper8 (willsmanic)</property>
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Themeing: Vinceliuice &amp; Papirus</property>
+                                <property name="label" translatable="yes">Themeing:
+Vinceliuice &amp; Papirus</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
