@@ -1896,12 +1896,13 @@ this tool allows steam to run windows games natively on linux.
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <child>
-                      <object class="GtkBox" id="credits_box">
+                      <!-- n-columns=2 n-rows=10 -->
+                      <object class="GtkGrid" id="credits_box">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="orientation">vertical</property>
-                        <property name="spacing">1</property>
-                        <property name="homogeneous">True</property>
+                        <property name="column-spacing">5</property>
+                        <property name="row-homogeneous">True</property>
+                        <property name="column-homogeneous">True</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
@@ -1924,7 +1925,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Welcome App's coding: Cosmo &amp; GlouriousEggroll</property>
+                                <property name="label" translatable="yes">Welcome App's coding:
+Cosmo &amp; GlouriousEggroll</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -1945,9 +1948,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">0</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">0</property>
                           </packing>
                         </child>
                         <child>
@@ -1972,7 +1974,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Kernel Base: CachyOS team (peter)</property>
+                                <property name="label" translatable="yes">Kernel Base:
+CachyOS team (peter)</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -1993,9 +1997,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">1</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">0</property>
                           </packing>
                         </child>
                         <child>
@@ -2020,7 +2023,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Welcome App's UI: PizzaLovingNerd - risiOS BDFL</property>
+                                <property name="label" translatable="yes">Welcome App's UI:
+PizzaLovingNerd - risiOS BDFL</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2041,9 +2046,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">2</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">1</property>
                           </packing>
                         </child>
                         <child>
@@ -2068,7 +2072,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Software, Updates, and Webapps manager: The Linux Mint team</property>
+                                <property name="label" translatable="yes">Software, Updates, and Webapps manager:
+The Linux Mint team</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2089,9 +2095,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">3</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">2</property>
                           </packing>
                         </child>
                         <child>
@@ -2116,7 +2121,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Standalone gamescope session: The ChimeraOS Team</property>
+                                <property name="label" translatable="yes">Standalone gamescope session:
+The ChimeraOS Team</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2137,9 +2144,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">4</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">3</property>
                           </packing>
                         </child>
                         <child>
@@ -2164,7 +2170,10 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Repositories, and firmware Manager, and The tiling in gnome-shell with pop-shell: The Pop!OS Team</property>
+                                <property name="label" translatable="yes">Repositories, and firmware Manager, 
+and The tiling in gnome-shell with pop-shell: 
+The Pop!OS Team</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2185,9 +2194,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">5</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">4</property>
                           </packing>
                         </child>
                         <child>
@@ -2212,7 +2220,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Hybrid GPU Controls: asus-linux</property>
+                                <property name="label" translatable="yes">Hybrid GPU Controls:
+asus-linux</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2233,9 +2243,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">6</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">5</property>
                           </packing>
                         </child>
                         <child>
@@ -2260,7 +2269,10 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">pikman package manager, website, and hosting: Ferreo</property>
+                                <property name="label" translatable="yes">pikman package manager, website,
+and hosting:
+Ferreo</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2281,9 +2293,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">7</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">6</property>
                           </packing>
                         </child>
                         <child>
@@ -2308,7 +2319,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">apx package manager: The Vanilla OS Team</property>
+                                <property name="label" translatable="yes">apx package manager:
+The Vanilla OS Team</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2329,9 +2342,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">8</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">7</property>
                           </packing>
                         </child>
                         <child>
@@ -2356,7 +2368,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Wallpapers: Neytirix</property>
+                                <property name="label" translatable="yes">Wallpapers:
+Neytirix</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2377,9 +2391,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">9</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">8</property>
                           </packing>
                         </child>
                         <child>
@@ -2404,7 +2417,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Logo artist: nesper8 (willsmanic)</property>
+                                <property name="label" translatable="yes">Logo artist:
+nesper8 (willsmanic)</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2425,9 +2440,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">10</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">9</property>
                           </packing>
                         </child>
                         <child>
@@ -2473,9 +2487,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">11</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">1</property>
                           </packing>
                         </child>
                         <child>
@@ -2500,7 +2513,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Encryption Support: SkimmingDeath</property>
+                                <property name="label" translatable="yes">Encryption Support:
+SkimmingDeath</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2521,9 +2536,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">12</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">2</property>
                           </packing>
                         </child>
                         <child>
@@ -2548,7 +2562,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Graphics Drivers: Kisak</property>
+                                <property name="label" translatable="yes">Graphics Drivers:
+Kisak</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2569,9 +2585,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">13</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">3</property>
                           </packing>
                         </child>
                         <child>
@@ -2596,7 +2611,10 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Package Builder Hardware &amp; Server Hosting: Ferreo</property>
+                                <property name="label" translatable="yes">Package Builder Hardware
+&amp; Server Hosting:
+Ferreo</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2617,9 +2635,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">14</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">4</property>
                           </packing>
                         </child>
                         <child>
@@ -2644,7 +2661,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Website: Ferreo &amp; BL4Z3</property>
+                                <property name="label" translatable="yes">Website:
+Ferreo &amp; BL4Z3</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2665,9 +2684,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">15</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">5</property>
                           </packing>
                         </child>
                         <child>
@@ -2692,7 +2710,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Anti Snap: The Xtradeb team</property>
+                                <property name="label" translatable="yes">Anti Snap:
+The Xtradeb team</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2713,9 +2733,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">16</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">6</property>
                           </packing>
                         </child>
                         <child>
@@ -2740,7 +2759,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Techinacal Advisors: Ferreo &amp; ptr1337 &amp; Zukureneno</property>
+                                <property name="label" translatable="yes">Techinacal Advisors:
+Ferreo &amp; ptr1337 &amp; Zukureneno</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2761,9 +2782,8 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">19</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">7</property>
                           </packing>
                         </child>
                         <child>
@@ -2788,7 +2808,9 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Financial Contributors: nesper8 (willsmanic)</property>
+                                <property name="label" translatable="yes">Financial Contributors:
+nesper8 (willsmanic)</property>
+                                <property name="justify">center</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -2809,9 +2831,57 @@ this tool allows steam to run windows games natively on linux.
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">20</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">9</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="margin-top">15</property>
+                                <property name="margin-bottom">15</property>
+                                <property name="label" translatable="yes">Audio Artist:
+4lk4</property>
+                                <property name="justify">center</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">8</property>
                           </packing>
                         </child>
                       </object>
