@@ -34,13 +34,14 @@
           <object class="GtkStack" id="Stack">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="hhomogeneous">False</property>
             <property name="transition-type">slide-up-down</property>
             <child>
               <object class="GtkScrolledWindow" id="Welcome_Scroll">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
-                <property name="hscrollbar-policy">never</property>
                 <property name="shadow-type">in</property>
+                <property name="propagate-natural-width">True</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -142,8 +143,8 @@ Enjoy!
               <object class="GtkScrolledWindow" id="first-steps_Scroll">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
-                <property name="hscrollbar-policy">never</property>
                 <property name="shadow-type">in</property>
+                <property name="propagate-natural-width">True</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -485,8 +486,8 @@ native desktop applications.
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="vexpand">True</property>
-                <property name="hscrollbar-policy">never</property>
                 <property name="shadow-type">in</property>
+                <property name="propagate-natural-width">True</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -1283,8 +1284,9 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="vexpand">True</property>
-                <property name="hscrollbar-policy">never</property>
+                <property name="hscrollbar-policy">always</property>
                 <property name="shadow-type">in</property>
+                <property name="propagate-natural-width">True</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -1563,7 +1565,9 @@ this tool allows steam to run windows games natively on linux.
               <object class="GtkScrolledWindow" id="quick-setup_Scroll">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
+                <property name="hscrollbar-policy">always</property>
                 <property name="shadow-type">in</property>
+                <property name="propagate-natural-width">True</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -1889,8 +1893,9 @@ this tool allows steam to run windows games natively on linux.
               <object class="GtkScrolledWindow" id="Credits_Scroll">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
-                <property name="hscrollbar-policy">never</property>
+                <property name="hscrollbar-policy">always</property>
                 <property name="shadow-type">in</property>
+                <property name="propagate-natural-width">True</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
