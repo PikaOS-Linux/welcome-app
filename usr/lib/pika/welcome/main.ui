@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.40.0 -->
+<!-- Generated with glade 3.38.2 -->
 <!-- Created with Cambalache 0.10.3 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkApplicationWindow" id="main_Window">
-    <property name="width-request">850</property>
+    <property name="name">90</property>
+    <property name="width-request">700</property>
     <property name="height-request">500</property>
     <property name="can-focus">False</property>
     <property name="title">PikaOS Welcome</property>
-    <property name="default-width">850</property>
+    <property name="default-width">1300</property>
     <property name="default-height">500</property>
     <property name="icon">pika-logo</property>
     <property name="icon-name">pika-logo</property>
@@ -70,7 +71,7 @@
                                 <property name="margin-top">15</property>
                                 <property name="hexpand">True</property>
                                 <property name="vexpand">True</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Welcome to &lt;b&gt;PikaOS&lt;/b&gt;&lt;/big&gt;</property>
+                                <property name="label" translatable="yes">&lt;big&gt;Welcome to &lt;b&gt;PikaOS&lt;/b&gt; Hub&lt;/big&gt;</property>
                                 <property name="use-markup">True</property>
                               </object>
                               <packing>
@@ -113,11 +114,11 @@
                             <property name="valign">center</property>
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>
-                            <property name="label" translatable="yes">Thank you for choosing PikaOS!
-This welcome screen will help guide you through the
-available resources for PikaOS as well as help you setup 
-your computer to your liking.
-
+                            <property name="label" translatable="yes">This application will further help you to setup
+ PikaOS to your liking.
+and
+too to do anything you might
+have missed during the first setup
 Enjoy!
 &lt;3 - the PikaOS team</property>
                             <property name="justify">center</property>
@@ -300,10 +301,10 @@ applications and provide hardware accelerated video playback/decoding and encodi
                               <object class="GtkLabel" id="nvidia_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;NVIDIA®&lt;/b&gt; drivers&lt;/big&gt; 
-Installs proprietary NVIDIA® drivers that significantly increase performance for NVIDIA cards. 
-(GTX 9XX and newer)
-
+                                <property name="label" translatable="yes">&lt;big&gt;Open &lt;b&gt;Driver Manager&lt;/b&gt;&lt;/big&gt; 
+A driver utility to install various driver such as the
+proprietary NVIDIA® drivers that significantly increase performance for NVIDIA cards 
+and microcode for CPUs and such.
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -477,7 +478,7 @@ native desktop applications.
               </object>
               <packing>
                 <property name="name">FirstStepsPage</property>
-                <property name="title">First Steps</property>
+                <property name="title">First Setup Steps</property>
                 <property name="position">1</property>
               </packing>
             </child>
@@ -2915,13 +2916,12 @@ nesper8 (willsmanic)</property>
       <object class="GtkHeaderBar" id="main_Header">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
-        <property name="title" translatable="yes">PikaOS Welcome</property>
-        <property name="subtitle" translatable="yes">Welcome to PikaOS the Cool birb OS</property>
+        <property name="title" translatable="yes">PikaOS Hub</property>
+        <property name="subtitle" translatable="yes">PikaOS the Cool birb OS</property>
         <property name="show-close-button">True</property>
         <child>
           <object class="GtkCheckButton" id="startup_switch">
             <property name="label" translatable="yes">Show on startup</property>
-            <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">False</property>
             <property name="draw-indicator">True</property>

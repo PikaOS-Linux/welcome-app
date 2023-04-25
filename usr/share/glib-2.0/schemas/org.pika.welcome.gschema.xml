@@ -1,7 +1,7 @@
 <schemalist>
   <schema path="/org/pika/welcome/" id="org.pika.welcome">
     <key type="b" name="startup-show">
-      <default>true</default>
+      <default>false</default>
       <summary>Show PikaOS Welcome on startup.</summary>
       <description>
         Show PikaOS Welcome on startup.
