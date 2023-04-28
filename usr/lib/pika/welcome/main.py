@@ -370,55 +370,55 @@ class Application:
     
     ### Blender ###
     def enter_install_blender(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install blender'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install blender'"], shell=True)
     def enter_remove_blender(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove blender'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove blender'"], shell=True)
     
     ### KDENLIVE ###
     def enter_install_kdenlive(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install kdenlive'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install kdenlive'"], shell=True)
     def enter_remove_kdenlive(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove kdenlive'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove kdenlive'"], shell=True)
     ### OBS STUDIO ###
     def enter_install_obs(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install obs-studio'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install obs-studio'"], shell=True)
     def enter_remove_obs(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove obs-studio'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove obs-studio'"], shell=True)
     ### DISCORD ###
     def enter_install_discord(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install discord'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install discord'"], shell=True)
     def enter_remove_discord(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove discord'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove discord'"], shell=True)
     ### GAME UTILS ###
     def enter_install_gameutils(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta'"], shell=True)
     def enter_remove_gameutils(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta'"], shell=True)
     ### MSTTF ###
     def enter_install_msttf(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt install ttf-mscorefonts-installer'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c 'pkexec apt install ttf-mscorefonts-installer'"], shell=True)
     def enter_remove_msttf(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal 'pkexec apt remove ttf-mscorefonts-installer'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c 'pkexec apt remove ttf-mscorefonts-installer'"], shell=True)
     ### LIBREOFFICE ###
     def enter_install_libreoffice(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-libreoffice-meta'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install pika-libreoffice-meta'"], shell=True)
     def enter_remove_libreoffice(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-libreoffice-meta'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove pika-libreoffice-meta'"], shell=True)
     ### KRITA ###
     def enter_install_krita(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install krita'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install krita'"], shell=True)
     def enter_remove_krita(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove krita'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove krita'"], shell=True)
     ### GAMEEXTRA ###
     def enter_install_gameextra(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta-extra'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install pika-gameutils-meta-extra'"], shell=True)
     def enter_remove_gameextra(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta-extra'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove pika-gameutils-meta-extra'"], shell=True)
     ### FABISCAFE ###
     def enter_install_fabiscafe(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install fabiscafe-devices'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install fabiscafe-devices'"], shell=True)
     def enter_remove_fabiscafe(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh remove fabiscafe-devices'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh remove fabiscafe-devices'"], shell=True)
 
 Application()
 Gtk.main()
