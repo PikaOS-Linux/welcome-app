@@ -281,7 +281,7 @@ class Application:
         subprocess.Popen(["/usr/bin/pika-amdgpu-config"])
     ### ROCm ###
     def enter_rocm(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-rocm-meta'"], shell=True)
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install pika-rocm-meta'"], shell=True)
     ### XONE ###
     def enter_xone(self, widget):
         subprocess.Popen(["/usr/bin/pika-controller-config"])
@@ -289,7 +289,7 @@ class Application:
     def enter_protonup(self, widget):
         flatpak_protonup_output = subprocess.run(["flatpak info net.davidotek.pupgui2"], shell=True)
         if (flatpak_protonup_output.returncode) != 0:
-            subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal 'pkexec flatpak -y install net.davidotek.pupgui2'"], shell=True)
+            subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c 'pkexec flatpak -y install net.davidotek.pupgui2'"], shell=True)
         else:
             subprocess.Popen(["flatpak run net.davidotek.pupgui2"], shell=True)
    
@@ -314,7 +314,7 @@ class Application:
         if layouts_file.is_file():
             subprocess.Popen(["/usr/bin/pika-gnome-layouts"])
         else:
-            subprocess.Popen(["/usr/lib/pika/welcome/xdg-terminal '/usr/lib/pika/welcome/pkcon-install.sh install pika-gnome-layouts'"], shell=True)
+            subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install pika-gnome-layouts'"], shell=True)
         pass
     ### THEMES ###
     def enter_theme(self, widget):
