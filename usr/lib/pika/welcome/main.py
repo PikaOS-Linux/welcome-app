@@ -336,7 +336,7 @@ class Application:
         subprocess.Popen(["xdg-open https://pikaproject.org/docs/"])
     ### Distro Sync ###
     def enter_distrosync(self, widget):
-        subprocess.Popen(["mintupdate"])
+        subprocess.Popen(["update-manager"])
 
 
     #### COMMUNITY ENTRIES ####
