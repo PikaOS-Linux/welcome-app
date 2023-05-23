@@ -2078,7 +2078,7 @@ PizzaLovingNerd - risiOS BDFL</property>
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Software, Updates, and Webapps manager:
+                                <property name="label" translatable="yes">Software and Webapps manager:
 The Linux Mint team</property>
                                 <property name="justify">center</property>
                               </object>
@@ -2275,9 +2275,8 @@ asus-linux</property>
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">pikman package manager, website,
-and hosting:
-Ferreo</property>
+                                <property name="label" translatable="yes">ISO testing VMs:
+AkiToasterUwU</property>
                                 <property name="justify">center</property>
                               </object>
                               <packing>
@@ -2375,7 +2374,7 @@ The Vanilla OS Team</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
                                 <property name="label" translatable="yes">Wallpapers:
-Neytirix</property>
+Neytirix - Colorman</property>
                                 <property name="justify">center</property>
                               </object>
                               <packing>
@@ -2619,7 +2618,7 @@ Kisak</property>
                                 <property name="can-focus">False</property>
                                 <property name="margin-top">15</property>
                                 <property name="margin-bottom">15</property>
-                                <property name="label" translatable="yes">Package Builder Hardware
+                                <property name="label" translatable="yes">pikman package manager &amp; Package Builder Hardware
 &amp; Server Hosting:
 Ferreo</property>
                                 <property name="justify">center</property>
