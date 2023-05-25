@@ -62,13 +62,10 @@ the issue? (strongly recommended) \n"`"
 				then
 					codec_install && export SUCCESSFUL="yes"
 		              		if [[ $SUCCESSFUL == "yes" ]]; then
-						if zenity --question --title='Complete!' --text="$(printf "Installation Complete! \nYou may want to reboot for changes to take effect.\n Reboot Now?")"
-						then
-							systemctl reboot
-						fi
-					else
-						zenity --error --title='Failed!' --text='Failed to install codecs!'
-					fi
+								zenity --info --title='Complete!' --text="$(printf "Installation Complete! \nYou may want to reboot for changes to take effect.\n Please do it ASAP")"
+							else
+								zenity --error --title='Failed!' --text='Failed to install codecs!'
+							fi
 				fi
 }
 
