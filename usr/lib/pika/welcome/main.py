@@ -326,6 +326,9 @@ class Application:
     def enter_extension(self, widget):
         subprocess.Popen(["/usr/bin/extension-manager"])
 
+    def on_button_dist_upgrade_pressed(self, widget):
+        subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c 'pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY pika-dist-upgrade'"], shell=True)
+
     #### TROUBLESHOOT ENTRIES ####
     
     ### Troubleshoot ###

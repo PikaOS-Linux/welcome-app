@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=PikaOS Dist Upgrade Notifaction
+Exec=notify-send "PikaOS 23.04 Lunar Lobster has been Released enter PikaOS Welcome to Upgrade"
+Icon=pika-logo
+StartupWMClass=pika_welcome
+Terminal=false
+Type=Application
+Terminal=false
+Categories=GNOME;GTK;Utility;
+Keywords=Gnome;GTK
+NoDisplay=true
