@@ -272,19 +272,19 @@ class Application:
     
     ### CODEC ###
     def enter_install_codec(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/codec.sh"])
+        subprocess.Popen(["/usr/lib/pika/welcome/codec.sh"], shell=True)
     ### NVIDIA ###
     def enter_nvidia(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/nvidia.sh"])
+        subprocess.Popen(["/usr/lib/pika/welcome/nvidia.sh"], shell=True)
     ### AMD PRO ###
     def enter_amd(self, widget):
-        subprocess.Popen(["/usr/bin/pika-amdgpu-config"])
+        subprocess.Popen(["/usr/bin/pika-amdgpu-config"], shell=True)
     ### ROCm ###
     def enter_rocm(self, widget):
         subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install pika-rocm-meta'"], shell=True)
     ### XONE ###
     def enter_xone(self, widget):
-        subprocess.Popen(["/usr/bin/pika-controller-config"])
+        subprocess.Popen(["/usr/bin/pika-controller-config"], shell=True)
     ### PROTONUP ###
     def enter_protonup(self, widget):
         flatpak_protonup_output = subprocess.run(["flatpak info net.davidotek.pupgui2"], shell=True)
@@ -298,73 +298,73 @@ class Application:
    
     ### APPS ###
     def enter_apps(self, widget):
-        subprocess.Popen(["/usr/lib/pika/welcome/apps.sh"])
+        subprocess.Popen(["/usr/lib/pika/welcome/apps.sh"], shell=True)
     ### WEBAPPS ###
     def enter_webapps(self, widget):
-        subprocess.Popen(["/usr/bin/webapp-manager"])
+        subprocess.Popen(["/usr/bin/webapp-manager"], shell=True)
 
     ##### QUICK SETUP ENTRIES #####
     
     ### LOGIN MANAGER ###
     def enter_dm(self, widget):
-        subprocess.Popen(["/usr/bin/pika-login-config"])
+        subprocess.Popen(["/usr/bin/pika-login-config"], shell=True)
     ### LAYOUTS ###
     def enter_layout(self, widget):
         layouts_file = Path('/usr/bin/pika-gnome-layouts')
         if layouts_file.is_file():
-            subprocess.Popen(["/usr/bin/pika-gnome-layouts"])
+            subprocess.Popen(["/usr/bin/pika-gnome-layouts"], shell=True)
         else:
             subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install pika-gnome-layouts'"], shell=True)
         pass
     ### THEMES ###
     def enter_theme(self, widget):
-        subprocess.Popen(["/usr/bin/gnome-tweaks"])
+        subprocess.Popen(["/usr/bin/gnome-tweaks"], shell=True)
     ### PLING ###
     def enter_pling(self, widget):
-        subprocess.Popen(["xdg-open https://pling.com/"])
+        subprocess.Popen(["xdg-open https://pling.com/"], shell=True)
     ### EXTENSION ###
     def enter_extension(self, widget):
-        subprocess.Popen(["/usr/bin/extension-manager"])
+        subprocess.Popen(["/usr/bin/extension-manager"], shell=True)
 
     #### TROUBLESHOOT ENTRIES ####
     
     ### Troubleshoot ###
     def enter_troubleshoot(self, widget):
-        subprocess.Popen(["xdg-open https://pikaproject.org/docs/upgrade-troubleshooting/"])
+        subprocess.Popen(["xdg-open https://pikaproject.org/docs/upgrade-troubleshooting/"], shell=True)
     ### Docs ###
     def enter_doc(self, widget):
-        subprocess.Popen(["xdg-open https://pikaproject.org/docs/"])
+        subprocess.Popen(["xdg-open https://pikaproject.org/docs/"], shell=True)
     ### Distro Sync ###
     def enter_distrosync(self, widget):
-        subprocess.Popen(["update-manager"])
+        subprocess.Popen(["update-manager"], shell=True)
 
 
     #### COMMUNITY ENTRIES ####
     
     ### discord ###
     def enter_discord(self, widget):
-        subprocess.Popen(["xdg-open https://discord.gg/6y3BdzC"])
+        subprocess.Popen(["xdg-open https://discord.gg/6y3BdzC"], shell=True)
     ### reddit ###
     def enter_reddit(self, widget):
-        subprocess.Popen(["xdg-open https://www.reddit.com/r/pikaProject/"])
+        subprocess.Popen(["xdg-open https://www.reddit.com/r/pikaProject/"], shell=True)
         
     #### Contribute ENTRIES ####
     
     ### patreon ###
     def enter_patreon(self, widget):
-        subprocess.Popen(["xdg-open https://www.patreon.com/gloriouseggroll"])
+        subprocess.Popen(["xdg-open https://www.patreon.com/gloriouseggroll"], shell=True)
     ### design ###
     def enter_design(self, widget):
-        subprocess.Popen(["xdg-open https://discord.com/channels/110175050006577152/1015154123114549309"])
+        subprocess.Popen(["xdg-open https://discord.com/channels/110175050006577152/1015154123114549309"], shell=True)
     ### GE GITLAB ###
     def enter_ge_gitlab(self, widget):
-        subprocess.Popen(["xdg-open https://gitlab.com/GloriousEggroll"])
+        subprocess.Popen(["xdg-open https://gitlab.com/GloriousEggroll"], shell=True)
     ### GE GITHUB ###
     def enter_ge_github(self, widget):
-        subprocess.Popen(["xdg-open https://github.com/GloriousEggroll"])
+        subprocess.Popen(["xdg-open https://github.com/GloriousEggroll"], shell=True)
     ### COSMO GITHUB ###
     def enter_cosmo_github(self, widget):
-        subprocess.Popen(["xdg-open https://github.com/CosmicFusion"])
+        subprocess.Popen(["xdg-open https://github.com/CosmicFusion"], shell=True)
     ###############################################################
     #### Install Window ####
     
