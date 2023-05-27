@@ -21,5 +21,6 @@ Depends: python3 (>= 3.3),
          pika-amdgpu-config,
          pika-controller-config,
          webapp-manager,
+         libnotify-bin,
 Recommends: pika-gnome-layouts
 Description: PikaOS Welcome App
