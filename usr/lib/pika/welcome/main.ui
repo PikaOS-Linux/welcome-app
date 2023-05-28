@@ -842,7 +842,7 @@ and many more...
                             </child>
                             <child>
                               <object class="GtkButton" id="gameutils_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
@@ -929,7 +929,7 @@ Installs TrueType Microsoft fonts and emulate Windows' font rendering.
                             </child>
                             <child>
                               <object class="GtkButton" id="msttf_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
@@ -1015,7 +1015,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                             </child>
                             <child>
                               <object class="GtkButton" id="blender_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
@@ -1102,7 +1102,7 @@ Open Broadcaster Software the free and open source software for video recording 
                             </child>
                             <child>
                               <object class="GtkButton" id="obs_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
@@ -1188,7 +1188,7 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                             </child>
                             <child>
                               <object class="GtkButton" id="kdenlive_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
@@ -1274,7 +1274,7 @@ KDE Krita is a professional FREE and open source painting program.
                             </child>
                             <child>
                               <object class="GtkButton" id="krita_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
@@ -1361,7 +1361,7 @@ LibreOffice is a free and powerful office suite, and a successor to OpenOffice.o
                             </child>
                             <child>
                               <object class="GtkButton" id="libreoffice_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
@@ -1448,7 +1448,7 @@ Installs Heroic Game Launcher and Bottles
                             </child>
                             <child>
                               <object class="GtkButton" id="gameextra_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
@@ -1535,7 +1535,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                             </child>
                             <child>
                               <object class="GtkButton" id="fabiscafe_install_button">
-                                <property name="label" translatable="yes"> Install  </property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can-focus">True</property>
