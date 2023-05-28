@@ -146,7 +146,7 @@ Enjoy!
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="shadow-type">in</property>
-                <property name="propagate-natural-width">True</property>
+                <property name="propagate-natural-width">False</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -171,13 +171,14 @@ Enjoy!
                               </object>
                               <packing>
                                 <property name="expand">False</property>
-                                <property name="fill">True</property>
+                                <property name="fill">False</property>
                                 <property name="position">0</property>
                               </packing>
                             </child>
                             <child>
                               <object class="GtkLabel" id="distrosync_text_2">
                                 <property name="visible">True</property>
+                                <property name="wrap">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Update my system&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
@@ -197,7 +198,7 @@ Enjoy!
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_distrosync" swapped="yes"/>
@@ -211,7 +212,7 @@ Enjoy!
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">0</property>
                           </packing>
@@ -231,7 +232,7 @@ Enjoy!
                               </object>
                               <packing>
                                 <property name="expand">False</property>
-                                <property name="fill">True</property>
+                                <property name="fill">False</property>
                                 <property name="position">0</property>
                               </packing>
                             </child>
@@ -239,9 +240,11 @@ Enjoy!
                               <object class="GtkLabel" id="codec_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Patented&lt;/b&gt; Media Codecs and Libraries&lt;/big&gt; 
-Get media codecs and libraries (Such as : FFMPEG, and VA-API) which are needed for many creative
-applications and provide hardware accelerated video playback/decoding and encoding.
+Get media codecs and libraries (Such as : FFMPEG, and VA-API)
+which are needed for many creative applications 
+and provide hardware accelerated video playback/decoding and encoding.
 </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -260,7 +263,7 @@ applications and provide hardware accelerated video playback/decoding and encodi
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_install_codec" swapped="yes"/>
@@ -274,7 +277,7 @@ applications and provide hardware accelerated video playback/decoding and encodi
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">1</property>
                           </packing>
@@ -294,7 +297,7 @@ applications and provide hardware accelerated video playback/decoding and encodi
                               </object>
                               <packing>
                                 <property name="expand">False</property>
-                                <property name="fill">True</property>
+                                <property name="fill">False</property>
                                 <property name="position">0</property>
                               </packing>
                             </child>
@@ -302,6 +305,7 @@ applications and provide hardware accelerated video playback/decoding and encodi
                               <object class="GtkLabel" id="nvidia_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Open &lt;b&gt;Driver Manager&lt;/b&gt;&lt;/big&gt; 
 A driver utility to install various driver such as the
 proprietary NVIDIA® drivers that significantly increase performance for NVIDIA cards 
@@ -325,7 +329,7 @@ and microcode for CPUs and such.
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_nvidia" swapped="yes"/>
@@ -339,7 +343,7 @@ and microcode for CPUs and such.
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">2</property>
                           </packing>
@@ -368,7 +372,7 @@ and microcode for CPUs and such.
                 <property name="vexpand">True</property>
                 <property name="hscrollbar-policy">always</property>
                 <property name="shadow-type">in</property>
-                <property name="propagate-natural-width">True</property>
+                <property name="propagate-natural-width">False</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -401,6 +405,7 @@ and microcode for CPUs and such.
                               <object class="GtkLabel" id="amd_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the proprietary &lt;b&gt;AMD®&lt;/b&gt; drivers&lt;/big&gt; 
 Installs proprietary AMD® drivers that add a few neat features not found in the FOSS Stack. 
 (RX 4XX and newer)
@@ -422,7 +427,7 @@ Installs proprietary AMD® drivers that add a few neat features not found in the
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_amd" swapped="yes"/>
@@ -436,7 +441,7 @@ Installs proprietary AMD® drivers that add a few neat features not found in the
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">0</property>
                           </packing>
@@ -464,6 +469,7 @@ Installs proprietary AMD® drivers that add a few neat features not found in the
                               <object class="GtkLabel" id="rocm_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;ROCm&lt;/b&gt; drivers&lt;/big&gt; 
 Installs the Radeon Open Compute drivers (AMD's CUDA Drivers) that add high performance 
 APIs and features, like OpenCL, HIP (Used by Blender) and many more APIs. 
@@ -486,7 +492,7 @@ APIs and features, like OpenCL, HIP (Used by Blender) and many more APIs.
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_rocm" swapped="yes"/>
@@ -500,7 +506,7 @@ APIs and features, like OpenCL, HIP (Used by Blender) and many more APIs.
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">1</property>
                           </packing>
@@ -528,6 +534,7 @@ APIs and features, like OpenCL, HIP (Used by Blender) and many more APIs.
                               <object class="GtkLabel" id="xone_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;XONE&lt;/b&gt; drivers&lt;/big&gt; 
 Installs the XONE and the XPADNEO drivers that provide Xbox One and Xbox Series controllers 
 with many features and improvements. 
@@ -550,7 +557,7 @@ with many features and improvements.
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_xone" swapped="yes"/>
@@ -564,7 +571,7 @@ with many features and improvements.
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">2</property>
                           </packing>
@@ -592,6 +599,7 @@ with many features and improvements.
                               <object class="GtkLabel" id="protonup_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Proton-GE&lt;/b&gt;&lt;/big&gt; 
 Compatibility tool for Steam Play based on Wine and additional components made by GloriousEggroll
 this tool allows steam to run windows games natively on linux.
@@ -613,7 +621,7 @@ this tool allows steam to run windows games natively on linux.
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_protonup" swapped="yes"/>
@@ -627,7 +635,7 @@ this tool allows steam to run windows games natively on linux.
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">3</property>
                           </packing>
@@ -656,6 +664,7 @@ this tool allows steam to run windows games natively on linux.
                               <object class="GtkLabel" id="software_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install more apps from the &lt;b&gt;Software Manager&lt;/b&gt; &lt;/big&gt; 
 Install and update software using the PikaOS Software Manager.
 
@@ -679,7 +688,7 @@ Install and update software using the PikaOS Software Manager.
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="margin-right">10</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_apps" swapped="yes"/>
@@ -693,7 +702,7 @@ Install and update software using the PikaOS Software Manager.
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">4</property>
                           </packing>
@@ -722,6 +731,7 @@ Install and update software using the PikaOS Software Manager.
                               <object class="GtkLabel" id="webapps_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;WebApps&lt;/b&gt;&lt;/big&gt; 
 Install WebApps with your favourite web browser as a backend. Turn your favourite WebApps into 
 native desktop applications.
@@ -745,7 +755,7 @@ native desktop applications.
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="margin-right">10</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_webapps" swapped="yes"/>
@@ -759,7 +769,7 @@ native desktop applications.
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">5</property>
                           </packing>
@@ -781,7 +791,7 @@ native desktop applications.
                 <property name="can-focus">True</property>
                 <property name="vexpand">True</property>
                 <property name="shadow-type">in</property>
-                <property name="propagate-natural-width">True</property>
+                <property name="propagate-natural-width">False</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -814,6 +824,7 @@ native desktop applications.
                               <object class="GtkLabel" id="gameutils_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;PikaOS Game Utilites &lt;/b&gt;&lt;/big&gt; 
 A meta package that installs: Steam, Lutris, Goverlay + Mangohud, Wine, Winetricks, VKBasalt, 
 and many more...
@@ -858,7 +869,7 @@ and many more...
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_gameutils" swapped="yes"/>
@@ -872,7 +883,7 @@ and many more...
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">0</property>
                           </packing>
@@ -900,6 +911,7 @@ and many more...
                               <object class="GtkLabel" id="msttf_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Microsoft True Type Fonts&lt;/b&gt;&lt;/big&gt; 
 Installs TrueType Microsoft fonts and emulate Windows' font rendering. 
 
@@ -944,7 +956,7 @@ Installs TrueType Microsoft fonts and emulate Windows' font rendering.
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_msttf" swapped="yes"/>
@@ -958,7 +970,7 @@ Installs TrueType Microsoft fonts and emulate Windows' font rendering.
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">1</property>
                           </packing>
@@ -986,6 +998,7 @@ Installs TrueType Microsoft fonts and emulate Windows' font rendering.
                               <object class="GtkLabel" id="blender_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Blender&lt;/b&gt;&lt;/big&gt; 
 Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline. 
 
@@ -1029,7 +1042,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_blender" swapped="yes"/>
@@ -1043,7 +1056,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">2</property>
                           </packing>
@@ -1071,6 +1084,7 @@ Blender is the free and open source 3D creation suite. It supports the entirety 
                               <object class="GtkLabel" id="obs_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;OBS Studio&lt;/b&gt;&lt;/big&gt; 
 Open Broadcaster Software the free and open source software for video recording and live streaming. 
 
@@ -1115,7 +1129,7 @@ Open Broadcaster Software the free and open source software for video recording 
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_obs" swapped="yes"/>
@@ -1129,7 +1143,7 @@ Open Broadcaster Software the free and open source software for video recording 
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">3</property>
                           </packing>
@@ -1157,6 +1171,7 @@ Open Broadcaster Software the free and open source software for video recording 
                               <object class="GtkLabel" id="kdenlive_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Kdenlive&lt;/b&gt;&lt;/big&gt; 
 KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE Frameworks libraries.
 
@@ -1200,7 +1215,7 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_kdenlive" swapped="yes"/>
@@ -1214,7 +1229,7 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">4</property>
                           </packing>
@@ -1242,6 +1257,7 @@ KDE Non-Linear Video Editor an open source video editor built on Qt and the KDE 
                               <object class="GtkLabel" id="krita_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Krita&lt;/b&gt;&lt;/big&gt; 
 KDE Krita is a professional FREE and open source painting program.
 
@@ -1285,7 +1301,7 @@ KDE Krita is a professional FREE and open source painting program.
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_krita" swapped="yes"/>
@@ -1299,7 +1315,7 @@ KDE Krita is a professional FREE and open source painting program.
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">5</property>
                           </packing>
@@ -1327,6 +1343,7 @@ KDE Krita is a professional FREE and open source painting program.
                               <object class="GtkLabel" id="libreoffice_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Libreoffice&lt;/b&gt;&lt;/big&gt; 
 LibreOffice is a free and powerful office suite, and a successor to OpenOffice.org 
 (commonly known as OpenOffice).
@@ -1371,7 +1388,7 @@ LibreOffice is a free and powerful office suite, and a successor to OpenOffice.o
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_libreoffice" swapped="yes"/>
@@ -1385,7 +1402,7 @@ LibreOffice is a free and powerful office suite, and a successor to OpenOffice.o
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">FAlse</property>
                             <property name="padding">4</property>
                             <property name="position">6</property>
                           </packing>
@@ -1413,6 +1430,7 @@ LibreOffice is a free and powerful office suite, and a successor to OpenOffice.o
                               <object class="GtkLabel" id="gameextra_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install the &lt;b&gt;PikaOS Game Utilites Extras&lt;/b&gt;&lt;/big&gt; 
 Installs Heroic Game Launcher and Bottles
 
@@ -1457,7 +1475,7 @@ Installs Heroic Game Launcher and Bottles
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_gameextra" swapped="no"/>
@@ -1471,7 +1489,7 @@ Installs Heroic Game Launcher and Bottles
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">7</property>
                           </packing>
@@ -1499,6 +1517,7 @@ Installs Heroic Game Launcher and Bottles
                               <object class="GtkLabel" id="fabiscafe_install_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Install &lt;b&gt;Device Configrations&lt;/b&gt; for many controllers and VR equipment&lt;/big&gt; 
 Installs udev rule configrations for many HID Devices
 for more info see: https://codeberg.org/fabiscafe/game-devices-udev
@@ -1543,7 +1562,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_remove_fabiscafe" swapped="no"/>
@@ -1557,7 +1576,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">8</property>
                           </packing>
@@ -1579,7 +1598,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                 <property name="can-focus">True</property>
                 <property name="hscrollbar-policy">always</property>
                 <property name="shadow-type">in</property>
-                <property name="propagate-natural-width">True</property>
+                <property name="propagate-natural-width">False</property>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -1612,6 +1631,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                               <object class="GtkLabel" id="dm_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Login Manager&lt;/b&gt;&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -1631,7 +1651,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_dm" swapped="yes"/>
@@ -1645,7 +1665,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">0</property>
                           </packing>
@@ -1673,6 +1693,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                               <object class="GtkLabel" id="pling_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Get &lt;b&gt;New&lt;/b&gt; themes and icons&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -1691,7 +1712,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_pling" swapped="yes"/>
@@ -1705,7 +1726,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">1</property>
                           </packing>
@@ -1733,6 +1754,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                               <object class="GtkLabel" id="layout_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Choose a &lt;b&gt;Layout&lt;/b&gt;&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -1751,7 +1773,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_layout" swapped="yes"/>
@@ -1765,7 +1787,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">FAlse</property>
                             <property name="padding">4</property>
                             <property name="position">2</property>
                           </packing>
@@ -1793,6 +1815,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                               <object class="GtkLabel" id="theme_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Theme&lt;/b&gt; your desktop&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -1811,7 +1834,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_theme" swapped="yes"/>
@@ -1825,7 +1848,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">3</property>
                           </packing>
@@ -1853,6 +1876,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                               <object class="GtkLabel" id="extension_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
+                                <property name="wrap">True</property>
                                 <property name="label" translatable="yes">&lt;big&gt;Add &lt;b&gt;Extensions&lt;/b&gt; to your desktop&lt;/big&gt; </property>
                                 <property name="use-markup">True</property>
                                 <property name="xalign">0</property>
@@ -1871,7 +1895,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-end">10</property>
+                                <property name="margin-end">40</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
                                 <signal name="pressed" handler="enter_extension" swapped="yes"/>
@@ -1885,7 +1909,7 @@ for more info see: https://codeberg.org/fabiscafe/game-devices-udev
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="padding">4</property>
                             <property name="position">4</property>
                           </packing>
