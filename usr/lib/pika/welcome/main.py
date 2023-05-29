@@ -57,10 +57,17 @@ class Application:
         ### Hidden Entries ###
         self.builder.get_object("dm_box").hide()
         
+        
+        self.main_Sidebar = self.builder.get_object("main_Sidebar")
+        
 
         ### app state refresh ###
         global app_state_refresh
         app_state_refresh = True
+        global window_state_refresh
+        window_state_refresh = True
+
+        
         
         def app_state_refresh_func(): 
             blender_install_button = self.builder.get_object("blender_install_button")
@@ -160,9 +167,37 @@ class Application:
         t1 = threading.Thread(target=app_state_refresh_func)
         t1.start()
         
+        self.main_Sidebar = self.builder.get_object("main_Sidebar")
+        self.Stack = self.builder.get_object("Stack")
+        self.sidebar_btn = self.builder.get_object("sidebar_btn")
+        
+        def resolution_refresh_func():
+            while window_state_refresh == True:
+                        time.sleep(1)
+                        if self.window.get_size()[0] < 650:
+                                                self.sidebar_btn.show()
+                                                if self.sidebar_btn.get_active() == False:
+                                                        self.Stack.show()
+                                                        self.main_Sidebar.hide()
+                                                else:
+                                                        self.main_Sidebar.show()
+                                                        self.Stack.hide()
+                                                        self.main_Sidebar.set_hexpand(True)
+                        else:
+                                                        self.sidebar_btn.hide()
+                                                        self.Stack.show()
+                                                        self.main_Sidebar.show()
+                                                        self.main_Sidebar.set_hexpand(False)
+        
+        t2 = threading.Thread(target=resolution_refresh_func)
+        t2.start()
+        
         def app_state_refresh_kill(self):
             global app_state_refresh
+            global window_state_refresh
             app_state_refresh = False
+            window_state_refresh = False
+            
         
         win.connect("destroy", app_state_refresh_kill)
         
@@ -267,6 +302,19 @@ class Application:
         return self.builder.get_object("install_Window").hide_on_delete()
     
     ##### FIRST STEPS ENTRIES #####
+    
+    def on_sidebar_btn_pressed(self, widget):
+        time.sleep(1)
+        if self.window.get_size()[0] < 650:
+                if self.Stack.get_visible() == True:
+                        self.sidebar_btn.set_active(False) 
+                        self.main_Sidebar.show()
+                        self.Stack.hide()
+                else:
+                        self.sidebar_btn.set_active(True)
+                        self.Stack.show()
+                        self.main_Sidebar.hide()
+    
     
     #### DRIVER ENTRIES ####
     

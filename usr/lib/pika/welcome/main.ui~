@@ -20,6 +20,7 @@
             <property name="width-request">10</property>
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="hexpand">True</property>
             <property name="stack">Real_Stack</property>
           </object>
           <packing>
