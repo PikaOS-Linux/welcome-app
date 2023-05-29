@@ -210,88 +210,10 @@ class Application:
         startup_switch.connect("toggled", lambda btn: settings.set_boolean("startup-show", btn.get_active()))
         
     ### Hardcoded icons ###
-        if (settings.get_boolean("use-system-icons")) == True:
-            update_logo = self.builder.get_object("distrosync_logo_2")
-            codec_install_logo = self.builder.get_object("codec_install_logo")
-            nvidia_logo = self.builder.get_object("nvidia_logo")
-            software_logo = self.builder.get_object("software_logo")
-            webapps_logo = self.builder.get_object("webapps_logo")
-            layout_logo_2 = self.builder.get_object("layout_logo_2")
-            
-            blender_install_logo = self.builder.get_object("blender_install_logo")
-            kdenlive_install_logo = self.builder.get_object("kdenlive_install_logo")
-            obs_install_logo = self.builder.get_object("obs_install_logo")
-#            discord_install_logo = self.builder.get_object("discord_install_logo")
-            gameutils_install_logo = self.builder.get_object("gameutils_install_logo")
-            msttf_install_logo = self.builder.get_object("msttf_install_logo")
-            krita_install_logo = self.builder.get_object("krita_install_logo")
-            libreoffice_install_logo = self.builder.get_object("libreoffice_install_logo")
-            gameextra_install_logo = self.builder.get_object("gameextra_install_logo")
-            fabiscafe_install_logo = self.builder.get_object("fabiscafe_install_logo")
-
-            amd_logo = self.builder.get_object("amd_logo")
-            rocm_logo = self.builder.get_object("rocm_logo")
-            xone_logo = self.builder.get_object("xone_logo")
-            protonup_logo = self.builder.get_object("protonup_logo")
-            
-            dm_logo = self.builder.get_object("dm_logo")
-            pling_logo = self.builder.get_object("pling_logo")
-            layout_logo = self.builder.get_object("layout_logo")
-            theme_logo = self.builder.get_object("theme_logo")
-            extension_logo = self.builder.get_object("extension_logo")
-            
-#            troubleshoot_logo = self.builder.get_object("troubleshoot_logo")
-#            doc_logo = self.builder.get_object("doc_logo")
-#            distrosync_logo = self.builder.get_object("distrosync_logo")
-            
-#            discord_logo = self.builder.get_object("discord_logo")
-#            reddit_logo = self.builder.get_object("reddit_logo")
-            
-#            patreon_logo = self.builder.get_object("patreon_logo")
-#            design_logo = self.builder.get_object("design_logo")
-#            ge_gitlab_logo = self.builder.get_object("ge_gitlab_logo")
-#            ge_github_logo = self.builder.get_object("ge_github_logo")
-#            cosmo_github_logo = self.builder.get_object("cosmo_github_logo")
-            
-            ###
-            
-            update_logo.set_from_icon_name("system-software-update", 80)
-            codec_install_logo.set_from_icon_name("media-tape", 80)
-            nvidia_logo.set_from_icon_name("nvidia", 80)
-            software_logo.set_from_icon_name("media-floppy", 80)
-            webapps_logo.set_from_icon_name("applications-internet", 80)
-            layout_logo_2.set_from_icon_name("desktop", 24)
-            
-            blender_install_logo.set_from_icon_name("blender", 80)
-            kdenlive_install_logo.set_from_icon_name("kdenlive", 80)
-            obs_install_logo.set_from_icon_name("obs", 80)
-#            discord_install_logo.set_from_icon_name("discord", 80)
-            gameutils_install_logo.set_from_icon_name("input-gaming", 80)
-            krita_install_logo.set_from_icon_name("krita", 80)
-            libreoffice_install_logo.set_from_icon_name("libreoffice", 80)
-            msttf_install_logo.set_from_icon_name("fonts", 80)
-            gameextra_install_logo.set_from_icon_name("input-gaming", 80)
-
-            amd_logo.set_from_icon_name("amd", 80)
-            rocm_logo.set_from_icon_name("amd", 80)
-            xone_logo.set_from_icon_name("input-gaming", 80)
-            protonup_logo.set_from_icon_name("net.davidotek.pupgui2", 80)
-            
-            dm_logo.set_from_icon_name("applications-graphics", 80)
-            pling_logo.set_from_icon_name("applications-graphics", 80)
-            layout_logo.set_from_icon_name("desktop", 80)
-            theme_logo.set_from_icon_name("applications-graphics", 80)
-            extension_logo.set_from_icon_name("application-x-addon", 80)
-            
-#            troubleshoot_logo.set_from_icon_name("applications-graphics", 80)
-#            doc_logo.set_from_icon_name("applications-graphics", 80)
-#            distrosync_logo.set_from_icon_name("system-software-update", 80)
-            
-#            discord_logo.set_from_icon_name("discord", 80)
-#            reddit_logo.set_from_icon_name("reddit", 80)
+#        if (settings.get_boolean("use-system-icons")) == True:
 
 
-        pass
+#        pass
         
     ### ENTER LOOK WINDOW ###
     def enter_add_software(self, widget):
