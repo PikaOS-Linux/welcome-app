@@ -33,14 +33,14 @@ codec_install() {
 	echo "15"; sleep 1
         echo "# Updating repository information"
 	# refresh repo metadata
-	echo $PASSWORD | sudo -S pkcon refresh force &>/tmp/codeccheck.log
+	echo $PASSWORD | sudo -S apt update &>/tmp/codeccheck.log
 	# update repos so that we can see any new repo package changes
-	echo $PASSWORD | sudo -S pkcon update -y pika-sources &>>/tmp/codeccheck.log
+	echo $PASSWORD | sudo -S apt install -y pika-sources &>>/tmp/codeccheck.log
 	# refresh repo data again.
-	echo $PASSWORD | sudo -S pkcon refresh force &>>/tmp/codeccheck.log
+	echo $PASSWORD | sudo -S apt update &>>/tmp/codeccheck.log
         echo "50"; sleep 1
 	echo "# Installing codec meta package, includes hardware decoding and ffmpeg stuff"
-	echo $PASSWORD | sudo -S pkcon install -y pika-codecs-meta &>>/tmp/codeccheck.log
+	echo $PASSWORD | sudo -S apt install -y pika-codecs-meta &>>/tmp/codeccheck.log
         echo "100"; sleep 1
       ) | zenity --title "Video Playback and Encoding enablement" --progress --width=600 --no-cancel --auto-close --percentage=0
 }

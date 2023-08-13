@@ -248,13 +248,13 @@ class Application:
         subprocess.Popen(["/usr/lib/pika/welcome/nvidia.sh"], shell=True)
     ### AMD PRO ###
     def enter_amd(self, widget):
-        subprocess.Popen(["/usr/bin/pika-amdgpu-config"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/nvidia.sh"], shell=True)
     ### ROCm ###
     def enter_rocm(self, widget):
         subprocess.Popen(["/usr/bin/x-terminal-emulator -e bash -c '/usr/lib/pika/welcome/pkcon-install.sh install pika-rocm-meta'"], shell=True)
     ### XONE ###
     def enter_xone(self, widget):
-        subprocess.Popen(["/usr/bin/pika-controller-config"], shell=True)
+        subprocess.Popen(["/usr/lib/pika/welcome/nvidia.sh"], shell=True)
     ### PROTONUP ###
     def enter_protonup(self, widget):
         flatpak_protonup_output = subprocess.run(["flatpak info net.davidotek.pupgui2"], shell=True)
