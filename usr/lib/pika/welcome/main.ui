@@ -2213,7 +2213,7 @@ The Linux Mint team</property>
                                     <property name="margin-top">15</property>
                                     <property name="margin-bottom">15</property>
                                     <property name="label" translatable="yes">Standalone gamescope session:
-The ChimeraOS Team</property>
+The ChimeraOS Team &amp; KyleGospo</property>
                                     <property name="justify">center</property>
                                   </object>
                                   <packing>
@@ -2508,7 +2508,7 @@ Neytirix &amp; Colorman</property>
                                     <property name="margin-top">15</property>
                                     <property name="margin-bottom">15</property>
                                     <property name="label" translatable="yes">Logo artist:
-nesper8 (willsmanic)</property>
+nesper8 (willsmanic) &amp; MattsCreative &amp; Piaf_Jaune</property>
                                     <property name="justify">center</property>
                                   </object>
                                   <packing>
@@ -2655,7 +2655,7 @@ SkimmingDeath</property>
                                     <property name="margin-top">15</property>
                                     <property name="margin-bottom">15</property>
                                     <property name="label" translatable="yes">Graphics Drivers:
-Kisak</property>
+Kisak &amp; Oibaf</property>
                                     <property name="justify">center</property>
                                   </object>
                                   <packing>
@@ -2901,7 +2901,7 @@ Ferreo &amp; ptr1337 &amp; Zukureneno</property>
                                     <property name="margin-top">15</property>
                                     <property name="margin-bottom">15</property>
                                     <property name="label" translatable="yes">Financial Contributors:
-nesper8 (willsmanic)</property>
+nesper8 (willsmanic) &amp; FlibbyJibbit &amp; Zukureneno</property>
                                     <property name="justify">center</property>
                                   </object>
                                   <packing>

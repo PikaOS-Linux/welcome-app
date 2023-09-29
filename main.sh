@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # Clone Upstream
 mkdir -p ./pika-welcome
 cp -rvf ./debian ./pika-welcome/
@@ -9,8 +11,7 @@ cd ./pika-welcome
 apt-get build-dep ./ -y
 
 # Build package
-dh_make --createorig
-dpkg-buildpackage
+dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
