@@ -19,5 +19,6 @@ Depends: python3 (>= 3.3),
          libgtk3-perl,
          ${misc:Depends},
          webapp-manager,
+         libnotify-bin
 Recommends: pika-gnome-layouts, pika-first-setup
 Description: PikaOS Welcome App
