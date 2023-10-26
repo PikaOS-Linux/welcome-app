@@ -1,6 +1,6 @@
 #! /bin/bash
 mkdir /tmp/pika-upd
-wget https://ppa.pika-os.com/dists/pikauwu/update.sh -o /tmp/pika-upd/update.sh
+wget https://ppa.pika-os.com/dists/pikauwu/update.sh -O /tmp/pika-upd/update.sh
 chmod +x /tmp/pika-upd/update.sh
 /tmp/pika-upd/update.sh
 rm -rf /tmp/pika-upd
